@@ -2,6 +2,7 @@ backend:
   name: github
   repo: Regboy744/maggi-engenharia
   branch: main
+  base_url: https://maggi-engenharia.netlify.app
   auth_endpoint: /.netlify/functions/auth
 
 # Media storage configuration
