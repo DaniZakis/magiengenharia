@@ -109,8 +109,8 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-serif);
-    font-weight: var(--font-bold);
+    font-family: var(--font-serif) !important;
+    font-weight: var(--font-bold) !important;
     color: rgb(44 36 22 / 1);
     line-height: var(--leading-tight);
   }

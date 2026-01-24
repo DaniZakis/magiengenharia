@@ -13,8 +13,34 @@ export default {
         error: '#C85A54',        // Muted red
       },
       fontFamily: {
-        sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
-        serif: ['Merriweather', 'Georgia', 'serif'],
+        sans: ['var(--font-sans)'],
+        serif: ['var(--font-serif)'],
+        mono: ['var(--font-mono)'],
+      },
+      fontSize: {
+        xs: 'var(--text-xs)',
+        sm: 'var(--text-sm)',
+        base: 'var(--text-base)',
+        lg: 'var(--text-lg)',
+        xl: 'var(--text-xl)',
+        '2xl': 'var(--text-h4)',
+        '3xl': 'var(--text-h3)',
+        '4xl': 'var(--text-h2)',
+        '5xl': 'var(--text-h1)',
+        '6xl': 'var(--text-h1)',
+      },
+      fontWeight: {
+        light: 'var(--font-light)',
+        normal: 'var(--font-normal)',
+        medium: 'var(--font-medium)',
+        semibold: 'var(--font-semibold)',
+        bold: 'var(--font-bold)',
+      },
+      lineHeight: {
+        tight: 'var(--leading-tight)',
+        normal: 'var(--leading-normal)',
+        relaxed: 'var(--leading-relaxed)',
+        loose: 'var(--leading-loose)',
       },
       spacing: {
         safe: 'max(env(safe-area-inset-left, 1rem), 1rem)',
