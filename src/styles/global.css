@@ -2,16 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ensure Inter font is loaded and applied */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* Custom base styles */
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: Inter, Helvetica, Arial, sans-serif;
   }
 
   body {
     @apply bg-light text-dark;
-    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-family: Inter, Helvetica, Arial, sans-serif !important;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  * {
+    font-family: Inter, Helvetica, Arial, sans-serif;
   }
 
   h1,
