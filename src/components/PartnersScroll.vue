@@ -22,7 +22,7 @@
           <div
             class="flex animate-scroll space-x-8 md:space-x-12 py-8"
             :style="{
-              animation: 'scroll 30s linear infinite'
+              animation: 'scroll 50s linear infinite'
             }"
             @mouseenter="isPaused = true"
             @mouseleave="isPaused = false"
@@ -74,42 +74,102 @@ interface Partner {
 
 const isPaused = ref(false);
 
-// Sample partner logos - replace with real ones
+// Real partner logos from /public/images/partners/
 const partners: Partner[] = [
   {
     id: '1',
     name: 'Parceiro 1',
-    logo: 'https://via.placeholder.com/150x100?text=Parceiro+1',
+    logo: '/images/partners/00bc070cca554892fc9f7c2949316e4e.png',
     website: '#'
   },
   {
     id: '2',
     name: 'Parceiro 2',
-    logo: 'https://via.placeholder.com/150x100?text=Parceiro+2',
+    logo: '/images/partners/0262833fc3b143a74bd472d19bfd56de.png',
     website: '#'
   },
   {
     id: '3',
     name: 'Parceiro 3',
-    logo: 'https://via.placeholder.com/150x100?text=Parceiro+3',
+    logo: '/images/partners/0763e71ab7ed268e08ccffe0c6fc9eaa.png',
     website: '#'
   },
   {
     id: '4',
     name: 'Parceiro 4',
-    logo: 'https://via.placeholder.com/150x100?text=Parceiro+4',
+    logo: '/images/partners/0eb2cee273692054dc6078c016edba92.png',
     website: '#'
   },
   {
     id: '5',
     name: 'Parceiro 5',
-    logo: 'https://via.placeholder.com/150x100?text=Parceiro+5',
+    logo: '/images/partners/14fce3bebf9ff20ba63a4a268010c257.png',
     website: '#'
   },
   {
     id: '6',
     name: 'Parceiro 6',
-    logo: 'https://via.placeholder.com/150x100?text=Parceiro+6',
+    logo: '/images/partners/23003b6b1d7380ebeedbf2f3ae860be7.png',
+    website: '#'
+  },
+  {
+    id: '7',
+    name: 'Parceiro 7',
+    logo: '/images/partners/392055571b40f21df103394b7e1d7f0e.png',
+    website: '#'
+  },
+  {
+    id: '8',
+    name: 'Parceiro 8',
+    logo: '/images/partners/4265b083f94b1b188a63792b6bb25e04.png',
+    website: '#'
+  },
+  {
+    id: '9',
+    name: 'Parceiro 9',
+    logo: '/images/partners/4ba0e35e876b73c89d8a0f937f811f07.png',
+    website: '#'
+  },
+  {
+    id: '10',
+    name: 'Parceiro 10',
+    logo: '/images/partners/656fd3ff0769374fc0b3390cef26e4b4.png',
+    website: '#'
+  },
+  {
+    id: '11',
+    name: 'Parceiro 11',
+    logo: '/images/partners/65e63b0b7a3b6a1cabb50cd700e0f94e.png',
+    website: '#'
+  },
+  {
+    id: '12',
+    name: 'Parceiro 12',
+    logo: '/images/partners/6a9e34ef70724af68dc3d89907df0b1f.png',
+    website: '#'
+  },
+  {
+    id: '13',
+    name: 'Parceiro 13',
+    logo: '/images/partners/b6b63874349e9ee6b423bd66ed86573d.png',
+    website: '#'
+  },
+  {
+    id: '14',
+    name: 'Parceiro 14',
+    logo: '/images/partners/c05b3130fbb9c8a071e09ae76b7a637a.png',
+    website: '#'
+  },
+  {
+    id: '15',
+    name: 'Parceiro 15',
+    logo: '/images/partners/e92581d183c7e01703f7a1a3879f1367.png',
+    website: '#'
+  },
+  {
+    id: '16',
+    name: 'Parceiro 16',
+    logo: '/images/partners/fe28ea465f5b206530e2de35c8f0b0c1.png',
     website: '#'
   },
 ];
@@ -126,7 +186,7 @@ const partners: Partner[] = [
 }
 
 .animate-scroll {
-  animation: scroll 30s linear infinite;
+  animation: scroll 50s linear infinite;
 }
 
 /* Pause animation on hover */
