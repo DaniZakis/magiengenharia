@@ -13,15 +13,7 @@ export default {
         error: '#C85A54',        // Muted red
       },
       fontFamily: {
-        sans: [
-          'ui-sans-serif',
-          'system-ui',
-          'sans-serif',
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
+        sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
         serif: ['Merriweather', 'Georgia', 'serif'],
       },
       spacing: {

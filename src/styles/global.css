@@ -10,7 +10,7 @@
 
   body {
     @apply bg-light text-dark;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Inter, Helvetica, Arial, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
