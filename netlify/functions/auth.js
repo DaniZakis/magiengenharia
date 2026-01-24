@@ -1,34 +1,42 @@
-// Simple GitHub OAuth handler for Decap CMS
+// GitHub OAuth handler for Decap CMS
 // This function exchanges the authorization code for an access token
 
 exports.handler = async (event, context) => {
-  // Only handle POST requests
-  if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ error: 'Method not allowed' })
-    };
-  }
+  console.log('Auth function called with method:', event.httpMethod);
+  console.log('Query params:', event.queryStringParameters);
+  console.log('Body:', event.body);
 
   try {
-    const { code } = JSON.parse(event.body);
+    const clientId = process.env.GITHUB_CLIENT_ID;
+    const clientSecret = process.env.GITHUB_CLIENT_SECRET;
+
+    if (!clientId || !clientSecret) {
+      console.error('Missing GitHub credentials');
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Missing GitHub credentials' })
+      };
+    }
+
+    // Get code from query parameters or request body
+    let code;
+    
+    if (event.httpMethod === 'GET') {
+      code = event.queryStringParameters?.code;
+    } else if (event.httpMethod === 'POST') {
+      const body = JSON.parse(event.body || '{}');
+      code = body.code;
+    }
 
     if (!code) {
+      console.error('No authorization code provided');
       return {
         statusCode: 400,
         body: JSON.stringify({ error: 'No authorization code provided' })
       };
     }
 
-    const clientId = process.env.GITHUB_CLIENT_ID;
-    const clientSecret = process.env.GITHUB_CLIENT_SECRET;
-
-    if (!clientId || !clientSecret) {
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ error: 'Missing GitHub credentials' })
-      };
-    }
+    console.log('Exchanging code for token...');
 
     // Exchange code for access token
     const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
@@ -47,11 +55,14 @@ exports.handler = async (event, context) => {
     const tokenData = await tokenResponse.json();
 
     if (tokenData.error) {
+      console.error('GitHub error:', tokenData.error_description);
       return {
         statusCode: 401,
         body: JSON.stringify({ error: tokenData.error_description || 'Authentication failed' })
       };
     }
+
+    console.log('Token exchange successful');
 
     // Return the access token
     return {
@@ -65,7 +76,7 @@ exports.handler = async (event, context) => {
     console.error('OAuth error:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Internal server error' })
+      body: JSON.stringify({ error: error.message || 'Internal server error' })
     };
   }
 };
