@@ -254,7 +254,7 @@ collections:
   # ============================================
   - name: "blog"
     label: "📝 Blog"
-    folder: "content/blog"
+    folder: "src/content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: "title"
