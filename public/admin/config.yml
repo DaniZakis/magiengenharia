@@ -1,19 +1,17 @@
 backend:
   name: github
-  repo: your-username/engineering-site
+  repo: Regboy744/maggi-engenharia
   branch: main
   auth_endpoint: api/auth
-  # Optional: Use GitHub as authentication provider
-  # You'll need to setup OAuth app in GitHub settings
 
 # Media storage configuration
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
 # Site configuration
-site_url: "https://yourdomain.com"
-display_url: "https://yourdomain.com"
-logo_url: "https://yourdomain.com/logo.png"
+site_url: "https://maggi-engenharia.netlify.app"
+display_url: "https://maggi-engenharia.netlify.app"
+logo_url: "https://maggi-engenharia.netlify.app/logo.png"
 
 # Editor UI customization
 editor:
