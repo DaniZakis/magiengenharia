@@ -2,7 +2,7 @@
 title: "NR-12: Tudo o que você precisa saber sobre segurança em máquinas"
 slug: nr-12-seguranca-maquinas
 excerpt: "Entenda os principais requisitos da NR-12 e como adequar suas máquinas e equipamentos para garantir a segurança dos trabalhadores."
-author: "Eng. Ricardo Maggi"
+author: "Eng. Danilo Maggi"
 date: 2024-01-15
 category: "Segurança do Trabalho"
 readTime: "8 min"

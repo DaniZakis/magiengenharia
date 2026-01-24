@@ -2,7 +2,7 @@
 title: "Laudo de Insalubridade: Quando é necessário?"
 slug: laudo-insalubridade-quando-necessario
 excerpt: "Saiba quando sua empresa precisa de um laudo de insalubridade e como ele é elaborado."
-author: "Eng. Ricardo Maggi"
+author: "Eng. Danilo Maggi"
 date: 2023-12-15
 category: "Documentação"
 readTime: "5 min"

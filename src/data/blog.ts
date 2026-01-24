@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
       <p>Nossa equipe de engenheiros especializados realiza a análise completa das suas máquinas e equipamentos, identificando as não conformidades e propondo soluções técnicas para adequação à NR-12.</p>
       <p>Oferecemos desde a elaboração do inventário de máquinas até a implementação das medidas de proteção, incluindo a emissão de ART (Anotação de Responsabilidade Técnica).</p>
     `,
-    author: 'Eng. Ricardo Maggi',
+    author: 'Eng. Danilo Maggi',
     date: '2024-01-15',
     category: 'Segurança do Trabalho',
     readTime: '8 min',
@@ -130,7 +130,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Nossos Serviços</h2>
       <p>Oferecemos projeto, instalação e certificação de sistemas de linha de vida, além de treinamentos completos conforme a NR-35.</p>
     `,
-    author: 'Eng. Ricardo Maggi',
+    author: 'Eng. Danilo Maggi',
     date: '2024-01-05',
     category: 'Segurança do Trabalho',
     readTime: '7 min',
@@ -229,7 +229,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Nossos Serviços</h2>
       <p>Elaboramos laudos de insalubridade e periculosidade com avaliações quantitativas, sempre emitidos por engenheiros habilitados e com ART.</p>
     `,
-    author: 'Eng. Ricardo Maggi',
+    author: 'Eng. Danilo Maggi',
     date: '2023-12-15',
     category: 'Documentação',
     readTime: '5 min',
