@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.vue';
+
+// Placeholder services data - will be replaced with CMS data
+export const servicesData = {
+  'consultoria-tecnica': {
+    title: 'Consultoria Técnica',
+    slug: 'consultoria-tecnica',
+    icon: '📋',
+    description: 'Assessoria especializada em projetos de engenharia',
+    shortDescription: 'Soluções técnicas personalizadas para otimizar seus projetos',
+    content: `
+      <h2>O que é Consultoria Técnica?</h2>
+      <p>A consultoria técnica é um serviço especializado que oferece orientação profissional sobre aspectos técnicos de projetos de engenharia. Nossa equipe está preparada para avaliar, analisar e propor soluções eficientes para sua obra.</p>
+      
+      <h2>Benefícios</h2>
+      <ul>
+        <li>Avaliação técnica detalhada</li>
+        <li>Otimização de recursos</li>
+        <li>Redução de custos</li>
+        <li>Garantia de conformidade regulatória</li>
+        <li>Suporte ao longo do projeto</li>
+      </ul>
+
+      <h2>Como Funciona</h2>
+      <p>Iniciamos com uma avaliação completa do seu projeto, seguida por apresentação de recomendações personalizadas e acompanhamento durante a execução.</p>
+    `,
+    benefits: [
+      'Expertise comprovada',
+      'Soluções customizadas',
+      'Suporte continuado',
+      'Resultados mensuráveis'
+    ],
+    related: ['projetos-estruturais', 'avaliacoes-pericias']
+  },
+  'projetos-estruturais': {
+    title: 'Projetos Estruturais',
+    slug: 'projetos-estruturais',
+    icon: '🏗️',
+    description: 'Desenvolvimento completo de projetos estruturais',
+    shortDescription: 'Projetos robustos e inovadores para suas construções',
+    content: `
+      <h2>Projetos Estruturais Especializados</h2>
+      <p>Desenvolvimento de projetos estruturais completos utilizando as mais modernas metodologias e softwares de cálculo estrutural.</p>
+      
+      <h2>Serviços Inclusos</h2>
+      <ul>
+        <li>Análise estrutural avançada</li>
+        <li>Dimensionamento de elementos</li>
+        <li>Projetos de fundações</li>
+        <li>Documentação técnica completa</li>
+        <li>Compatibilização com outras disciplinas</li>
+      </ul>
+
+      <h2>Aplicações</h2>
+      <p>Residencial, comercial, industrial, infraestrutura e projetos especiais.</p>
+    `,
+    benefits: [
+      'Cálculos precisos',
+      'Segurança estrutural',
+      'Otimização econômica',
+      'Documentação completa'
+    ],
+    related: ['consultoria-tecnica', 'avaliacoes-pericias']
+  },
+  'avaliacoes-pericias': {
+    title: 'Avaliações e Perícias',
+    slug: 'avaliacoes-pericias',
+    icon: '🔍',
+    description: 'Avaliações detalhadas e relatórios de perícia',
+    shortDescription: 'Laudos técnicos precisos e confiáveis',
+    content: `
+      <h2>Avaliações e Perícias Técnicas</h2>
+      <p>Realizamos avaliações técnicas detalhadas e elaboração de laudos de perícia para fins diversos, sempre com rigor técnico e imparcialidade.</p>
+      
+      <h2>Tipos de Avaliação</h2>
+      <ul>
+        <li>Avaliação de imóveis</li>
+        <li>Perícia judicial</li>
+        <li>Inspeção técnica de estruturas</li>
+        <li>Análise de patologias</li>
+        <li>Avaliação de danos</li>
+      </ul>
+
+      <h2>Documentação</h2>
+      <p>Todos os trabalhos resultam em laudo técnico detalhado, com fotografias, medições e recomendações.</p>
+    `,
+    benefits: [
+      'Parecer técnico confiável',
+      'Documentação completa',
+      'Parecer imparcial',
+      'Aceito judicialmente'
+    ],
+    related: ['consultoria-tecnica', 'projetos-estruturais']
+  },
+};
+
+export function getStaticPaths() {
+  return Object.keys(servicesData).map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const service = servicesData[slug as keyof typeof servicesData];
+
+if (!service) {
+  return Astro.redirect('/servicos');
+}
+
+const relatedServices = service.related
+  .map(s => servicesData[s as keyof typeof servicesData])
+  .filter(Boolean);
+---
+
+<BaseLayout title={`${service.title} | Maggi Engenharia`} description={service.description}>
+  <!-- Service Header -->
+  <section class="bg-gradient-to-br from-dark to-secondary py-12 md:py-20">
+    <div class="container-max px-4 md:px-6">
+      <div class="max-w-3xl">
+        <p class="text-light/80 text-lg mb-2">Serviço</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">
+          {service.title}
+        </h1>
+        <p class="text-xl text-light/90">
+          {service.description}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Content -->
+  <section class="section-padding bg-light">
+    <div class="container-max">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <div class="prose prose-lg max-w-none text-dark">
+            <p>{service.shortDescription}</p>
+            <div set:html={service.content} />
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Benefits Card -->
+          <div class="card p-8 sticky top-24">
+            <h3 class="text-2xl font-bold text-dark mb-6">Vantagens</h3>
+            <ul class="space-y-4">
+              {
+                service.benefits.map((benefit: string) => (
+                  <li class="flex items-start space-x-3">
+                    <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-dark/80">{benefit}</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section-padding bg-white border-t border-light">
+    <div class="container-max">
+      <h2 class="text-3xl font-serif font-bold text-dark mb-8">Serviços Relacionados</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          relatedServices.map((relatedService: any) => (
+            <a href={`/servicos/${relatedService.slug}`} class="group card p-6 hover:shadow-xl">
+              <div class="text-4xl mb-3">{relatedService.icon}</div>
+              <h3 class="text-xl font-bold text-dark group-hover:text-primary transition-colors mb-2">
+                {relatedService.title}
+              </h3>
+              <p class="text-sm text-dark/70 mb-4">
+                {relatedService.shortDescription}
+              </p>
+              <span class="text-primary font-semibold text-sm">Saiba Mais →</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <CTASection
+    client:load
+    title={`Interessado em ${service.title}?`}
+    description="Entre em contato conosco para discutir como podemos ajudar com seu projeto."
+    primaryLabel="Solicitar Orçamento"
+    primaryUrl="/contato"
+    secondaryLabel="Chat WhatsApp"
+    showWhatsApp={true}
+  />
+</BaseLayout>
+
+<style>
+  :global(.prose) {
+    color: inherit;
+  }
+
+  :global(.prose h2) {
+    @apply text-2xl font-serif font-bold text-dark mt-8 mb-4;
+  }
+
+  :global(.prose p) {
+    @apply mb-4 text-dark/80 leading-relaxed;
+  }
+
+  :global(.prose ul) {
+    @apply list-disc list-inside mb-4 space-y-2;
+  }
+
+  :global(.prose li) {
+    @apply text-dark/80;
+  }
+</style>

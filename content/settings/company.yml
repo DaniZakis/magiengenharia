@@ -1,0 +1,22 @@
+companyName: Maggi Engenharia
+logo: /uploads/logo.png
+favicon: /uploads/favicon.ico
+mission: Transformar ideias em soluções de engenharia de excelência
+about: |
+  A Maggi Engenharia é uma empresa especializada em soluções completas de engenharia, consultoria técnica e desenvolvimento de projetos inovadores. Com uma equipe de profissionais experientes, oferecemos serviços de alta qualidade com compromisso com a excelência.
+phone: "+55 (11) 9999-9999"
+whatsapp: "+55 (11) 9999-9999"
+email: contato@maggi.com.br
+address: "Rua Exemplo, 123"
+cep: "01310-100"
+city: São Paulo
+state: SP
+hours:
+  weekday: "8h às 18h"
+  saturday: "8h às 14h"
+  sunday: "Fechado"
+googleAnalyticsId: ""
+facebook: "https://facebook.com"
+instagram: "https://instagram.com"
+linkedin: "https://linkedin.com"
+youtube: ""

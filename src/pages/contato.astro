@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.vue';
+import HeroSection from '../components/HeroSection.vue';
+
+const contactInfo = {
+  phone: '+55 (11) 9999-9999',
+  whatsapp: 'https://wa.me/5511999999999',
+  email: 'contato@maggi.com.br',
+  address: 'São Paulo, SP, Brasil',
+  hours: {
+    weekday: '8h às 18h',
+    saturday: '8h às 14h',
+    sunday: 'Fechado',
+  },
+};
+---
+
+<BaseLayout title="Contato | Maggi Engenharia" description="Entre em contato conosco para solicitar orçamentos e consultoria sobre seus projetos de engenharia.">
+  <!-- Hero Section -->
+  <HeroSection
+    client:load
+    title="Entre em Contato Conosco"
+    subtitle="Estamos prontos para discutir seu projeto"
+  />
+
+  <!-- Contact Section -->
+  <section class="section-padding bg-light">
+    <div class="container-max">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-8">
+            Envie sua Mensagem
+          </h2>
+          <ContactForm client:load />
+        </div>
+
+        <!-- Contact Information -->
+        <div class="space-y-8">
+          <!-- Info Cards -->
+          <div class="card p-8">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.832-.97c.542 1.32 1.685 2.882 2.956 4.153 1.271 1.271 2.832 2.414 4.153 2.956l.97-1.832a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-dark mb-1">Telefone</h3>
+                <a href={`tel:${contactInfo.phone}`} class="text-primary hover:text-secondary transition-colors">
+                  {contactInfo.phone}
+                </a>
+                <p class="text-sm text-dark/60 mt-2">Seg-Sex: 8h às 18h | Sábado: 8h às 14h</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp Card -->
+          <div class="card p-8">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.2-5.038 5.55-5.038 9.04 0 3.04.93 5.961 2.694 8.498l-2.876 5.041 5.216-1.72c2.485 1.362 5.28 2.084 8.233 2.084 8.694 0 15.75-7.056 15.75-15.75 0-4.151-1.628-8.047-4.576-10.974C20.336 6.693 16.274 5.038 12.05 5.038z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-dark mb-1">WhatsApp</h3>
+                <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary transition-colors">
+                  Enviar Mensagem
+                </a>
+                <p class="text-sm text-dark/60 mt-2">Resposta rápida em horário comercial</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Card -->
+          <div class="card p-8">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-dark mb-1">Email</h3>
+                <a href={`mailto:${contactInfo.email}`} class="text-primary hover:text-secondary transition-colors">
+                  {contactInfo.email}
+                </a>
+                <p class="text-sm text-dark/60 mt-2">Resposta em até 24 horas</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address Card -->
+          <div class="card p-8">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-dark mb-1">Localização</h3>
+                <p class="text-dark/80">
+                  {contactInfo.address}
+                </p>
+                <p class="text-sm text-dark/60 mt-2">Prédio comercial em zona estratégica</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hours Card -->
+          <div class="card p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20">
+            <h3 class="text-lg font-bold text-dark mb-4">Horário de Funcionamento</h3>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between">
+                <span class="text-dark/70">Segunda a Sexta</span>
+                <span class="font-semibold text-dark">{contactInfo.hours.weekday}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-dark/70">Sábado</span>
+                <span class="font-semibold text-dark">{contactInfo.hours.saturday}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-dark/70">Domingo</span>
+                <span class="font-semibold text-dark">{contactInfo.hours.sunday}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section (Future Enhancement) -->
+  <section class="h-96 bg-light border-t border-light">
+    <div class="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+      <div class="text-center">
+        <svg class="w-16 h-16 text-primary/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <p class="text-dark/60">Mapa será adicionado em breve</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

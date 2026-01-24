@@ -1,17 +1,147 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.vue';
+import ServiceCard from '../components/ServiceCard.vue';
+import ServiceCarousel from '../components/ServiceCarousel.vue';
+import FeatureBox from '../components/FeatureBox.vue';
+import CTASection from '../components/CTASection.vue';
+import PartnersScroll from '../components/PartnersScroll.vue';
+import BlogSection from '../components/BlogSection.vue';
 
+// Placeholder services data - will be replaced with CMS data
+const services = [
+  {
+    title: 'Consultoria Técnica',
+    slug: 'consultoria-tecnica',
+    description: 'Assessoria especializada em projetos de engenharia',
+    shortDescription: 'Soluções técnicas personalizadas para otimizar seus projetos',
+    icon: '📋',
+  },
+  {
+    title: 'Projetos Estruturais',
+    slug: 'projetos-estruturais',
+    description: 'Desenvolvimento completo de projetos estruturais',
+    shortDescription: 'Projetos robustos e inovadores para suas construções',
+    icon: '🏗️',
+  },
+  {
+    title: 'Avaliações e Perícias',
+    slug: 'avaliacoes-pericias',
+    description: 'Avaliações detalhadas e relatórios de perícia',
+    shortDescription: 'Laudos técnicos precisos e confiáveis',
+    icon: '🔍',
+  },
+];
+
+const features = [
+  {
+    icon: '⚡',
+    title: 'Eficiência Garantida',
+    description: 'Processos otimizados que garantem entrega no prazo com a qualidade esperada.',
+  },
+  {
+    icon: '👥',
+    title: 'Equipe Especializada',
+    description: 'Profissionais experientes com expertise em diversos segmentos de engenharia.',
+  },
+  {
+    icon: '🎯',
+    title: 'Solução Personalizada',
+    description: 'Cada projeto é único. Desenvolvemos soluções adequadas à sua necessidade.',
+  },
+  {
+    icon: '💡',
+    title: 'Inovação Constante',
+    description: 'Utilizamos as melhores práticas e tecnologias mais recentes do mercado.',
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Maggi Engenharia | Soluções em Engenharia" description="Consultoria, projetos estruturais, avaliações e perícias. Soluções completas em engenharia.">
+  <!-- Hero Section -->
+  <HeroSection
+    client:load
+    title="Soluções em Engenharia para seu Projeto"
+    subtitle="Consultoria, projetos e soluções técnicas especializadas"
+    primaryCtaLabel="Solicitar Orçamento"
+    primaryCtaUrl="/contato"
+    secondaryCtaLabel="Saiba Mais"
+    secondaryCtaUrl="/servicos"
+  />
+
+  <!-- Services Section with Carousel -->
+  <section class="section-padding bg-light">
+    <div class="container-max">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-dark mb-4">
+          Nossos Serviços
+        </h2>
+        <p class="text-lg text-dark/70 max-w-2xl mx-auto">
+          Oferecemos soluções completas em engenharia para atender todas as necessidades do seu projeto.
+        </p>
+      </div>
+
+      <!-- Services Carousel -->
+      <ServiceCarousel
+        client:load
+        services={services}
+      />
+
+      <!-- View All Services Link -->
+      <div class="text-center mt-8">
+        <a href="/servicos" class="btn-secondary inline-block">
+          Ver Todos os Serviços
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-dark mb-4">
+          Por Que Nos Escolher?
+        </h2>
+        <p class="text-lg text-dark/70 max-w-2xl mx-auto">
+          Temos o compromisso de entregar excelência em cada projeto que realizamos.
+        </p>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {
+          features.map((feature) => (
+            <div class="group">
+              <FeatureBox
+                client:load
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners/Clients Scrolling Section -->
+  <PartnersScroll client:load />
+
+  <!-- Blog Posts Section -->
+  <BlogSection client:load />
+
+  <!-- CTA Section -->
+  <CTASection
+    client:load
+    title="Pronto para Começar seu Projeto?"
+    description="Conte conosco para transformar suas ideias em soluções de engenharia de excelência."
+    primaryLabel="Solicitar Orçamento"
+    primaryUrl="/contato"
+    secondaryLabel="Chat WhatsApp"
+    showWhatsApp={true}
+  />
+</BaseLayout>
