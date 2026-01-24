@@ -5,6 +5,69 @@
 /* Ensure Inter font is loaded and applied */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* ============================================
+   FONT VARIABLES - Define once, use everywhere
+   ============================================ */
+:root {
+  /* Font Families */
+  --font-sans: Inter, Helvetica, Arial, sans-serif;
+  --font-serif: Merriweather, Georgia, serif;
+  --font-mono: 'Courier New', monospace;
+
+  /* Font Sizes - Body Text */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+
+  /* Font Sizes - Headings */
+  --text-h4: 1.25rem;
+  --text-h3: 1.5rem;
+  --text-h2: 1.875rem;
+  --text-h1: 2.25rem;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* Letter Spacing */
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+}
+
+/* Responsive Font Sizes */
+@media (min-width: 768px) {
+  :root {
+    /* Tablet and above sizes */
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-h4: 1.5rem;
+    --text-h3: 1.875rem;
+    --text-h2: 2.25rem;
+    --text-h1: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    /* Desktop sizes */
+    --text-h3: 1.875rem;
+    --text-h2: 3rem;
+    --text-h1: 3.75rem;
+  }
+}
+
 /* Custom base styles */
 @layer base {
   html {
@@ -14,12 +77,30 @@
 
   body {
     @apply bg-light text-dark;
-    font-family: Inter, Helvetica, Arial, sans-serif !important;
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   * {
-    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
+  }
+
+  strong,
+  b {
+    font-weight: var(--font-bold);
+  }
+
+  em,
+  i {
+    font-style: italic;
+  }
+
+  code,
+  pre {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
   }
 
   h1,
@@ -28,27 +109,40 @@
   h4,
   h5,
   h6 {
-    @apply font-serif font-bold text-dark;
+    font-family: var(--font-serif);
+    font-weight: var(--font-bold);
+    color: rgb(44 36 22 / 1);
+    line-height: var(--leading-tight);
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    font-size: var(--text-h1);
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    font-size: var(--text-h2);
   }
 
   h3 {
-    @apply text-2xl md:text-3xl;
+    font-size: var(--text-h3);
   }
 
   h4 {
-    @apply text-xl md:text-2xl;
+    font-size: var(--text-h4);
+  }
+
+  h5 {
+    font-size: var(--text-lg);
+  }
+
+  h6 {
+    font-size: var(--text-base);
   }
 
   p {
-    @apply leading-relaxed text-base md:text-lg;
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
   }
 
   a {
@@ -62,16 +156,76 @@
 
 /* Reusable component classes */
 @layer components {
+  /* Button Styles */
   .btn-primary {
-    @apply px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-secondary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    font-family: var(--font-sans);
+    font-weight: var(--font-semibold);
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+    @apply px-6 py-3 bg-secondary text-white rounded-lg hover:bg-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+    font-family: var(--font-sans);
+    font-weight: var(--font-semibold);
   }
 
   .btn-outline {
-    @apply px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply px-6 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    font-family: var(--font-sans);
+    font-weight: var(--font-semibold);
+  }
+
+  /* Typography Utilities */
+  .text-heading-1 {
+    font-family: var(--font-serif);
+    font-size: var(--text-h1);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+  }
+
+  .text-heading-2 {
+    font-family: var(--font-serif);
+    font-size: var(--text-h2);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+  }
+
+  .text-heading-3 {
+    font-family: var(--font-serif);
+    font-size: var(--text-h3);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+  }
+
+  .text-heading-4 {
+    font-family: var(--font-serif);
+    font-size: var(--text-h4);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+  }
+
+  .text-body-lg {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+  }
+
+  .text-body-base {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+  }
+
+  .text-body-sm {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .text-body-xs {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
   }
 
   .card {
@@ -122,21 +276,22 @@
   }
 }
 
-/* Responsive typography */
+/* Mobile-specific typography */
 @media (max-width: 640px) {
-  h1 {
-    @apply text-2xl;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: var(--leading-normal);
   }
 
-  h2 {
-    @apply text-xl;
-  }
-
-  h3 {
-    @apply text-lg;
-  }
-
-  p {
-    @apply text-sm;
+  :root {
+    /* Mobile sizes - smaller */
+    --text-h1: 1.5rem;
+    --text-h2: 1.25rem;
+    --text-h3: 1.125rem;
+    --text-h4: 1rem;
   }
 }
