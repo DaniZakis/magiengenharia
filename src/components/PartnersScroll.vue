@@ -1,5 +1,5 @@
 <template>
-  <section class="overflow-hidden bg-white py-12 md:py-16">
+  <section class="bg-white py-12 md:py-16">
     <div class="container-max px-4 md:px-6">
       <!-- Section Header -->
       <div class="text-center mb-12">
@@ -11,21 +11,17 @@
         </p>
       </div>
 
-      <!-- Scrolling Partners Container -->
-      <div class="relative">
+      <!-- Desktop: Scrolling Partners Container -->
+      <div class="hidden md:block relative">
         <!-- Gradient Overlays -->
-        <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none hidden md:block"></div>
-        <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none hidden md:block"></div>
+        <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
         <!-- Scrolling Wrapper -->
         <div class="overflow-hidden">
           <div
-            class="flex animate-scroll space-x-8 md:space-x-12 py-8"
-            :style="{
-              animation: 'scroll 50s linear infinite'
-            }"
-            @mouseenter="isPaused = true"
-            @mouseleave="isPaused = false"
+            class="flex gap-8 md:gap-12 py-8"
+            :class="['partners-scroll', isPaused ? 'paused' : 'scrolling']"
           >
             <!-- Duplicate partners for seamless loop -->
             <div
@@ -45,10 +41,17 @@
             </div>
           </div>
         </div>
+
+        <!-- Hover Area for Pause/Resume -->
+        <div
+          class="absolute inset-0"
+          @mouseenter="isPaused = true"
+          @mouseleave="isPaused = false"
+        ></div>
       </div>
 
       <!-- Mobile Version (Static Grid) -->
-      <div class="grid grid-cols-2 md:hidden gap-4 mt-8">
+      <div class="grid grid-cols-2 md:hidden gap-4">
         <div
           v-for="partner in partners.slice(0, 4)"
           :key="partner.id"
@@ -176,21 +179,35 @@ const partners: Partner[] = [
 </script>
 
 <style scoped>
-@keyframes scroll {
+@keyframes slideInfinite {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% / 2));
+    transform: translateX(-50%);
   }
 }
 
-.animate-scroll {
-  animation: scroll 50s linear infinite;
+.partners-scroll {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+  width: 100%;
+  will-change: transform;
 }
 
-/* Pause animation on hover */
-.animate-scroll:hover {
+.partners-scroll.scrolling {
+  animation: slideInfinite 80s linear infinite;
+}
+
+.partners-scroll.paused {
   animation-play-state: paused;
+}
+
+/* Ensure smooth rendering */
+@media (prefers-reduced-motion: no-preference) {
+  .partners-scroll.scrolling {
+    animation: slideInfinite 80s linear infinite;
+  }
 }
 </style>
