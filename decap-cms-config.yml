@@ -290,10 +290,22 @@ collections:
         format: "YYYY-MM-DD"
         required: false
 
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Segurança do Trabalho", value: "Segurança do Trabalho" }
+          - { label: "Documentação", value: "Documentação" }
+          - { label: "Engenharia", value: "Engenharia" }
+          - { label: "Treinamentos", value: "Treinamentos" }
+          - { label: "Geral", value: "Geral" }
+        default: "Geral"
+        required: true
+
       - label: "Imagem Destaque"
         name: "image"
         widget: "image"
-        required: true
+        required: false
 
       - label: "Resumo/Excerpt"
         name: "excerpt"
@@ -301,6 +313,19 @@ collections:
         hint: "Resumo do artigo (máx 160 caracteres)"
         pattern: [".{0,160}", "Máximo 160 caracteres"]
         required: true
+
+      - label: "Tempo de Leitura"
+        name: "readTime"
+        widget: "string"
+        hint: "ex: 5 min"
+        default: "5 min"
+        required: false
+
+      - label: "Destaque"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        required: false
 
       - label: "Conteúdo"
         name: "body"
