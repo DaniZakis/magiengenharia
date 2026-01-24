@@ -1,5 +1,10 @@
 <template>
-  <header class="bg-white shadow-sm sticky top-0 z-50">
+  <header 
+    :class="[
+      'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+      isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+    ]"
+  >
     <div class="container-max px-4 md:px-6">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
@@ -7,20 +12,74 @@
           <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
             <span class="text-white font-bold text-xl">M</span>
           </div>
-          <span class="hidden sm:inline font-serif font-bold text-lg text-dark">Maggi</span>
+          <span 
+            :class="[
+              'hidden sm:inline font-bold text-lg transition-colors duration-300',
+              isScrolled ? 'text-dark' : 'text-white'
+            ]"
+          >
+            Maggi
+          </span>
         </a>
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center space-x-8">
-          <a href="/" class="text-dark hover:text-primary transition-colors">Home</a>
-          <a href="/servicos" class="text-dark hover:text-primary transition-colors">Serviços</a>
-          <a href="/contato" class="btn-primary">Contato</a>
+          <a 
+            href="/" 
+            :class="[
+              'transition-colors duration-300',
+              isScrolled ? 'text-dark hover:text-primary' : 'text-white/90 hover:text-white'
+            ]"
+          >
+            Home
+          </a>
+          <a 
+            href="/sobre" 
+            :class="[
+              'transition-colors duration-300',
+              isScrolled ? 'text-dark hover:text-primary' : 'text-white/90 hover:text-white'
+            ]"
+          >
+            Quem Somos
+          </a>
+          <a 
+            href="/servicos" 
+            :class="[
+              'transition-colors duration-300',
+              isScrolled ? 'text-dark hover:text-primary' : 'text-white/90 hover:text-white'
+            ]"
+          >
+            Serviços
+          </a>
+          <a 
+            href="/blog" 
+            :class="[
+              'transition-colors duration-300',
+              isScrolled ? 'text-dark hover:text-primary' : 'text-white/90 hover:text-white'
+            ]"
+          >
+            Blog
+          </a>
+          <a 
+            href="/contato" 
+            :class="[
+              'px-6 py-2.5 rounded-lg font-semibold transition-all duration-300',
+              isScrolled 
+                ? 'bg-primary text-white hover:bg-secondary' 
+                : 'bg-white/10 text-white border border-white/30 hover:bg-white/20'
+            ]"
+          >
+            Contato
+          </a>
         </nav>
 
         <!-- Mobile Menu Button -->
         <button
           @click="isOpen = !isOpen"
-          class="md:hidden p-2 rounded-lg hover:bg-light transition-colors"
+          :class="[
+            'md:hidden p-2 rounded-lg transition-colors',
+            isScrolled ? 'hover:bg-light text-dark' : 'hover:bg-white/10 text-white'
+          ]"
           :aria-label="isOpen ? 'Fechar menu' : 'Abrir menu'"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,21 +110,50 @@
       >
         <nav
           v-if="isOpen"
-          class="md:hidden pb-4 space-y-3 border-t border-light"
+          :class="[
+            'md:hidden pb-4 space-y-3 border-t',
+            isScrolled ? 'border-light bg-white' : 'border-white/20 bg-dark/95 backdrop-blur-lg'
+          ]"
         >
           <a
             href="/"
-            class="block py-2 text-dark hover:text-primary transition-colors"
+            :class="[
+              'block py-2 transition-colors',
+              isScrolled ? 'text-dark hover:text-primary' : 'text-white hover:text-primary'
+            ]"
             @click="isOpen = false"
           >
             Home
           </a>
           <a
+            href="/sobre"
+            :class="[
+              'block py-2 transition-colors',
+              isScrolled ? 'text-dark hover:text-primary' : 'text-white hover:text-primary'
+            ]"
+            @click="isOpen = false"
+          >
+            Quem Somos
+          </a>
+          <a
             href="/servicos"
-            class="block py-2 text-dark hover:text-primary transition-colors"
+            :class="[
+              'block py-2 transition-colors',
+              isScrolled ? 'text-dark hover:text-primary' : 'text-white hover:text-primary'
+            ]"
             @click="isOpen = false"
           >
             Serviços
+          </a>
+          <a
+            href="/blog"
+            :class="[
+              'block py-2 transition-colors',
+              isScrolled ? 'text-dark hover:text-primary' : 'text-white hover:text-primary'
+            ]"
+            @click="isOpen = false"
+          >
+            Blog
           </a>
           <a
             href="/contato"
@@ -81,9 +169,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const isOpen = ref(false);
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Check initial scroll position
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style scoped>

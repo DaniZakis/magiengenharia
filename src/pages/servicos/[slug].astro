@@ -1,164 +1,269 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTASection from '../../components/CTASection.vue';
+import { services, getServicesArray } from '../../data/services';
+import type { Service } from '../../data/services';
 
-// Placeholder services data - will be replaced with CMS data
-export const servicesData = {
-  'consultoria-tecnica': {
-    title: 'Consultoria Técnica',
-    slug: 'consultoria-tecnica',
-    icon: '📋',
-    description: 'Assessoria especializada em projetos de engenharia',
-    shortDescription: 'Soluções técnicas personalizadas para otimizar seus projetos',
-    content: `
-      <h2>O que é Consultoria Técnica?</h2>
-      <p>A consultoria técnica é um serviço especializado que oferece orientação profissional sobre aspectos técnicos de projetos de engenharia. Nossa equipe está preparada para avaliar, analisar e propor soluções eficientes para sua obra.</p>
-      
-      <h2>Benefícios</h2>
-      <ul>
-        <li>Avaliação técnica detalhada</li>
-        <li>Otimização de recursos</li>
-        <li>Redução de custos</li>
-        <li>Garantia de conformidade regulatória</li>
-        <li>Suporte ao longo do projeto</li>
-      </ul>
-
-      <h2>Como Funciona</h2>
-      <p>Iniciamos com uma avaliação completa do seu projeto, seguida por apresentação de recomendações personalizadas e acompanhamento durante a execução.</p>
-    `,
-    benefits: [
-      'Expertise comprovada',
-      'Soluções customizadas',
-      'Suporte continuado',
-      'Resultados mensuráveis'
-    ],
-    related: ['projetos-estruturais', 'avaliacoes-pericias']
+// Muted, harmonious category styling - earthy tones that complement gold/brown brand
+const categoryStyles: Record<string, { gradient: string; iconColor: string; lightBg: string; borderColor: string }> = {
+  'Segurança do Trabalho': {
+    gradient: 'from-stone-600 via-stone-700 to-stone-800',
+    iconColor: 'text-stone-600',
+    lightBg: 'bg-stone-50',
+    borderColor: 'border-stone-200'
   },
-  'projetos-estruturais': {
-    title: 'Projetos Estruturais',
-    slug: 'projetos-estruturais',
-    icon: '🏗️',
-    description: 'Desenvolvimento completo de projetos estruturais',
-    shortDescription: 'Projetos robustos e inovadores para suas construções',
-    content: `
-      <h2>Projetos Estruturais Especializados</h2>
-      <p>Desenvolvimento de projetos estruturais completos utilizando as mais modernas metodologias e softwares de cálculo estrutural.</p>
-      
-      <h2>Serviços Inclusos</h2>
-      <ul>
-        <li>Análise estrutural avançada</li>
-        <li>Dimensionamento de elementos</li>
-        <li>Projetos de fundações</li>
-        <li>Documentação técnica completa</li>
-        <li>Compatibilização com outras disciplinas</li>
-      </ul>
-
-      <h2>Aplicações</h2>
-      <p>Residencial, comercial, industrial, infraestrutura e projetos especiais.</p>
-    `,
-    benefits: [
-      'Cálculos precisos',
-      'Segurança estrutural',
-      'Otimização econômica',
-      'Documentação completa'
-    ],
-    related: ['consultoria-tecnica', 'avaliacoes-pericias']
+  'Documentação Técnica': {
+    gradient: 'from-slate-500 via-slate-600 to-slate-700',
+    iconColor: 'text-slate-600',
+    lightBg: 'bg-slate-50',
+    borderColor: 'border-slate-200'
   },
-  'avaliacoes-pericias': {
-    title: 'Avaliações e Perícias',
-    slug: 'avaliacoes-pericias',
-    icon: '🔍',
-    description: 'Avaliações detalhadas e relatórios de perícia',
-    shortDescription: 'Laudos técnicos precisos e confiáveis',
-    content: `
-      <h2>Avaliações e Perícias Técnicas</h2>
-      <p>Realizamos avaliações técnicas detalhadas e elaboração de laudos de perícia para fins diversos, sempre com rigor técnico e imparcialidade.</p>
-      
-      <h2>Tipos de Avaliação</h2>
-      <ul>
-        <li>Avaliação de imóveis</li>
-        <li>Perícia judicial</li>
-        <li>Inspeção técnica de estruturas</li>
-        <li>Análise de patologias</li>
-        <li>Avaliação de danos</li>
-      </ul>
-
-      <h2>Documentação</h2>
-      <p>Todos os trabalhos resultam em laudo técnico detalhado, com fotografias, medições e recomendações.</p>
-    `,
-    benefits: [
-      'Parecer técnico confiável',
-      'Documentação completa',
-      'Parecer imparcial',
-      'Aceito judicialmente'
-    ],
-    related: ['consultoria-tecnica', 'projetos-estruturais']
+  'Engenharia Estrutural': {
+    gradient: 'from-amber-700 via-amber-800 to-amber-900',
+    iconColor: 'text-amber-700',
+    lightBg: 'bg-amber-50',
+    borderColor: 'border-amber-200'
+  },
+  'Engenharia Mecânica': {
+    gradient: 'from-zinc-600 via-zinc-700 to-zinc-800',
+    iconColor: 'text-zinc-600',
+    lightBg: 'bg-zinc-50',
+    borderColor: 'border-zinc-200'
+  },
+  'Capacitação': {
+    gradient: 'from-emerald-700 via-emerald-800 to-emerald-900',
+    iconColor: 'text-emerald-700',
+    lightBg: 'bg-emerald-50',
+    borderColor: 'border-emerald-200'
+  },
+  'Segurança': {
+    gradient: 'from-orange-800 via-orange-900 to-orange-950',
+    iconColor: 'text-orange-800',
+    lightBg: 'bg-orange-50',
+    borderColor: 'border-orange-200'
+  },
+  'Recursos Humanos': {
+    gradient: 'from-sky-700 via-sky-800 to-sky-900',
+    iconColor: 'text-sky-700',
+    lightBg: 'bg-sky-50',
+    borderColor: 'border-sky-200'
+  },
+  'Institucional': {
+    gradient: 'from-primary via-secondary to-dark',
+    iconColor: 'text-primary',
+    lightBg: 'bg-primary/5',
+    borderColor: 'border-primary/20'
   },
 };
 
+const getStyle = (category: string) => categoryStyles[category] || {
+  gradient: 'from-dark via-secondary to-dark',
+  iconColor: 'text-primary',
+  lightBg: 'bg-light',
+  borderColor: 'border-gray-200'
+};
+
+// Large icons for header
+const icons: Record<string, string> = {
+  'shield-check': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+  'building': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+  'award': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+  'clipboard-list': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>`,
+  'document-text': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+  'link': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>`,
+  'users': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>`,
+  'cog': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+  'search': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+  'folder': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>`,
+  'fire': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>`,
+  'academic-cap': `<svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+};
+
+// Medium icons for related services
+const mediumIcons: Record<string, string> = {
+  'shield-check': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+  'building': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+  'award': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+  'clipboard-list': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>`,
+  'document-text': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+  'link': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>`,
+  'users': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>`,
+  'cog': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+  'search': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+  'folder': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>`,
+  'fire': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>`,
+  'academic-cap': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+};
+
 export function getStaticPaths() {
-  return Object.keys(servicesData).map((slug) => ({
+  return Object.keys(services).map((slug) => ({
     params: { slug },
   }));
 }
 
 const { slug } = Astro.params;
-const service = servicesData[slug as keyof typeof servicesData];
+const service = services[slug as keyof typeof services];
 
 if (!service) {
   return Astro.redirect('/servicos');
 }
 
 const relatedServices = service.related
-  .map(s => servicesData[s as keyof typeof servicesData])
+  .map(s => services[s as keyof typeof services])
   .filter(Boolean);
+
+const style = getStyle(service.category);
+const getIcon = (iconName: string) => icons[iconName] || icons['document-text'];
+const getMediumIcon = (iconName: string) => mediumIcons[iconName] || mediumIcons['document-text'];
 ---
 
 <BaseLayout title={`${service.title} | Maggi Engenharia`} description={service.description}>
-  <!-- Service Header -->
-  <section class="bg-gradient-to-br from-dark to-secondary py-12 md:py-20">
-    <div class="container-max px-4 md:px-6">
-      <div class="max-w-3xl">
-        <p class="text-light/80 text-lg mb-2">Serviço</p>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">
-          {service.title}
-        </h1>
-        <p class="text-xl text-light/90">
-          {service.description}
-        </p>
+  <!-- Service Header - Category Colored (Muted Tones) -->
+  <section class={`relative py-20 md:py-28 overflow-hidden bg-gradient-to-br ${style.gradient}`}>
+    <!-- Background Decorations -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-black/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.02] rounded-full blur-3xl"></div>
+      <!-- Grid Pattern -->
+      <div class="absolute inset-0 opacity-[0.05]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    </div>
+
+    <div class="container-max px-4 md:px-6 relative">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
+        <!-- Icon Container -->
+        <div class="flex-shrink-0">
+          <div class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-3xl shadow-2xl flex items-center justify-center transform hover:scale-105 transition-all duration-300">
+            <div class={style.iconColor}>
+              <Fragment set:html={getIcon(service.icon)} />
+            </div>
+          </div>
+        </div>
+        
+        <!-- Text Content -->
+        <div class="flex-1">
+          <!-- Breadcrumb -->
+          <nav class="flex items-center gap-2 text-white/50 text-sm mb-4">
+            <a href="/" class="hover:text-white/80 transition-colors">Home</a>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+            <a href="/servicos" class="hover:text-white/80 transition-colors">Serviços</a>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+            <span class="text-white/80">{service.title}</span>
+          </nav>
+
+          <!-- Category Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+            <span class="w-2 h-2 bg-white/80 rounded-full"></span>
+            <span class="text-white/90 text-sm font-medium">{service.category}</span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            {service.title}
+          </h1>
+
+          <!-- Description -->
+          <p class="text-xl text-white/80 max-w-2xl leading-relaxed">
+            {service.description}
+          </p>
+
+          <!-- Quick Stats -->
+          <div class="flex flex-wrap gap-6 mt-8">
+            <div class="flex items-center gap-2 text-white/70">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-sm">Profissionais Certificados</span>
+            </div>
+            <div class="flex items-center gap-2 text-white/70">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-sm">Atendimento Ágil</span>
+            </div>
+            <div class="flex items-center gap-2 text-white/70">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              <span class="text-sm">Documentação Completa</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Service Content -->
-  <section class="section-padding bg-light">
-    <div class="container-max">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+  <section class="py-16 md:py-20 bg-light">
+    <div class="container-max px-4 md:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
         <!-- Main Content -->
         <div class="lg:col-span-2">
-          <div class="prose prose-lg max-w-none text-dark">
-            <p>{service.shortDescription}</p>
-            <div set:html={service.content} />
+          <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-10">
+            <!-- Intro -->
+            <p class="text-lg text-dark/80 leading-relaxed mb-8 pb-8 border-b border-gray-100">
+              {service.shortDescription}
+            </p>
+            
+            <!-- Content -->
+            <div class="prose prose-lg max-w-none text-dark">
+              <div set:html={service.content} />
+            </div>
           </div>
         </div>
 
         <!-- Sidebar -->
-        <div class="lg:col-span-1">
+        <div class="lg:col-span-1 space-y-6">
           <!-- Benefits Card -->
-          <div class="card p-8 sticky top-24">
-            <h3 class="text-2xl font-bold text-dark mb-6">Vantagens</h3>
+          <div class={`rounded-3xl p-8 ${style.lightBg} border ${style.borderColor}`}>
+            <div class="flex items-center gap-3 mb-6">
+              <div class={`w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center ${style.iconColor}`}>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-dark">Vantagens</h3>
+            </div>
             <ul class="space-y-4">
               {
                 service.benefits.map((benefit: string) => (
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <li class="flex items-start gap-3">
+                    <svg class={`w-5 h-5 flex-shrink-0 mt-0.5 ${style.iconColor}`} fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                     </svg>
-                    <span class="text-dark/80">{benefit}</span>
+                    <span class="text-dark/80 text-sm">{benefit}</span>
                   </li>
                 ))
               }
             </ul>
+          </div>
+
+          <!-- Contact Card -->
+          <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8">
+            <h3 class="text-xl font-bold text-dark mb-4">Solicite um Orçamento</h3>
+            <p class="text-dark/60 text-sm mb-6">
+              Nossa equipe está pronta para atender sua demanda com agilidade e qualidade.
+            </p>
+            <a 
+              href="/contato" 
+              class="block w-full py-4 px-6 bg-primary text-white text-center font-semibold rounded-xl transition-all duration-300 hover:bg-secondary hover:shadow-lg"
+            >
+              Fale Conosco
+            </a>
+            <a 
+              href="https://wa.me/5500000000000" 
+              target="_blank"
+              class="flex items-center justify-center gap-2 w-full py-4 px-6 mt-3 bg-emerald-700 text-white font-semibold rounded-xl hover:bg-emerald-800 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -166,27 +271,56 @@ const relatedServices = service.related
   </section>
 
   <!-- Related Services -->
-  <section class="section-padding bg-white border-t border-light">
-    <div class="container-max">
-      <h2 class="text-3xl font-serif font-bold text-dark mb-8">Serviços Relacionados</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {
-          relatedServices.map((relatedService: any) => (
-            <a href={`/servicos/${relatedService.slug}`} class="group card p-6 hover:shadow-xl">
-              <div class="text-4xl mb-3">{relatedService.icon}</div>
-              <h3 class="text-xl font-bold text-dark group-hover:text-primary transition-colors mb-2">
-                {relatedService.title}
-              </h3>
-              <p class="text-sm text-dark/70 mb-4">
-                {relatedService.shortDescription}
-              </p>
-              <span class="text-primary font-semibold text-sm">Saiba Mais →</span>
-            </a>
-          ))
-        }
+  {relatedServices.length > 0 && (
+    <section class="py-16 md:py-20 bg-white">
+      <div class="container-max px-4 md:px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Serviços Relacionados</h2>
+          <p class="text-dark/60 max-w-2xl mx-auto">Conheça outros serviços que podem complementar suas necessidades</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {
+            relatedServices.map((relatedService: Service) => {
+              const relatedStyle = getStyle(relatedService.category);
+              return (
+                <a href={`/servicos/${relatedService.slug}`} class="group">
+                  <div class="bg-light rounded-2xl overflow-hidden h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+                    <!-- Colored Header -->
+                    <div class={`h-24 bg-gradient-to-r ${relatedStyle.gradient} flex items-center justify-center relative overflow-hidden`}>
+                      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                      <div class="w-16 h-16 bg-white rounded-xl shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <div class={relatedStyle.iconColor}>
+                          <Fragment set:html={getMediumIcon(relatedService.icon)} />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-6">
+                      <span class={`text-xs font-semibold uppercase tracking-wider ${relatedStyle.iconColor}`}>
+                        {relatedService.category}
+                      </span>
+                      <h3 class="text-xl font-bold text-dark group-hover:text-primary transition-colors mt-2 mb-3">
+                        {relatedService.title}
+                      </h3>
+                      <p class="text-sm text-dark/60 mb-4 line-clamp-2">
+                        {relatedService.shortDescription}
+                      </p>
+                      <span class="inline-flex items-center text-primary font-semibold text-sm">
+                        Saiba Mais 
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              );
+            })
+          }
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <!-- CTA Section -->
   <CTASection
@@ -206,7 +340,7 @@ const relatedServices = service.related
   }
 
   :global(.prose h2) {
-    @apply text-2xl font-serif font-bold text-dark mt-8 mb-4;
+    @apply text-2xl font-bold text-dark mt-8 mb-4 first:mt-0;
   }
 
   :global(.prose p) {
@@ -214,10 +348,26 @@ const relatedServices = service.related
   }
 
   :global(.prose ul) {
-    @apply list-disc list-inside mb-4 space-y-2;
+    @apply list-none mb-6 space-y-3 pl-0;
   }
 
   :global(.prose li) {
-    @apply text-dark/80;
+    @apply text-dark/80 flex items-start gap-3;
+  }
+
+  :global(.prose li::before) {
+    content: '';
+    @apply w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2;
+  }
+
+  :global(.prose strong) {
+    @apply text-dark font-semibold;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 </style>

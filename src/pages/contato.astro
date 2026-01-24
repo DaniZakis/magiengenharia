@@ -1,13 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactForm from '../components/ContactForm.vue';
-import HeroSection from '../components/HeroSection.vue';
 
 const contactInfo = {
-  phone: '+55 (11) 9999-9999',
-  whatsapp: 'https://wa.me/5511999999999',
-  email: 'contato@maggi.com.br',
-  address: 'São Paulo, SP, Brasil',
+  phone: '+55 (11) 99994-8676',
+  whatsapp: 'https://wa.me/5511999948676',
+  email: 'contato@maggiengenharia.com',
+  address: 'São Paulo, SP',
   hours: {
     weekday: '8h às 18h',
     saturday: '8h às 14h',
@@ -17,12 +16,82 @@ const contactInfo = {
 ---
 
 <BaseLayout title="Contato | Maggi Engenharia" description="Entre em contato conosco para solicitar orçamentos e consultoria sobre seus projetos de engenharia.">
-  <!-- Hero Section -->
-  <HeroSection
-    client:load
-    title="Entre em Contato Conosco"
-    subtitle="Estamos prontos para discutir seu projeto"
-  />
+  <!-- Compact Gradient Header -->
+  <section class="relative py-20 md:py-28 overflow-hidden bg-gradient-to-br from-primary via-secondary to-dark">
+    <!-- Background Decorations -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-black/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.02] rounded-full blur-3xl"></div>
+      <!-- Grid Pattern -->
+      <div class="absolute inset-0 opacity-[0.05]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    </div>
+
+    <div class="container-max px-4 md:px-6 relative">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
+        <!-- Icon Container -->
+        <div class="flex-shrink-0">
+          <div class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-3xl shadow-2xl flex items-center justify-center transform hover:scale-105 transition-all duration-300">
+            <div class="text-primary">
+              <svg class="w-16 h-16 md:w-20 md:h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Text Content -->
+        <div class="flex-1">
+          <!-- Breadcrumb -->
+          <nav class="flex items-center gap-2 text-white/50 text-sm mb-4">
+            <a href="/" class="hover:text-white/80 transition-colors">Home</a>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+            <span class="text-white/80">Contato</span>
+          </nav>
+
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+            <span class="w-2 h-2 bg-white/80 rounded-full animate-pulse"></span>
+            <span class="text-white/90 text-sm font-medium">Atendimento Personalizado</span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Entre em Contato
+          </h1>
+
+          <!-- Description -->
+          <p class="text-xl text-white/80 max-w-2xl leading-relaxed">
+            Estamos prontos para atender sua demanda. Solicite um orçamento ou tire suas dúvidas com nossa equipe especializada.
+          </p>
+
+          <!-- Quick Stats -->
+          <div class="flex flex-wrap gap-6 mt-8">
+            <div class="flex items-center gap-2 text-white/70">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-sm">Resposta em até 24h</span>
+            </div>
+            <div class="flex items-center gap-2 text-white/70">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-sm">Orçamento sem compromisso</span>
+            </div>
+            <div class="flex items-center gap-2 text-white/70">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span class="text-sm">Equipe Especializada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Contact Section -->
   <section class="section-padding bg-light">
@@ -30,7 +99,7 @@ const contactInfo = {
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Contact Form -->
         <div>
-          <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-8">
             Envie sua Mensagem
           </h2>
           <ContactForm client:load />
@@ -59,14 +128,14 @@ const contactInfo = {
           <!-- WhatsApp Card -->
           <div class="card p-8">
             <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.2-5.038 5.55-5.038 9.04 0 3.04.93 5.961 2.694 8.498l-2.876 5.041 5.216-1.72c2.485 1.362 5.28 2.084 8.233 2.084 8.694 0 15.75-7.056 15.75-15.75 0-4.151-1.628-8.047-4.576-10.974C20.336 6.693 16.274 5.038 12.05 5.038z" />
+              <div class="w-12 h-12 rounded-lg bg-[#25D366]/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 32 32">
+                  <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z" />
                 </svg>
               </div>
               <div>
                 <h3 class="text-lg font-bold text-dark mb-1">WhatsApp</h3>
-                <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary transition-colors">
+                <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer" class="text-[#25D366] hover:text-[#20ba5a] transition-colors font-medium">
                   Enviar Mensagem
                 </a>
                 <p class="text-sm text-dark/60 mt-2">Resposta rápida em horário comercial</p>

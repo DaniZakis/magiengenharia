@@ -1,58 +1,51 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.vue';
-import ServiceCard from '../components/ServiceCard.vue';
 import ServiceCarousel from '../components/ServiceCarousel.vue';
-import FeatureBox from '../components/FeatureBox.vue';
 import CTASection from '../components/CTASection.vue';
 import PartnersScroll from '../components/PartnersScroll.vue';
 import BlogSection from '../components/BlogSection.vue';
+import { getFeaturedServices } from '../data/services';
 
-// Placeholder services data - will be replaced with CMS data
-const services = [
-  {
-    title: 'Consultoria Técnica',
-    slug: 'consultoria-tecnica',
-    description: 'Assessoria especializada em projetos de engenharia',
-    shortDescription: 'Soluções técnicas personalizadas para otimizar seus projetos',
-    icon: '📋',
-  },
-  {
-    title: 'Projetos Estruturais',
-    slug: 'projetos-estruturais',
-    description: 'Desenvolvimento completo de projetos estruturais',
-    shortDescription: 'Projetos robustos e inovadores para suas construções',
-    icon: '🏗️',
-  },
-  {
-    title: 'Avaliações e Perícias',
-    slug: 'avaliacoes-pericias',
-    description: 'Avaliações detalhadas e relatórios de perícia',
-    shortDescription: 'Laudos técnicos precisos e confiáveis',
-    icon: '🔍',
-  },
-];
+// Get featured services for carousel
+const servicesData = getFeaturedServices();
+const services = servicesData.map(s => ({
+  title: s.title,
+  slug: s.slug,
+  description: s.description,
+  shortDescription: s.shortDescription,
+  icon: s.icon,
+  category: s.category,
+}));
 
 const features = [
   {
-    icon: '⚡',
+    icon: 'clock',
     title: 'Eficiência Garantida',
     description: 'Processos otimizados que garantem entrega no prazo com a qualidade esperada.',
+    stat: '99%',
+    statLabel: 'No prazo',
   },
   {
-    icon: '👥',
+    icon: 'users',
     title: 'Equipe Especializada',
     description: 'Profissionais experientes com expertise em diversos segmentos de engenharia.',
+    stat: '25+',
+    statLabel: 'Especialistas',
   },
   {
-    icon: '🎯',
+    icon: 'target',
     title: 'Solução Personalizada',
     description: 'Cada projeto é único. Desenvolvemos soluções adequadas à sua necessidade.',
+    stat: '100%',
+    statLabel: 'Customizado',
   },
   {
-    icon: '💡',
+    icon: 'lightbulb',
     title: 'Inovação Constante',
     description: 'Utilizamos as melhores práticas e tecnologias mais recentes do mercado.',
+    stat: '15+',
+    statLabel: 'Anos inovando',
   },
 ];
 ---
@@ -63,6 +56,7 @@ const features = [
     client:load
     title="Soluções em Engenharia para seu Projeto"
     subtitle="Consultoria, projetos e soluções técnicas especializadas"
+    backgroundImage="/images/hero/construction-workers-collaborating-blueprints-construction-site_23-2152006117.avif"
     primaryCtaLabel="Solicitar Orçamento"
     primaryCtaUrl="/contato"
     secondaryCtaLabel="Saiba Mais"
@@ -74,7 +68,7 @@ const features = [
     <div class="container-max">
       <!-- Section Header -->
       <div class="text-center mb-12">
-        <h2 class="text-4xl md:text-5xl font-serif font-bold text-dark mb-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-dark mb-4">
           Nossos Serviços
         </h2>
         <p class="text-lg text-dark/70 max-w-2xl mx-auto">
@@ -97,33 +91,119 @@ const features = [
     </div>
   </section>
 
-  <!-- Why Choose Us Section -->
-  <section class="section-padding bg-white">
-    <div class="container-max">
+  <!-- Nossos Diferenciais Section -->
+  <section class="py-20 md:py-28 bg-dark relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 opacity-[0.03]">
+      <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+    </div>
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+
+    <div class="container-max px-4 md:px-6 relative">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-serif font-bold text-dark mb-4">
-          Por Que Nos Escolher?
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
+          <span class="w-2 h-2 bg-primary rounded-full"></span>
+          <span class="text-primary text-sm font-medium">Por que nos escolher</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+          Nossos Diferenciais
         </h2>
-        <p class="text-lg text-dark/70 max-w-2xl mx-auto">
-          Temos o compromisso de entregar excelência em cada projeto que realizamos.
+        <p class="text-lg text-white/60 max-w-2xl mx-auto">
+          Compromisso com excelência, inovação e resultados que fazem a diferença em cada projeto.
         </p>
       </div>
 
       <!-- Features Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {
-          features.map((feature) => (
-            <div class="group">
-              <FeatureBox
-                client:load
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-              />
+          features.map((feature, index) => (
+            <div 
+              class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-primary/30 transition-all duration-300"
+            >
+              <!-- Icon -->
+              <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/30 transition-colors">
+                {feature.icon === 'clock' && (
+                  <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                {feature.icon === 'users' && (
+                  <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                )}
+                {feature.icon === 'target' && (
+                  <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                )}
+                {feature.icon === 'lightbulb' && (
+                  <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                )}
+              </div>
+
+              <!-- Content -->
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                {feature.title}
+              </h3>
+              <p class="text-white/60 text-sm leading-relaxed mb-5">
+                {feature.description}
+              </p>
+
+              <!-- Stat Badge -->
+              <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+                <span class="text-2xl font-bold text-primary">{feature.stat}</span>
+                <span class="text-white/50 text-sm">{feature.statLabel}</span>
+              </div>
+
+              <!-- Hover Glow Effect -->
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           ))
         }
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="mt-16 text-center">
+        <div class="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+          <div class="flex items-center gap-4">
+            <div class="flex -space-x-3">
+              <div class="w-10 h-10 rounded-full bg-primary/30 border-2 border-dark flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-green-500/30 border-2 border-dark flex items-center justify-center">
+                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-blue-500/30 border-2 border-dark flex items-center justify-center">
+                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="text-left">
+              <span class="text-white font-semibold block">+500 projetos entregues</span>
+              <span class="text-white/50 text-sm">com satisfação garantida</span>
+            </div>
+          </div>
+          <div class="h-px sm:h-12 w-full sm:w-px bg-white/10"></div>
+          <a 
+            href="/contato" 
+            class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-dark font-semibold rounded-lg hover:bg-primary/90 transition-all"
+          >
+            Fale com um especialista
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>

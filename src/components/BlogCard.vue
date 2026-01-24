@@ -1,7 +1,7 @@
 <template>
-  <div class="card overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow">
+  <div class="card overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow group">
     <!-- Image -->
-    <div class="relative overflow-hidden h-48 bg-light">
+    <a :href="`/blog/${post.slug}`" class="block relative overflow-hidden h-48 bg-light">
       <img
         v-if="post.image"
         :src="post.image"
@@ -10,22 +10,35 @@
       />
       <div v-else class="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
         <svg class="w-12 h-12 text-primary/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v.756a3.5 3.5 0 015.477 3.082A3.5 3.5 0 0115.513 15H20a2 2 0 012-2v-1a2 2 0 00-2-2h-.38a2 2 0 01-1.923-1.322l-.5-1.5a2 2 0 00-1.923-1.322H11a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1M19 20a2 2 0 002-2V8a2 2 0 00-2-2h-1M8 7h.01M12 7h.01M8 11h.01M12 11h4" />
         </svg>
       </div>
-    </div>
+      <!-- Category Badge -->
+      <div v-if="post.category" class="absolute top-3 left-3">
+        <span class="px-2 py-1 text-xs font-semibold bg-dark/80 text-white rounded">
+          {{ post.category }}
+        </span>
+      </div>
+    </a>
 
     <!-- Content -->
     <div class="p-6 flex-1 flex flex-col">
-      <!-- Date -->
-      <p class="text-xs text-primary font-semibold uppercase tracking-wide mb-2">
-        {{ formatDate(post.date) }}
-      </p>
+      <!-- Date & Read Time -->
+      <div class="flex items-center gap-3 mb-2">
+        <p class="text-xs text-primary font-semibold uppercase tracking-wide">
+          {{ formatDate(post.date) }}
+        </p>
+        <span v-if="post.readTime" class="text-xs text-dark/50">
+          • {{ post.readTime }} de leitura
+        </span>
+      </div>
 
       <!-- Title -->
-      <h3 class="text-lg font-bold text-dark mb-3 line-clamp-2">
-        {{ post.title }}
-      </h3>
+      <a :href="`/blog/${post.slug}`" class="block">
+        <h3 class="text-lg font-bold text-dark mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+          {{ post.title }}
+        </h3>
+      </a>
 
       <!-- Excerpt -->
       <p class="text-sm text-dark/70 mb-4 flex-1 line-clamp-3">
@@ -36,7 +49,7 @@
       <div class="flex items-center justify-between pt-4 border-t border-light">
         <span class="text-xs text-dark/60">{{ post.author }}</span>
         <a
-          href="#"
+          :href="`/blog/${post.slug}`"
           class="text-primary font-semibold text-sm hover:text-secondary transition-colors"
         >
           Ler Mais →
@@ -47,21 +60,14 @@
 </template>
 
 <script setup lang="ts">
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  date: Date;
-  image?: string;
-  slug?: string;
-}
+import type { BlogPost } from '../data/blog';
 
 defineProps<{
   post: BlogPost;
 }>();
 
-const formatDate = (date: Date) => {
+const formatDate = (dateStr: string) => {
+  const date = new Date(dateStr);
   return new Intl.DateTimeFormat('pt-BR', {
     year: 'numeric',
     month: 'long',

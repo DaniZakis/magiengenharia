@@ -3,7 +3,7 @@
     <div class="container-max px-4 md:px-6">
       <div class="text-center">
         <!-- Title -->
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
           {{ title }}
         </h2>
 

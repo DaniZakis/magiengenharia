@@ -13,9 +13,9 @@ export default {
         error: '#C85A54',        // Muted red
       },
       fontFamily: {
-        sans: ['var(--font-sans)'],
-        serif: ['var(--font-serif)'],
-        mono: ['var(--font-mono)'],
+        sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+        serif: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+        mono: ['Courier New', 'monospace'],
       },
       fontSize: {
         xs: 'var(--text-xs)',
