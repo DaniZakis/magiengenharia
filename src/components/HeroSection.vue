@@ -26,7 +26,7 @@
           <!-- Badge -->
           <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8 animate-fade-in">
             <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-            <span class="text-white/90 text-sm font-medium">Excelência em Engenharia desde 2024</span>
+            <span class="text-white/90 text-sm font-medium">Mais de 10 anos de excelência em Projetos e Laudos</span>
           </div>
 
           <!-- Main Title -->
@@ -40,8 +40,7 @@
 
           <!-- Subtitle -->
           <p class="text-lg md:text-xl text-white/80 mb-8 max-w-lg animate-fade-in-up animation-delay-100">
-            Soluções inovadoras em engenharia estrutural, consultoria técnica e avaliações. 
-            Transformamos desafios complexos em projetos de excelência.
+            Gestão de Projetos, adequação às normas e projetos industriais alinhados a realidade operacional
           </p>
 
           <!-- CTA Buttons -->
@@ -69,12 +68,12 @@
           <!-- Stats Row -->
           <div class="flex flex-wrap gap-8 md:gap-12 pt-8 border-t border-white/20 animate-fade-in-up animation-delay-300">
             <div class="stat-item">
-              <span class="text-3xl md:text-4xl font-bold text-white">15+</span>
+              <span class="text-3xl md:text-4xl font-bold text-white">10+</span>
               <span class="text-sm text-white/60 block mt-1">Anos de Experiência</span>
             </div>
             <div class="stat-item">
-              <span class="text-3xl md:text-4xl font-bold text-white">500+</span>
-              <span class="text-sm text-white/60 block mt-1">Projetos Entregues</span>
+              <span class="text-3xl md:text-4xl font-bold text-white">250+</span>
+              <span class="text-sm text-white/60 block mt-1">Projetos e Laudos Entregues</span>
             </div>
             <div class="stat-item">
               <span class="text-3xl md:text-4xl font-bold text-white">98%</span>
@@ -92,50 +91,28 @@
             <div class="col-span-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-100">
               <div class="flex items-center justify-between mb-4">
                 <span class="text-white/70 text-sm font-medium">Nossos Serviços</span>
-                <div class="flex items-center gap-1.5 px-2.5 py-1 bg-green-500/20 rounded-full">
-                  <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-                  <span class="text-green-400 text-xs font-medium">Ativos</span>
-                </div>
               </div>
               
               <div class="space-y-3">
-                <div class="flex items-center gap-3 p-2.5 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group">
-                  <div class="w-9 h-9 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <a
+                  v-for="(item, index) in displayedServices"
+                  :key="item.service.slug"
+                  :href="'/servicos/' + item.service.slug"
+                  class="flex items-center gap-3 p-2.5 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group"
+                >
+                  <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" :class="item.color.bg">
+                    <svg class="w-4 h-4" :class="item.color.text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="item.iconPath" />
                     </svg>
                   </div>
                   <div class="flex-1 min-w-0">
-                    <span class="text-white font-medium text-sm block">Consultoria Técnica</span>
-                    <span class="text-white/50 text-xs">Assessoria especializada</span>
+                    <span class="text-white font-medium text-sm block">{{ item.service.title }}</span>
+                    <span class="text-white/50 text-xs">{{ item.service.shortDescription || item.service.category || 'Serviço especializado' }}</span>
                   </div>
-                </div>
-
-                <div class="flex items-center gap-3 p-2.5 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group">
-                  <div class="w-9 h-9 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <span class="text-white font-medium text-sm block">Projetos Estruturais</span>
-                    <span class="text-white/50 text-xs">Engenharia de precisão</span>
-                  </div>
-                  <span class="px-2 py-0.5 bg-blue-500/20 text-blue-400 text-xs rounded-md flex-shrink-0">Popular</span>
-                </div>
-
-                <div class="flex items-center gap-3 p-2.5 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group">
-                  <div class="w-9 h-9 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                    </svg>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <span class="text-white font-medium text-sm block">Avaliações e Perícias</span>
-                    <span class="text-white/50 text-xs">Laudos técnicos</span>
-                  </div>
-                  <span class="px-2 py-0.5 bg-green-500/20 text-green-400 text-xs rounded-md flex-shrink-0">Certificado</span>
-                </div>
+                  <svg class="w-4 h-4 text-white/30 group-hover:text-white/60 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             </div>
 
@@ -149,21 +126,21 @@
                   </svg>
                 </div>
               </div>
-              <span class="text-3xl font-bold text-white block">500+</span>
+              <span class="text-3xl font-bold text-white block">250+</span>
               <span class="text-white/60 text-sm">Projetos Entregues</span>
             </div>
 
-            <!-- Team Card -->
+            <!-- Experience Card -->
             <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-300">
               <div class="flex items-center gap-3 mb-3">
                 <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
                   <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
               </div>
-              <span class="text-3xl font-bold text-white block">25+</span>
-              <span class="text-white/60 text-sm">Profissionais</span>
+              <span class="text-3xl font-bold text-white block">10+</span>
+              <span class="text-white/60 text-sm">Anos de Experiência</span>
             </div>
 
             <!-- Success Rate Card (spans 2 columns) -->
@@ -191,7 +168,18 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { ref, onMounted } from 'vue';
+
+interface Service {
+  title: string;
+  slug: string;
+  description?: string;
+  shortDescription?: string;
+  icon?: string;
+  category?: string;
+}
+
+const props = defineProps<{
   title?: string;
   subtitle?: string;
   backgroundImage?: string;
@@ -199,7 +187,50 @@ defineProps<{
   primaryCtaUrl?: string;
   secondaryCtaLabel?: string;
   secondaryCtaUrl?: string;
+  services?: Service[];
 }>();
+
+const colorSchemes = [
+  { bg: 'bg-primary/20', text: 'text-primary' },
+  { bg: 'bg-blue-500/20', text: 'text-blue-400' },
+  { bg: 'bg-purple-500/20', text: 'text-purple-400' },
+  { bg: 'bg-green-500/20', text: 'text-green-400' },
+  { bg: 'bg-rose-500/20', text: 'text-rose-400' },
+  { bg: 'bg-cyan-500/20', text: 'text-cyan-400' },
+];
+
+const iconPaths = [
+  'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+  'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+  'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4',
+  'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z',
+  'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+  'M13 10V3L4 14h7v7l9-11h-7z',
+];
+
+function shuffle<T>(array: T[]): T[] {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+const displayedServices = ref<{ service: Service; color: typeof colorSchemes[0]; iconPath: string }[]>([]);
+
+onMounted(() => {
+  if (props.services && props.services.length > 0) {
+    const shuffled = shuffle(props.services).slice(0, 3);
+    const shuffledColors = shuffle(colorSchemes);
+    const shuffledIcons = shuffle(iconPaths);
+    displayedServices.value = shuffled.map((service, i) => ({
+      service,
+      color: shuffledColors[i % shuffledColors.length],
+      iconPath: shuffledIcons[i % shuffledIcons.length],
+    }));
+  }
+});
 </script>
 
 <style scoped>

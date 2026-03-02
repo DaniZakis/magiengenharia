@@ -24,7 +24,7 @@
         <!-- Stats -->
         <div class="flex items-center gap-8">
           <div class="text-center">
-            <span class="text-4xl font-bold text-primary block">16+</span>
+            <span class="text-4xl font-bold text-primary block">14+</span>
             <span class="text-dark/60 text-sm">Parceiros Ativos</span>
           </div>
           <div class="w-px h-12 bg-dark/10"></div>
@@ -142,8 +142,8 @@
             </svg>
           </div>
           <div>
-            <span class="font-semibold text-dark block">Qualidade Certificada</span>
-            <span class="text-dark/50 text-sm">Normas ISO 9001</span>
+            <span class="font-semibold text-dark block">Certificado CREA</span>
+            <span class="text-dark/50 text-sm">Empresa credenciada</span>
           </div>
         </div>
         
@@ -193,27 +193,25 @@ const isPaused = ref(false);
 
 // Real partner logos from /public/images/partners/
 const partners: Partner[] = [
-  { id: '1', name: 'Parceiro 1', logo: '/images/partners/00bc070cca554892fc9f7c2949316e4e.png', website: '#' },
-  { id: '2', name: 'Parceiro 2', logo: '/images/partners/0262833fc3b143a74bd472d19bfd56de.png', website: '#' },
-  { id: '3', name: 'Parceiro 3', logo: '/images/partners/0763e71ab7ed268e08ccffe0c6fc9eaa.png', website: '#' },
-  { id: '4', name: 'Parceiro 4', logo: '/images/partners/0eb2cee273692054dc6078c016edba92.png', website: '#' },
-  { id: '5', name: 'Parceiro 5', logo: '/images/partners/14fce3bebf9ff20ba63a4a268010c257.png', website: '#' },
-  { id: '6', name: 'Parceiro 6', logo: '/images/partners/23003b6b1d7380ebeedbf2f3ae860be7.png', website: '#' },
-  { id: '7', name: 'Parceiro 7', logo: '/images/partners/392055571b40f21df103394b7e1d7f0e.png', website: '#' },
-  { id: '8', name: 'Parceiro 8', logo: '/images/partners/4265b083f94b1b188a63792b6bb25e04.png', website: '#' },
-  { id: '9', name: 'Parceiro 9', logo: '/images/partners/4ba0e35e876b73c89d8a0f937f811f07.png', website: '#' },
-  { id: '10', name: 'Parceiro 10', logo: '/images/partners/656fd3ff0769374fc0b3390cef26e4b4.png', website: '#' },
-  { id: '11', name: 'Parceiro 11', logo: '/images/partners/65e63b0b7a3b6a1cabb50cd700e0f94e.png', website: '#' },
-  { id: '12', name: 'Parceiro 12', logo: '/images/partners/6a9e34ef70724af68dc3d89907df0b1f.png', website: '#' },
-  { id: '13', name: 'Parceiro 13', logo: '/images/partners/b6b63874349e9ee6b423bd66ed86573d.png', website: '#' },
-  { id: '14', name: 'Parceiro 14', logo: '/images/partners/c05b3130fbb9c8a071e09ae76b7a637a.png', website: '#' },
-  { id: '15', name: 'Parceiro 15', logo: '/images/partners/e92581d183c7e01703f7a1a3879f1367.png', website: '#' },
-  { id: '16', name: 'Parceiro 16', logo: '/images/partners/fe28ea465f5b206530e2de35c8f0b0c1.png', website: '#' },
+  { id: '1', name: 'BASF', logo: '/images/partners/BASF.png' },
+  { id: '2', name: 'Berneck', logo: '/images/partners/Berneck.JPG' },
+  { id: '3', name: 'DSM Firmenich', logo: '/images/partners/dsm firmenich.jpg' },
+  { id: '4', name: 'FINI', logo: '/images/partners/FINI.jpg' },
+  { id: '5', name: 'Guararapes', logo: '/images/partners/guararapes.png' },
+  { id: '6', name: 'Irani', logo: '/images/partners/irani.JPG' },
+  { id: '7', name: 'JBS', logo: '/images/partners/JBS.png' },
+  { id: '8', name: 'Karsten', logo: '/images/partners/karsten.JPG' },
+  { id: '9', name: 'Klabin', logo: '/images/partners/klabin.JPG' },
+  { id: '10', name: 'Mostaza', logo: '/images/partners/MOSTAZA.webp' },
+  { id: '11', name: 'Santa Helena', logo: '/images/partners/SANTA HELENA.jpg' },
+  { id: '12', name: 'Seara', logo: '/images/partners/searta.JPG' },
+  { id: '13', name: 'Thomazi', logo: '/images/partners/THOMAZI.png' },
+  { id: '14', name: 'Trombini', logo: '/images/partners/trombini.JPG' },
 ];
 
 // Split partners into two rows
-const partnersRow1 = computed(() => partners.slice(0, 8));
-const partnersRow2 = computed(() => partners.slice(8, 16));
+const partnersRow1 = computed(() => partners.slice(0, 7));
+const partnersRow2 = computed(() => partners.slice(7, 14));
 </script>
 
 <style scoped>

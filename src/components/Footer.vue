@@ -6,7 +6,7 @@
         <div>
           <h3 class="text-xl font-bold mb-4 text-white">Maggi Engenharia</h3>
           <p class="text-sm text-light/80">
-            Soluções completas em engenharia, consultoria e projetos especializados para transformar sua ideia em realidade.
+            Soluções completas em engenharia, gestão de projetos e laudos técnicos para maior segurança e eficiência operacional.
           </p>
         </div>
 

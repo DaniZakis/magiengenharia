@@ -8,7 +8,7 @@
             Notícias e Artigos
           </h2>
           <p class="text-lg text-dark/70 max-w-2xl">
-            Fique atualizado com as últimas novidades e insights do mercado de engenharia
+            Fique por dentro das últimas novidades da área de engenharia, gestão de projeto e normas industriais.
           </p>
         </div>
         <a href="/blog" class="btn-secondary mt-6 md:mt-0 inline-block whitespace-nowrap">
