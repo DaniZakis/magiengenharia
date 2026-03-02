@@ -1,19 +1,18 @@
 backend:
   name: github
-  repo: your-username/engineering-site
+  repo: DaniZakis/magiengenharia
   branch: main
-  auth_endpoint: api/auth
-  # Optional: Use GitHub as authentication provider
-  # You'll need to setup OAuth app in GitHub settings
+  base_url: https://maggieng.com.br
+  auth_endpoint: /.netlify/functions/auth
 
 # Media storage configuration
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
 # Site configuration
-site_url: "https://yourdomain.com"
-display_url: "https://yourdomain.com"
-logo_url: "https://yourdomain.com/logo.png"
+site_url: "https://maggieng.com.br"
+display_url: "https://maggieng.com.br"
+logo_url: "https://maggieng.com.br/logo.png"
 
 # Editor UI customization
 editor:

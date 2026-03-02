@@ -74,7 +74,7 @@ exports.handler = async (event, context) => {
 
   // No code provided - redirect to GitHub for authorization
   const scope = params.scope || 'repo,user';
-  const redirectUri = `https://maggi-engenharia.netlify.app/.netlify/functions/auth`;
+  const redirectUri = `https://maggieng.com.br/.netlify/functions/auth`;
   
   const authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scope)}`;
 

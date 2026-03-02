@@ -7,5 +7,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [vue(), tailwind()],
   output: 'static',
-  site: 'https://yourdomain.com',
+  site: 'https://maggieng.com.br',
 });

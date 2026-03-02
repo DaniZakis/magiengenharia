@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: Regboy744/maggi-engenharia
+  repo: DaniZakis/magiengenharia
   branch: main
-  base_url: https://maggi-engenharia.netlify.app
+  base_url: https://maggieng.com.br
   auth_endpoint: /.netlify/functions/auth
 
 # Media storage configuration
@@ -10,9 +10,9 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 # Site configuration
-site_url: "https://maggi-engenharia.netlify.app"
-display_url: "https://maggi-engenharia.netlify.app"
-logo_url: "https://maggi-engenharia.netlify.app/logo.png"
+site_url: "https://maggieng.com.br"
+display_url: "https://maggieng.com.br"
+logo_url: "https://maggieng.com.br/logo.png"
 
 # Editor UI customization
 editor:
