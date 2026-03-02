@@ -8,20 +8,12 @@
     <div class="container-max px-4 md:px-6">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
-        <a href="/" class="flex items-center space-x-2">
+        <a href="/" class="flex items-center">
           <img 
             src="/images/logo/Sem fundo.png" 
             alt="Maggi Engenharia" 
             class="h-10 w-auto"
           />
-          <span 
-            :class="[
-              'hidden sm:inline font-bold text-lg transition-colors duration-300',
-              isScrolled ? 'text-dark' : 'text-white'
-            ]"
-          >
-            Maggi
-          </span>
         </a>
 
         <!-- Desktop Navigation -->
