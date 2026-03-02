@@ -68,7 +68,7 @@
             </svg>
           </a>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=61588011692484"
             target="_blank"
             rel="noopener noreferrer"
             class="w-10 h-10 rounded-full bg-primary/20 hover:bg-primary flex items-center justify-center transition-colors"
@@ -79,7 +79,7 @@
             </svg>
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/maggi.eng/"
             target="_blank"
             rel="noopener noreferrer"
             class="w-10 h-10 rounded-full bg-primary/20 hover:bg-primary flex items-center justify-center transition-colors"
@@ -90,7 +90,7 @@
             </svg>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/maggi-engenharia/?viewAsMember=true"
             target="_blank"
             rel="noopener noreferrer"
             class="w-10 h-10 rounded-full bg-primary/20 hover:bg-primary flex items-center justify-center transition-colors"
