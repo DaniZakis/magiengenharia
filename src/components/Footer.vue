@@ -38,13 +38,13 @@
              </p>
              <p>
                <strong>Email:</strong>
-               <a href="mailto:contato@maggiengenharia.com" class="hover:text-accent transition-colors">
-                 contato@maggiengenharia.com
-               </a>
+              <a href="mailto:contato@maggieng.com.br" class="hover:text-accent transition-colors">
+                  contato@maggieng.com.br
+                </a>
              </p>
             <p>
               <strong>Endereço:</strong>
-              <span>São Paulo, SP</span>
+              <span>Rua Dante Carraro, 110, 1º andar – Pinheiros – São Paulo/SP</span>
             </p>
           </div>
         </div>
