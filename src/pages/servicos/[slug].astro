@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTASection from '../../components/CTASection.vue';
-import { services, getServicesArray } from '../../data/services';
-import type { Service } from '../../data/services';
+import { getCollection } from 'astro:content';
 
 // Muted, harmonious category styling - earthy tones that complement gold/brown brand
 const categoryStyles: Record<string, { gradient: string; iconColor: string; lightBg: string; borderColor: string }> = {
@@ -95,21 +94,43 @@ const mediumIcons: Record<string, string> = {
   'academic-cap': `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
 };
 
-export function getStaticPaths() {
-  return Object.keys(services).map((slug) => ({
-    params: { slug },
+export async function getStaticPaths() {
+  const serviceEntries = await getCollection('services');
+  return serviceEntries.map((entry) => ({
+    params: { slug: entry.data.slug || entry.slug },
+    props: { entry },
   }));
 }
 
-const { slug } = Astro.params;
-const service = services[slug as keyof typeof services];
+const { entry } = Astro.props;
+const { Content } = await entry.render();
 
-if (!service) {
-  return Astro.redirect('/servicos');
-}
+const service = {
+  title: entry.data.title,
+  slug: entry.data.slug || entry.slug,
+  icon: entry.data.icon || 'document-text',
+  category: entry.data.category || 'Geral',
+  description: entry.data.description,
+  shortDescription: entry.data.shortDescription,
+  benefits: entry.data.benefits || [],
+  relatedServices: entry.data.relatedServices || [],
+};
 
-const relatedServices = service.related
-  .map(s => services[s as keyof typeof services])
+// Fetch all services for related services lookup
+const allServiceEntries = await getCollection('services');
+
+const relatedServices = service.relatedServices
+  .map((relSlug: string) => {
+    const found = allServiceEntries.find(e => (e.data.slug || e.slug) === relSlug);
+    if (!found) return null;
+    return {
+      title: found.data.title,
+      slug: found.data.slug || found.slug,
+      icon: found.data.icon || 'document-text',
+      category: found.data.category || 'Geral',
+      shortDescription: found.data.shortDescription,
+    };
+  })
   .filter(Boolean);
 
 const style = getStyle(service.category);
@@ -211,7 +232,7 @@ const getMediumIcon = (iconName: string) => mediumIcons[iconName] || mediumIcons
             
             <!-- Content -->
             <div class="prose prose-lg max-w-none text-dark">
-              <div set:html={service.content} />
+              <Content />
             </div>
           </div>
         </div>
@@ -280,7 +301,7 @@ const getMediumIcon = (iconName: string) => mediumIcons[iconName] || mediumIcons
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {
-            relatedServices.map((relatedService: Service) => {
+            relatedServices.map((relatedService: any) => {
               const relatedStyle = getStyle(relatedService.category);
               return (
                 <a href={`/servicos/${relatedService.slug}`} class="group">

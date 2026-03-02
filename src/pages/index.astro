@@ -5,17 +5,20 @@ import ServiceCarousel from '../components/ServiceCarousel.vue';
 import CTASection from '../components/CTASection.vue';
 import PartnersScroll from '../components/PartnersScroll.vue';
 import BlogSection from '../components/BlogSection.vue';
-import { getFeaturedServices } from '../data/services';
+import { getCollection } from 'astro:content';
 
-// Get featured services for carousel
-const servicesData = getFeaturedServices();
+// Get featured services for carousel (first 6 by order)
+const serviceEntries = await getCollection('services');
+const servicesData = serviceEntries
+  .sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
+  .slice(0, 6);
 const services = servicesData.map(s => ({
-  title: s.title,
-  slug: s.slug,
-  description: s.description,
-  shortDescription: s.shortDescription,
-  icon: s.icon,
-  category: s.category,
+  title: s.data.title,
+  slug: s.data.slug || s.slug,
+  description: s.data.description,
+  shortDescription: s.data.shortDescription,
+  icon: s.data.icon || 'document-text',
+  category: s.data.category || 'Geral',
 }));
 
 const features = [

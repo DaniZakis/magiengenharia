@@ -25,7 +25,7 @@ collections:
   # ============================================
   - name: "services"
     label: "📋 Serviços"
-    folder: "content/services"
+    folder: "src/content/services"
     create: true
     slug: "{{slug}}"
     identifier_field: "title"
@@ -77,8 +77,43 @@ collections:
 
       - label: "Ícone (Opcional)"
         name: "icon"
-        widget: "string"
-        hint: "Nome do ícone ou emoji ex: 🔧 ou wrench"
+        widget: "select"
+        hint: "Ícone que aparece no card do serviço"
+        options:
+          - { label: "Escudo (Segurança)", value: "shield-check" }
+          - { label: "Prédio (Estrutura)", value: "building" }
+          - { label: "Estrela (Destaque)", value: "award" }
+          - { label: "Lista (Checklist)", value: "clipboard-list" }
+          - { label: "Documento", value: "document-text" }
+          - { label: "Link (Conexão)", value: "link" }
+          - { label: "Pessoas", value: "users" }
+          - { label: "Engrenagem", value: "cog" }
+          - { label: "Busca", value: "search" }
+          - { label: "Pasta", value: "folder" }
+          - { label: "Fogo (Incêndio)", value: "fire" }
+          - { label: "Chapéu (Capacitação)", value: "academic-cap" }
+        default: "document-text"
+        required: false
+
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Segurança do Trabalho", value: "Segurança do Trabalho" }
+          - { label: "Documentação Técnica", value: "Documentação Técnica" }
+          - { label: "Engenharia Estrutural", value: "Engenharia Estrutural" }
+          - { label: "Engenharia Mecânica", value: "Engenharia Mecânica" }
+          - { label: "Capacitação", value: "Capacitação" }
+          - { label: "Segurança", value: "Segurança" }
+          - { label: "Recursos Humanos", value: "Recursos Humanos" }
+          - { label: "Institucional", value: "Institucional" }
+        default: "Geral"
+        required: false
+
+      - label: "Benefícios/Vantagens"
+        name: "benefits"
+        widget: "list"
+        hint: "Lista de benefícios do serviço (um por linha)"
         required: false
 
       - label: "Serviços Relacionados"

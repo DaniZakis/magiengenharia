@@ -1,10 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CTASection from '../components/CTASection.vue';
-import { getServicesArray, getCategories } from '../data/services';
+import { getCollection } from 'astro:content';
 
-const allServices = getServicesArray();
-const categories = getCategories();
+const serviceEntries = await getCollection('services');
+const allServices = serviceEntries
+  .map(entry => ({
+    title: entry.data.title,
+    slug: entry.data.slug || entry.slug,
+    icon: entry.data.icon || 'document-text',
+    category: entry.data.category || 'Geral',
+    shortDescription: entry.data.shortDescription,
+    description: entry.data.description,
+  }))
+  .sort((a, b) => {
+    const orderA = serviceEntries.find(e => (e.data.slug || e.slug) === a.slug)?.data.order || 0;
+    const orderB = serviceEntries.find(e => (e.data.slug || e.slug) === b.slug)?.data.order || 0;
+    return orderA - orderB;
+  });
+
+const categories = [...new Set(allServices.map(s => s.category))];
 
 // Icon components map
 const icons: Record<string, string> = {
