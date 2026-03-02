@@ -12,7 +12,7 @@
           <img 
             src="/images/logo/Sem fundo.png" 
             alt="Maggi Engenharia" 
-            class="h-20 w-auto"
+            class="h-[104px] w-auto"
           />
         </a>
 
