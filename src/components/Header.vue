@@ -9,9 +9,11 @@
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
         <a href="/" class="flex items-center space-x-2">
-          <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-xl">M</span>
-          </div>
+          <img 
+            src="/images/logo/Sem fundo.png" 
+            alt="Maggi Engenharia" 
+            class="h-10 w-auto"
+          />
           <span 
             :class="[
               'hidden sm:inline font-bold text-lg transition-colors duration-300',
