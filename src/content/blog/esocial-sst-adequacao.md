@@ -1,11 +1,13 @@
 ---
 title: "eSocial SST: Como se adequar às novas exigências"
 slug: esocial-sst-adequacao
-excerpt: "Saiba como transmitir corretamente os eventos de SST ao eSocial e evite penalidades para sua empresa."
-author: "Equipe Técnica"
+author: Equipe Técnica
 date: 2024-01-10
-category: "Documentação"
-readTime: "6 min"
+category: Documentação
+image: /uploads/gemini_generated_image_naxnyjnaxnyjnaxn.png
+excerpt: Saiba como transmitir corretamente os eventos de SST ao eSocial e evite
+  penalidades para sua empresa.
+readTime: 6 min
 featured: true
 ---
 
