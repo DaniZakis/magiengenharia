@@ -6,7 +6,7 @@ shortDescription: Garantimos a segurança das suas máquinas e equipamentos
 description: Adequação de máquinas e equipamentos conforme a Norma Regulamentadora NR-12
 image: /uploads/gemini_generated_image_naxnyjnaxnyjnaxn.png
 order: 1
-icon: shield-check
+icon: building
 category: Segurança do Trabalho
 benefits:
   - Conformidade legal garantida
@@ -23,7 +23,7 @@ relatedServices:
 
 A Norma Regulamentadora NR-12 estabelece requisitos mínimos para a prevenção de acidentes e doenças do trabalho nas fases de projeto e utilização de máquinas e equipamentos. Nossa equipe especializada garante que suas máquinas estejam em total conformidade.
 
-## Serviços de Adequaçãooo
+## Serviços de Adequação
 
 * Inventário de máquinas e equipamentos
 * Análise de riscos (APR/HRN)
