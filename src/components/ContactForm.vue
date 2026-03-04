@@ -187,6 +187,9 @@ const isValidEmail = (email: string): boolean => {
   return emailRegex.test(email);
 };
 
+const SUPABASE_URL = (import.meta.env.PUBLIC_SUPABASE_URL?.trim() || 'https://uavvklkmzudsqviefzyd.supabase.co').replace(/\/$/, '');
+const EDGE_FN_URL = `${SUPABASE_URL}/functions/v1/contact-form`;
+
 const submitForm = async () => {
   successMessage.value = '';
   errorMessage.value = '';
@@ -199,13 +202,31 @@ const submitForm = async () => {
   isSubmitting.value = true;
 
   try {
-    // For Phase 1, we'll just simulate submission
-    // In Phase 2, this will be connected to a backend/email service
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const response = await fetch(EDGE_FN_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.value.name,
+        email: formData.value.email,
+        phone: formData.value.phone || undefined,
+        subject: formData.value.subject,
+        message: formData.value.message,
+      }),
+    });
 
-    // Simulate successful submission
-    successMessage.value = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
-    
+    const data = await response.json();
+
+    if (!response.ok) {
+      if (response.status === 429) {
+        errorMessage.value = 'Muitas tentativas. Por favor, aguarde alguns minutos e tente novamente.';
+      } else {
+        errorMessage.value = data.error || 'Erro ao enviar mensagem. Por favor, tente novamente.';
+      }
+      return;
+    }
+
+    successMessage.value = data.message || 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+
     // Reset form
     formData.value = {
       name: '',
