@@ -19,7 +19,7 @@
       <!-- Blog Posts Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <BlogCard
-          v-for="post in recentPosts"
+          v-for="post in posts"
           :key="post.slug"
           :post="post"
         />
@@ -37,8 +37,20 @@
 
 <script setup lang="ts">
 import BlogCard from './BlogCard.vue';
-import { getRecentPosts, type BlogPost } from '../data/blog';
 
-// Get the 3 most recent posts from the actual blog data
-const recentPosts: BlogPost[] = getRecentPosts(3);
+export interface BlogPost {
+  title: string;
+  slug: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  category: string;
+  image?: string;
+  readTime?: string;
+  featured?: boolean;
+}
+
+const props = defineProps<{
+  posts: BlogPost[];
+}>();
 </script>

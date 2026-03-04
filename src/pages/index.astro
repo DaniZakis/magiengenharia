@@ -7,6 +7,23 @@ import PartnersScroll from '../components/PartnersScroll.vue';
 import BlogSection from '../components/BlogSection.vue';
 import { getCollection } from 'astro:content';
 
+// Get blog posts from content collection for homepage section
+const blogEntries = await getCollection('blog');
+const recentBlogPosts = blogEntries
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3)
+  .map(post => ({
+    title: post.data.title,
+    slug: post.data.slug || post.slug,
+    excerpt: post.data.excerpt || '',
+    author: post.data.author,
+    date: new Date(post.data.date).toISOString(),
+    category: post.data.category || 'Geral',
+    image: post.data.image || '',
+    readTime: post.data.readTime || '5 min',
+    featured: post.data.featured || false,
+  }));
+
 // Get featured services for carousel (first 6 by order)
 const serviceEntries = await getCollection('services');
 const servicesData = serviceEntries
@@ -216,7 +233,7 @@ const features = [
   <PartnersScroll client:load />
 
   <!-- Blog Posts Section -->
-  <BlogSection client:load />
+  <BlogSection client:load posts={recentBlogPosts} />
 
   <!-- CTA Section -->
   <CTASection

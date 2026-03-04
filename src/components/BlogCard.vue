@@ -60,7 +60,17 @@
 </template>
 
 <script setup lang="ts">
-import type { BlogPost } from '../data/blog';
+interface BlogPost {
+  title: string;
+  slug: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  category: string;
+  image?: string;
+  readTime?: string;
+  featured?: boolean;
+}
 
 defineProps<{
   post: BlogPost;
