@@ -1,11 +1,13 @@
 ---
 title: "Trabalho em Altura: Requisitos da NR-35"
 slug: trabalho-altura-nr35
-excerpt: "Conheça as exigências da NR-35 para trabalho em altura e como implementar um sistema de proteção eficiente."
-author: "Eng. Danilo Maggi"
+author: Eng. Danilo Maggi
 date: 2024-01-05
-category: "Segurança do Trabalho"
-readTime: "7 min"
+category: Segurança do Trabalho
+image: https://corsul.com.br/wp-content/uploads/CINTO-ANSELL-CORSUL.jpg
+excerpt: Conheça as exigências da NR-35 para trabalho em altura e como
+  implementar um sistema de proteção eficiente.
+readTime: 7 min
 featured: false
 ---
 
