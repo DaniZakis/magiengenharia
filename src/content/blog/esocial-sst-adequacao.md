@@ -4,7 +4,7 @@ slug: esocial-sst-adequacao
 author: Equipe Técnica
 date: 2024-01-10
 category: Documentação
-image: /uploads/gemini_generated_image_naxnyjnaxnyjnaxn.png
+image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMSUHkQ8MQBmJn__hBAC2JKPJMoFXxtqeP3g&s
 excerpt: Saiba como transmitir corretamente os eventos de SST ao eSocial e evite
   penalidades para sua empresa.
 readTime: 6 min
