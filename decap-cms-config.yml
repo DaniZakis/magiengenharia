@@ -61,7 +61,7 @@ collections:
         name: "image"
         widget: "image"
         choose_url: false
-        required: true
+        required: false
 
       - label: "Conteúdo Detalhado"
         name: "body"
@@ -126,162 +126,167 @@ collections:
         required: false
 
   # ============================================
-  # PROJECTS / PROJETOS
+  # HIDDEN COLLECTIONS - To be re-enabled in the future
+  # Uncomment each section below when ready to use
   # ============================================
-  - name: "projects"
-    label: "📸 Projetos"
-    folder: "content/projects"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    identifier_field: "title"
-    summary: "{{title}} ({{client}})"
-    preview_path: "/projetos/{{slug}}"
-    fields:
-      - label: "Título do Projeto"
-        name: "title"
-        widget: "string"
-        required: true
 
-      - label: "Slug (URL)"
-        name: "slug"
-        widget: "string"
-        required: false
+  # # ============================================
+  # # PROJECTS / PROJETOS
+  # # ============================================
+  # - name: "projects"
+  #   label: "Projetos"
+  #   folder: "content/projects"
+  #   create: true
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   identifier_field: "title"
+  #   summary: "{{title}} ({{client}})"
+  #   preview_path: "/projetos/{{slug}}"
+  #   fields:
+  #     - label: "Título do Projeto"
+  #       name: "title"
+  #       widget: "string"
+  #       required: true
+  #
+  #     - label: "Slug (URL)"
+  #       name: "slug"
+  #       widget: "string"
+  #       required: false
+  #
+  #     - label: "Descrição Curta"
+  #       name: "description"
+  #       widget: "text"
+  #       hint: "Breve resumo do projeto"
+  #       required: true
+  #
+  #     - label: "Imagem Destaque"
+  #       name: "image"
+  #       widget: "image"
+  #       required: true
+  #
+  #     - label: "Galeria de Imagens"
+  #       name: "gallery"
+  #       widget: "list"
+  #       field:
+  #         label: "Imagem"
+  #         name: "image"
+  #         widget: "image"
+  #       required: false
+  #
+  #     - label: "Cliente"
+  #       name: "client"
+  #       widget: "string"
+  #       required: true
+  #
+  #     - label: "Localização"
+  #       name: "location"
+  #       widget: "string"
+  #       hint: "ex: São Paulo - SP"
+  #       required: false
+  #
+  #     - label: "Data do Projeto"
+  #       name: "date"
+  #       widget: "datetime"
+  #       format: "YYYY-MM-DD"
+  #       required: true
+  #
+  #     - label: "Serviços Utilizados"
+  #       name: "services"
+  #       widget: "relation"
+  #       collection: "services"
+  #       search_fields: ["title"]
+  #       value_field: "slug"
+  #       display_fields: ["title"]
+  #       multiple: true
+  #       required: false
+  #
+  #     - label: "Desafio"
+  #       name: "challenge"
+  #       widget: "markdown"
+  #       hint: "Qual era o desafio/problema a resolver"
+  #       required: false
+  #
+  #     - label: "Solução"
+  #       name: "solution"
+  #       widget: "markdown"
+  #       hint: "Como foi resolvido"
+  #       required: false
+  #
+  #     - label: "Resultados"
+  #       name: "results"
+  #       widget: "markdown"
+  #       hint: "Resultados alcançados"
+  #       required: false
+  #
+  #     - label: "Conteúdo Adicional"
+  #       name: "body"
+  #       widget: "markdown"
+  #       required: false
+  #
+  #     - label: "Depoimento do Cliente (Opcional)"
+  #       name: "testimonial"
+  #       widget: "object"
+  #       collapsed: true
+  #       required: false
+  #       fields:
+  #         - { label: "Nome", name: "clientName", widget: "string" }
+  #         - { label: "Cargo", name: "position", widget: "string" }
+  #         - { label: "Depoimento", name: "text", widget: "text" }
 
-      - label: "Descrição Curta"
-        name: "description"
-        widget: "text"
-        hint: "Breve resumo do projeto"
-        required: true
-
-      - label: "Imagem Destaque"
-        name: "image"
-        widget: "image"
-        required: true
-
-      - label: "Galeria de Imagens"
-        name: "gallery"
-        widget: "list"
-        field:
-          label: "Imagem"
-          name: "image"
-          widget: "image"
-        required: false
-
-      - label: "Cliente"
-        name: "client"
-        widget: "string"
-        required: true
-
-      - label: "Localização"
-        name: "location"
-        widget: "string"
-        hint: "ex: São Paulo - SP"
-        required: false
-
-      - label: "Data do Projeto"
-        name: "date"
-        widget: "datetime"
-        format: "YYYY-MM-DD"
-        required: true
-
-      - label: "Serviços Utilizados"
-        name: "services"
-        widget: "relation"
-        collection: "services"
-        search_fields: ["title"]
-        value_field: "slug"
-        display_fields: ["title"]
-        multiple: true
-        required: false
-
-      - label: "Desafio"
-        name: "challenge"
-        widget: "markdown"
-        hint: "Qual era o desafio/problema a resolver"
-        required: false
-
-      - label: "Solução"
-        name: "solution"
-        widget: "markdown"
-        hint: "Como foi resolvido"
-        required: false
-
-      - label: "Resultados"
-        name: "results"
-        widget: "markdown"
-        hint: "Resultados alcançados"
-        required: false
-
-      - label: "Conteúdo Adicional"
-        name: "body"
-        widget: "markdown"
-        required: false
-
-      - label: "Depoimento do Cliente (Opcional)"
-        name: "testimonial"
-        widget: "object"
-        collapsed: true
-        required: false
-        fields:
-          - { label: "Nome", name: "clientName", widget: "string" }
-          - { label: "Cargo", name: "position", widget: "string" }
-          - { label: "Depoimento", name: "text", widget: "text" }
-
-  # ============================================
-  # TESTIMONIALS / DEPOIMENTOS
-  # ============================================
-  - name: "testimonials"
-    label: "⭐ Depoimentos"
-    folder: "content/testimonials"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: "clientName"
-    summary: "{{clientName}} - {{company}}"
-    fields:
-      - label: "Nome do Cliente"
-        name: "clientName"
-        widget: "string"
-        required: true
-
-      - label: "Empresa"
-        name: "company"
-        widget: "string"
-        required: true
-
-      - label: "Cargo/Função"
-        name: "position"
-        widget: "string"
-        hint: "ex: Diretor de Obras"
-        required: false
-
-      - label: "Foto do Cliente"
-        name: "image"
-        widget: "image"
-        required: false
-
-      - label: "Depoimento"
-        name: "testimonial"
-        widget: "text"
-        hint: "O que o cliente diz sobre seus serviços"
-        required: true
-
-      - label: "Avaliação (Estrelas)"
-        name: "rating"
-        widget: "select"
-        options:
-          - { label: "⭐ 1 Estrela", value: 1 }
-          - { label: "⭐⭐ 2 Estrelas", value: 2 }
-          - { label: "⭐⭐⭐ 3 Estrelas", value: 3 }
-          - { label: "⭐⭐⭐⭐ 4 Estrelas", value: 4 }
-          - { label: "⭐⭐⭐⭐⭐ 5 Estrelas", value: 5 }
-        default: 5
-        required: true
-
-      - label: "Data do Depoimento"
-        name: "date"
-        widget: "datetime"
-        format: "YYYY-MM-DD"
-        required: true
+  # # ============================================
+  # # TESTIMONIALS / DEPOIMENTOS
+  # # ============================================
+  # - name: "testimonials"
+  #   label: "Depoimentos"
+  #   folder: "content/testimonials"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   identifier_field: "clientName"
+  #   summary: "{{clientName}} - {{company}}"
+  #   fields:
+  #     - label: "Nome do Cliente"
+  #       name: "clientName"
+  #       widget: "string"
+  #       required: true
+  #
+  #     - label: "Empresa"
+  #       name: "company"
+  #       widget: "string"
+  #       required: true
+  #
+  #     - label: "Cargo/Função"
+  #       name: "position"
+  #       widget: "string"
+  #       hint: "ex: Diretor de Obras"
+  #       required: false
+  #
+  #     - label: "Foto do Cliente"
+  #       name: "image"
+  #       widget: "image"
+  #       required: false
+  #
+  #     - label: "Depoimento"
+  #       name: "testimonial"
+  #       widget: "text"
+  #       hint: "O que o cliente diz sobre seus serviços"
+  #       required: true
+  #
+  #     - label: "Avaliação (Estrelas)"
+  #       name: "rating"
+  #       widget: "select"
+  #       options:
+  #         - { label: "1 Estrela", value: 1 }
+  #         - { label: "2 Estrelas", value: 2 }
+  #         - { label: "3 Estrelas", value: 3 }
+  #         - { label: "4 Estrelas", value: 4 }
+  #         - { label: "5 Estrelas", value: 5 }
+  #       default: 5
+  #       required: true
+  #
+  #     - label: "Data do Depoimento"
+  #       name: "date"
+  #       widget: "datetime"
+  #       format: "YYYY-MM-DD"
+  #       required: true
 
   # ============================================
   # BLOG / NOTÍCIAS
@@ -386,188 +391,188 @@ collections:
         hint: "ex: engenharia, consultoria, projetos"
         required: false
 
-  # ============================================
-  # TEAM / EQUIPE (opcional)
-  # ============================================
-  - name: "team"
-    label: "👥 Equipe"
-    folder: "content/team"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: "name"
-    summary: "{{name}} - {{position}}"
-    fields:
-      - label: "Nome"
-        name: "name"
-        widget: "string"
-        required: true
+  # # ============================================
+  # # TEAM / EQUIPE (opcional)
+  # # ============================================
+  # - name: "team"
+  #   label: "Equipe"
+  #   folder: "content/team"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   identifier_field: "name"
+  #   summary: "{{name}} - {{position}}"
+  #   fields:
+  #     - label: "Nome"
+  #       name: "name"
+  #       widget: "string"
+  #       required: true
+  #
+  #     - label: "Cargo/Função"
+  #       name: "position"
+  #       widget: "string"
+  #       required: true
+  #
+  #     - label: "Bio/Descrição"
+  #       name: "bio"
+  #       widget: "text"
+  #       hint: "Breve biografia"
+  #       required: false
+  #
+  #     - label: "Foto"
+  #       name: "image"
+  #       widget: "image"
+  #       required: true
+  #
+  #     - label: "Email"
+  #       name: "email"
+  #       widget: "string"
+  #       required: false
+  #
+  #     - label: "Telefone"
+  #       name: "phone"
+  #       widget: "string"
+  #       required: false
+  #
+  #     - label: "Especialidades"
+  #       name: "specialties"
+  #       widget: "list"
+  #       hint: "ex: Perícias, Avaliações"
+  #       required: false
 
-      - label: "Cargo/Função"
-        name: "position"
-        widget: "string"
-        required: true
+  # # ============================================
+  # # CLIENT LOGOS / CLIENTES
+  # # ============================================
+  # - name: "clients"
+  #   label: "Clientes"
+  #   folder: "content/clients"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   identifier_field: "name"
+  #   summary: "{{name}}"
+  #   fields:
+  #     - label: "Nome da Empresa"
+  #       name: "name"
+  #       widget: "string"
+  #       required: true
+  #
+  #     - label: "Logo"
+  #       name: "logo"
+  #       widget: "image"
+  #       required: true
+  #
+  #     - label: "Site (opcional)"
+  #       name: "website"
+  #       widget: "string"
+  #       required: false
+  #
+  #     - label: "Ordem"
+  #       name: "order"
+  #       widget: "number"
+  #       default: 0
 
-      - label: "Bio/Descrição"
-        name: "bio"
-        widget: "text"
-        hint: "Breve biografia"
-        required: false
-
-      - label: "Foto"
-        name: "image"
-        widget: "image"
-        required: true
-
-      - label: "Email"
-        name: "email"
-        widget: "string"
-        required: false
-
-      - label: "Telefone"
-        name: "phone"
-        widget: "string"
-        required: false
-
-      - label: "Especialidades"
-        name: "specialties"
-        widget: "list"
-        hint: "ex: Perícias, Avaliações"
-        required: false
-
-  # ============================================
-  # CLIENT LOGOS / CLIENTES
-  # ============================================
-  - name: "clients"
-    label: "🏢 Clientes"
-    folder: "content/clients"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: "name"
-    summary: "{{name}}"
-    fields:
-      - label: "Nome da Empresa"
-        name: "name"
-        widget: "string"
-        required: true
-
-      - label: "Logo"
-        name: "logo"
-        widget: "image"
-        required: true
-
-      - label: "Site (opcional)"
-        name: "website"
-        widget: "string"
-        required: false
-
-      - label: "Ordem"
-        name: "order"
-        widget: "number"
-        default: 0
-
-  # ============================================
-  # SETTINGS / CONFIGURAÇÕES
-  # ============================================
-  - name: "settings"
-    label: "⚙️ Configurações"
-    delete: false
-    editor:
-      preview: false
-    files:
-      - file: "content/settings/company.yml"
-        label: "Informações da Empresa"
-        name: "company"
-        create: false
-        fields:
-          - label: "Nome da Empresa"
-            name: "companyName"
-            widget: "string"
-            required: true
-
-          - label: "Logo"
-            name: "logo"
-            widget: "image"
-            required: false
-
-          - label: "Favicon"
-            name: "favicon"
-            widget: "image"
-            required: false
-
-          - label: "Missão"
-            name: "mission"
-            widget: "text"
-            required: false
-
-          - label: "Sobre a Empresa"
-            name: "about"
-            widget: "markdown"
-            required: false
-
-          - label: "Telefone Principal"
-            name: "phone"
-            widget: "string"
-            required: true
-
-          - label: "Telefone WhatsApp"
-            name: "whatsapp"
-            widget: "string"
-            required: true
-
-          - label: "Email"
-            name: "email"
-            widget: "string"
-            required: true
-
-          - label: "Endereço"
-            name: "address"
-            widget: "string"
-            required: true
-
-          - label: "CEP"
-            name: "cep"
-            widget: "string"
-            required: false
-
-          - label: "Cidade"
-            name: "city"
-            widget: "string"
-            required: true
-
-          - label: "Estado"
-            name: "state"
-            widget: "string"
-            required: true
-
-          - label: "Horário de Funcionamento"
-            name: "hours"
-            widget: "object"
-            fields:
-              - { label: "Segunda a Sexta", name: "weekday", widget: "string", default: "8h às 18h" }
-              - { label: "Sábado", name: "saturday", widget: "string", default: "8h às 14h" }
-              - { label: "Domingo", name: "sunday", widget: "string", default: "Fechado" }
-
-          - label: "Google Analytics ID"
-            name: "googleAnalyticsId"
-            widget: "string"
-            required: false
-
-          - label: "Facebook URL"
-            name: "facebook"
-            widget: "string"
-            required: false
-
-          - label: "Instagram URL"
-            name: "instagram"
-            widget: "string"
-            required: false
-
-          - label: "LinkedIn URL"
-            name: "linkedin"
-            widget: "string"
-            required: false
-
-          - label: "YouTube URL"
-            name: "youtube"
-            widget: "string"
-            required: false
+  # # ============================================
+  # # SETTINGS / CONFIGURAÇÕES
+  # # ============================================
+  # - name: "settings"
+  #   label: "Configurações"
+  #   delete: false
+  #   editor:
+  #     preview: false
+  #   files:
+  #     - file: "content/settings/company.yml"
+  #       label: "Informações da Empresa"
+  #       name: "company"
+  #       create: false
+  #       fields:
+  #         - label: "Nome da Empresa"
+  #           name: "companyName"
+  #           widget: "string"
+  #           required: true
+  #
+  #         - label: "Logo"
+  #           name: "logo"
+  #           widget: "image"
+  #           required: false
+  #
+  #         - label: "Favicon"
+  #           name: "favicon"
+  #           widget: "image"
+  #           required: false
+  #
+  #         - label: "Missão"
+  #           name: "mission"
+  #           widget: "text"
+  #           required: false
+  #
+  #         - label: "Sobre a Empresa"
+  #           name: "about"
+  #           widget: "markdown"
+  #           required: false
+  #
+  #         - label: "Telefone Principal"
+  #           name: "phone"
+  #           widget: "string"
+  #           required: true
+  #
+  #         - label: "Telefone WhatsApp"
+  #           name: "whatsapp"
+  #           widget: "string"
+  #           required: true
+  #
+  #         - label: "Email"
+  #           name: "email"
+  #           widget: "string"
+  #           required: true
+  #
+  #         - label: "Endereço"
+  #           name: "address"
+  #           widget: "string"
+  #           required: true
+  #
+  #         - label: "CEP"
+  #           name: "cep"
+  #           widget: "string"
+  #           required: false
+  #
+  #         - label: "Cidade"
+  #           name: "city"
+  #           widget: "string"
+  #           required: true
+  #
+  #         - label: "Estado"
+  #           name: "state"
+  #           widget: "string"
+  #           required: true
+  #
+  #         - label: "Horário de Funcionamento"
+  #           name: "hours"
+  #           widget: "object"
+  #           fields:
+  #             - { label: "Segunda a Sexta", name: "weekday", widget: "string", default: "8h às 18h" }
+  #             - { label: "Sábado", name: "saturday", widget: "string", default: "8h às 14h" }
+  #             - { label: "Domingo", name: "sunday", widget: "string", default: "Fechado" }
+  #
+  #         - label: "Google Analytics ID"
+  #           name: "googleAnalyticsId"
+  #           widget: "string"
+  #           required: false
+  #
+  #         - label: "Facebook URL"
+  #           name: "facebook"
+  #           widget: "string"
+  #           required: false
+  #
+  #         - label: "Instagram URL"
+  #           name: "instagram"
+  #           widget: "string"
+  #           required: false
+  #
+  #         - label: "LinkedIn URL"
+  #           name: "linkedin"
+  #           widget: "string"
+  #           required: false
+  #
+  #         - label: "YouTube URL"
+  #           name: "youtube"
+  #           widget: "string"
+  #           required: false
