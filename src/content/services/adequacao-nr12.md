@@ -6,7 +6,7 @@ shortDescription: Garantimos a segurança das suas máquinas e equipamentos
 description: Adequação de máquinas e equipamentos conforme a Norma Regulamentadora NR-12
 image: /uploads/gemini_generated_image_naxnyjnaxnyjnaxn.png
 order: 1
-icon: building
+icon: shield-check
 category: Segurança do Trabalho
 benefits:
   - Conformidade legal garantida
