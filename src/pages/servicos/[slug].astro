@@ -112,6 +112,7 @@ const service = {
   category: entry.data.category || 'Geral',
   description: entry.data.description,
   shortDescription: entry.data.shortDescription,
+  image: entry.data.image,
   benefits: entry.data.benefits || [],
   relatedServices: entry.data.relatedServices || [],
 };
@@ -225,6 +226,13 @@ const getMediumIcon = (iconName: string) => mediumIcons[iconName] || mediumIcons
         <!-- Main Content -->
         <div class="lg:col-span-2">
           <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-10">
+            <!-- Featured Image -->
+            {service.image && (
+              <div class="mb-8 -mt-2 -mx-2 md:-mt-4 md:-mx-4">
+                <img src={service.image} alt={service.title} class="w-full rounded-2xl object-cover" />
+              </div>
+            )}
+
             <!-- Intro -->
             <p class="text-lg text-dark/80 leading-relaxed mb-8 pb-8 border-b border-gray-100">
               {service.shortDescription}
