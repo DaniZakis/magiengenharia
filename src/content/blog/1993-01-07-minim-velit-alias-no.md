@@ -1,7 +1,7 @@
 ---
 title: Accusantium quos vol
 slug: ""
-author: Ratione placeat har
+author: Equipe Técnica
 date: 1977-08-12
 lastUpdated: 1989-12-05
 category: Geral
