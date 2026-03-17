@@ -139,7 +139,35 @@ const getIcon = (iconName: string) => icons[iconName] || icons['document-text'];
 const getMediumIcon = (iconName: string) => mediumIcons[iconName] || mediumIcons['document-text'];
 ---
 
-<BaseLayout title={`${service.title} | Maggi Engenharia`} description={service.description}>
+<BaseLayout
+  title={`${service.title} | Maggi Engenharia`}
+  description={service.description}
+  ogImage={service.image || '/images/logo/Sem fundo.png'}
+  jsonLd={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": service.title,
+      "description": service.description,
+      "provider": {
+        "@type": "Organization",
+        "name": "Maggi Engenharia",
+        "url": "https://maggieng.com.br"
+      },
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "url": `https://maggieng.com.br/servicos/${service.slug}`
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://maggieng.com.br" },
+        { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://maggieng.com.br/servicos" },
+        { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://maggieng.com.br/servicos/${service.slug}` }
+      ]
+    }
+  ]}
+>
   <!-- Service Header - Category Colored (Muted Tones) -->
   <section class={`relative py-20 md:py-28 overflow-hidden bg-gradient-to-br ${style.gradient}`}>
     <!-- Background Decorations -->

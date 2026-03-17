@@ -8,9 +8,96 @@ interface Props {
   title: string;
   description?: string;
   keywords?: string;
+  ogType?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  jsonLd?: Record<string, any> | Record<string, any>[];
 }
 
-const { title, description = 'Soluções em engenharia para seu projeto', keywords } = Astro.props;
+const {
+  title,
+  description = 'Soluções em engenharia para seu projeto',
+  keywords,
+  ogType = 'website',
+  ogImage = '/images/logo/Sem fundo.png',
+  canonicalUrl,
+  jsonLd,
+} = Astro.props;
+
+const siteUrl = 'https://maggieng.com.br';
+const currentUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl).href;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).href;
+
+// Build JSON-LD array
+const jsonLdScripts: Record<string, any>[] = [];
+
+// Always include Organization + WebSite on homepage
+if (Astro.url.pathname === '/' || Astro.url.pathname === '') {
+  jsonLdScripts.push({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Maggi Engenharia",
+    "legalName": "Maggi Engenharia Ltda",
+    "url": siteUrl,
+    "logo": `${siteUrl}/images/logo/Sem fundo.png`,
+    "image": `${siteUrl}/images/logo/Logo.png`,
+    "description": "Consultoria, projetos estruturais, avaliações e perícias. Soluções completas em engenharia.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Dante Carraro, 110, 1º andar",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "05008-001",
+      "addressCountry": "BR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-11-99994-8676",
+      "contactType": "customer service",
+      "availableLanguage": "Portuguese"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61588011692484",
+      "https://www.instagram.com/maggi.eng/",
+      "https://www.linkedin.com/company/maggi-engenharia/"
+    ]
+  });
+
+  jsonLdScripts.push({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Maggi Engenharia",
+    "url": siteUrl,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${siteUrl}/servicos`,
+      "query-input": "required name=search_term_string"
+    }
+  });
+}
+
+// SiteNavigationElement — always present to reinforce site structure
+jsonLdScripts.push({
+  "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  "name": ["Home", "Serviços", "Blog", "Sobre", "Contato"],
+  "url": [
+    siteUrl,
+    `${siteUrl}/servicos`,
+    `${siteUrl}/blog`,
+    `${siteUrl}/sobre`,
+    `${siteUrl}/contato`
+  ]
+});
+
+// Add page-specific JSON-LD
+if (jsonLd) {
+  if (Array.isArray(jsonLd)) {
+    jsonLdScripts.push(...jsonLd);
+  } else {
+    jsonLdScripts.push(jsonLd);
+  }
+}
 ---
 
 <!doctype html>
@@ -20,11 +107,33 @@ const { title, description = 'Soluções em engenharia para seu projeto', keywor
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/letter-m.png" />
     <link rel="apple-touch-icon" href="/letter-m.png" />
-    <meta name="description" :content="description" />
-    <meta property="og:title" :content="title" />
-    <meta property="og:description" :content="description" />
-    <meta property="og:type" content="website" />
+
+    <!-- SEO Meta -->
+    <meta name="description" content={description} />
     {keywords && <meta name="keywords" content={keywords} />}
+    <link rel="canonical" href={currentUrl} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Maggi Engenharia" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullOgImage} />
+
+    <!-- JSON-LD Structured Data -->
+    {jsonLdScripts.map((script) => (
+      <script type="application/ld+json" set:html={JSON.stringify(script)} />
+    ))}
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
