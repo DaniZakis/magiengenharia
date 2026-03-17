@@ -39,4 +39,3 @@ Elaboramos laudos técnicos de engenharia para diversas finalidades, sempre com 
 
 Realizamos vistoria técnica, coleta de dados, análises necessárias e elaboração do documento com todas as informações técnicas, conclusões e recomendações.
 
-https://media.istockphoto.com/id/1413025608/vector/yellow-safety-first-sign-style-sign-isolated-on-white-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=KkdULQYfUIfIdJ7oH9tFfUgQ9QLzIQHHb7WRwpSIF04=
