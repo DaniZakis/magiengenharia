@@ -1,7 +1,7 @@
 ---
 title: Minim velit alias no
 slug: Eius enim cum doloru
-author: Consequatur In nequ
+author: Equipe Técnica
 date: 1993-01-07
 lastUpdated: 1992-10-04
 category: Geral
