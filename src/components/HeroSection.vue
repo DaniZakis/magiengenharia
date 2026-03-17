@@ -2,29 +2,28 @@
   <section class="relative min-h-screen flex items-center overflow-hidden">
     <!-- Background Image with Stronger Overlay -->
     <div class="absolute inset-0">
-      <img
-        v-if="backgroundImage"
-        :src="backgroundImage"
-        alt="Engineering background"
-        class="w-full h-full object-cover"
-      />
+      <img v-if="backgroundImage" :src="backgroundImage" alt="Engineering background"
+        class="w-full h-full object-cover" />
       <!-- Stronger dark overlay for better text readability -->
       <div class="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/90 to-dark/80"></div>
     </div>
 
     <!-- Subtle Grid Pattern -->
     <div class="absolute inset-0 opacity-[0.02]">
-      <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+      <div class="absolute inset-0"
+        style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 50px 50px;">
+      </div>
     </div>
 
     <!-- Main Content -->
     <div class="relative container-max px-4 md:px-6 lg:px-8 py-24 md:py-0 w-full mt-16">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        
+
         <!-- Left Column - Text Content -->
         <div class="order-2 lg:order-1">
           <!-- Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8 animate-fade-in">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8 animate-fade-in">
             <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
             <span class="text-white/90 text-sm font-medium">Mais de 10 anos de excelência em Projetos e Laudos</span>
           </div>
@@ -45,28 +44,27 @@
 
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up animation-delay-200">
-            <a 
-              href="/contato" 
-              class="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-dark font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:gap-3"
-            >
+            <a href="/contato"
+              class="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-dark font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:gap-3">
               Solicitar Orçamento
-              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            <a 
-              href="/servicos" 
-              class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
-            >
+            <a href="/servicos"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
               Ver Servicos
             </a>
           </div>
 
           <!-- Stats Row -->
-          <div class="flex flex-wrap gap-8 md:gap-12 pt-8 border-t border-white/20 animate-fade-in-up animation-delay-300">
+          <div
+            class="flex flex-wrap gap-8 md:gap-12 pt-8 border-t border-white/20 animate-fade-in-up animation-delay-300">
             <div class="stat-item">
               <span class="text-3xl md:text-4xl font-bold text-white">10+</span>
               <span class="text-sm text-white/60 block mt-1">Anos de Experiência</span>
@@ -85,21 +83,19 @@
         <!-- Right Column - Symmetric Card Grid -->
         <div class="order-1 lg:order-2 hidden lg:block">
           <div class="grid grid-cols-2 gap-4 max-w-md mx-auto lg:max-w-none">
-            
+
             <!-- Top Row -->
             <!-- Services Card (spans 2 columns) -->
-            <div class="col-span-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-100">
+            <div
+              class="col-span-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-100">
               <div class="flex items-center justify-between mb-4">
-                <span class="text-white/70 text-sm font-medium">Nossos Serviços</span>
+                <span class="text-white/70 text-sm font-medium">Alguns de nossos serviços</span>
               </div>
-              
+
               <div class="space-y-3">
-                <a
-                  v-for="(item, index) in displayedServices"
-                  :key="item.service.slug"
+                <a v-for="(item, index) in displayedServices" :key="item.service.slug"
                   :href="'/servicos/' + item.service.slug"
-                  class="flex items-center gap-3 p-2.5 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group"
-                >
+                  class="flex items-center gap-3 p-2.5 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group">
                   <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" :class="item.color.bg">
                     <svg class="w-4 h-4" :class="item.color.text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="item.iconPath" />
@@ -107,9 +103,11 @@
                   </div>
                   <div class="flex-1 min-w-0">
                     <span class="text-white font-medium text-sm block">{{ item.service.title }}</span>
-                    <span class="text-white/50 text-xs">{{ item.service.shortDescription || item.service.category || 'Serviço especializado' }}</span>
+                    <span class="text-white/50 text-xs">{{ item.service.shortDescription || item.service.category ||
+                      'Serviço especializado' }}</span>
                   </div>
-                  <svg class="w-4 h-4 text-white/30 group-hover:text-white/60 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-4 h-4 text-white/30 group-hover:text-white/60 transition-colors flex-shrink-0"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
@@ -118,7 +116,8 @@
 
             <!-- Bottom Row - 2 symmetric cards -->
             <!-- Projects Card -->
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-200">
+            <div
+              class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-200">
               <div class="flex items-center gap-3 mb-3">
                 <div class="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
                   <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,11 +130,13 @@
             </div>
 
             <!-- Experience Card -->
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-300">
+            <div
+              class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-300">
               <div class="flex items-center gap-3 mb-3">
                 <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
                   <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
               </div>
@@ -144,7 +145,8 @@
             </div>
 
             <!-- Success Rate Card (spans 2 columns) -->
-            <div class="col-span-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-400">
+            <div
+              class="col-span-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 animate-fade-in-up animation-delay-400">
               <div class="flex items-center justify-between mb-3">
                 <span class="text-white/70 text-sm font-medium">Taxa de Sucesso</span>
                 <span class="text-primary font-bold text-lg">98.7%</span>
@@ -239,6 +241,7 @@ onMounted(() => {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -249,6 +252,7 @@ onMounted(() => {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -259,6 +263,7 @@ onMounted(() => {
   from {
     width: 0;
   }
+
   to {
     width: 98.7%;
   }
@@ -270,14 +275,17 @@ onMounted(() => {
     transform: scaleY(0);
     transform-origin: top;
   }
+
   50% {
     opacity: 1;
     transform: scaleY(1);
     transform-origin: top;
   }
+
   50.1% {
     transform-origin: bottom;
   }
+
   100% {
     opacity: 0;
     transform: scaleY(0);
