@@ -12,7 +12,7 @@ public_folder: "/uploads"
 # Site configuration
 site_url: "https://maggieng.com.br"
 display_url: "https://maggieng.com.br"
-logo_url: "https://maggieng.com.br/logo.png"
+logo_url: "/images/logo/Sem fundo.png"
 
 # Editor UI customization
 editor:
