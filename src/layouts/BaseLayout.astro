@@ -7,9 +7,10 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  keywords?: string;
 }
 
-const { title, description = 'Soluções em engenharia para seu projeto' } = Astro.props;
+const { title, description = 'Soluções em engenharia para seu projeto', keywords } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,6 +24,7 @@ const { title, description = 'Soluções em engenharia para seu projeto' } = Ast
     <meta property="og:title" :content="title" />
     <meta property="og:description" :content="description" />
     <meta property="og:type" content="website" />
+    {keywords && <meta name="keywords" content={keywords} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
