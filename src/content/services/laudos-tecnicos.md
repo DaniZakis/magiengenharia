@@ -1,21 +1,24 @@
 ---
-title: "Laudos Técnicos de Engenharia"
-slug: "laudos-tecnicos"
-icon: "document-text"
-category: "Documentação Técnica"
-description: "Elaboração de laudos técnicos para diversas finalidades com responsabilidade técnica"
-shortDescription: "Laudos técnicos elaborados por engenheiros especializados, com ART e validade legal para todas as finalidades."
+title: Laudos Técnicos de Engenharia
+slug: laudos-tecnicos
+shortDescription: Laudos técnicos elaborados por engenheiros especializados, com
+  ART e validade legal para todas as finalidades.
+description: Elaboração de laudos técnicos para diversas finalidades com
+  responsabilidade técnica
+image: /uploads/gemini_generated_image_naxnyjnaxnyjnaxn.png
 order: 4
+icon: document-text
+category: Documentação Técnica
 benefits:
-  - "Validade legal garantida"
-  - "ART inclusa"
-  - "Engenheiros especializados"
-  - "Entrega no prazo"
-  - "Suporte pós-entrega"
+  - Validade legal garantida
+  - ART inclusa
+  - Engenheiros especializados
+  - Entrega no prazo
+  - Suporte pós-entrega
 relatedServices:
-  - "pericia-tecnica"
-  - "pgr-pcmso-ltcat"
-  - "adequacao-nr12"
+  - pericia-tecnica
+  - pgr-pcmso-ltcat
+  - adequacao-nr12
 ---
 
 ## Laudos Técnicos Especializados
