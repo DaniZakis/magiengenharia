@@ -7,7 +7,7 @@ lastUpdated: 1989-12-05
 category: Geral
 image: /uploads/gemini_generated_image_naxnyjnaxnyjnaxn.png
 excerpt: Nihil asperiores mol
-readTime: Veritatis nobis ex s
+readTime: 10 m
 featured: true
 tags:
   - testag
