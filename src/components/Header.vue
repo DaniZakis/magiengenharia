@@ -105,15 +105,15 @@
         <nav
           v-if="isOpen"
           :class="[
-            'md:hidden pb-4 space-y-3 border-t',
+            'md:hidden py-4 px-4 space-y-1 border-t',
             isScrolled ? 'border-light bg-white' : 'border-white/20 bg-dark/95 backdrop-blur-lg'
           ]"
         >
           <a
             href="/"
             :class="[
-              'block py-2 transition-colors',
-              isScrolled ? 'text-dark hover:text-primary' : 'text-white hover:text-primary'
+              'block py-3 px-3 rounded-lg transition-colors',
+              isScrolled ? 'text-dark hover:bg-light hover:text-primary' : 'text-white hover:bg-white/10 hover:text-primary'
             ]"
             @click="isOpen = false"
           >
@@ -122,8 +122,8 @@
           <a
             href="/sobre"
             :class="[
-              'block py-2 transition-colors',
-              isScrolled ? 'text-dark hover:text-primary' : 'text-white hover:text-primary'
+              'block py-3 px-3 rounded-lg transition-colors',
+              isScrolled ? 'text-dark hover:bg-light hover:text-primary' : 'text-white hover:bg-white/10 hover:text-primary'
             ]"
             @click="isOpen = false"
           >
@@ -132,8 +132,8 @@
           <a
             href="/servicos"
             :class="[
-              'block py-2 transition-colors',
-              isScrolled ? 'text-dark hover:text-primary' : 'text-white hover:text-primary'
+              'block py-3 px-3 rounded-lg transition-colors',
+              isScrolled ? 'text-dark hover:bg-light hover:text-primary' : 'text-white hover:bg-white/10 hover:text-primary'
             ]"
             @click="isOpen = false"
           >
@@ -142,20 +142,22 @@
           <a
             href="/blog"
             :class="[
-              'block py-2 transition-colors',
-              isScrolled ? 'text-dark hover:text-primary' : 'text-white hover:text-primary'
+              'block py-3 px-3 rounded-lg transition-colors',
+              isScrolled ? 'text-dark hover:bg-light hover:text-primary' : 'text-white hover:bg-white/10 hover:text-primary'
             ]"
             @click="isOpen = false"
           >
             Blog
           </a>
-          <a
-            href="/contato"
-            class="block btn-primary text-center"
-            @click="isOpen = false"
-          >
-            Contato
-          </a>
+          <div class="pt-2 mt-2 border-t" :class="isScrolled ? 'border-gray-100' : 'border-white/10'">
+            <a
+              href="/contato"
+              class="block btn-primary text-center rounded-xl"
+              @click="isOpen = false"
+            >
+              Contato
+            </a>
+          </div>
         </nav>
       </transition>
     </div>
