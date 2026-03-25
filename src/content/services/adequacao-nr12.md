@@ -1,10 +1,13 @@
 ---
-title: Adequação NR-12
-slug: adequacao-nr12
-shortDescription: Garantimos a segurança das suas máquinas e equipamentos
-  conforme as exigências da NR-12, protegendo seus colaboradores e sua empresa.
-description: Adequação de máquinas e equipamentos conforme a Norma Regulamentadora NR-12
-image: ""
+title: Adequação NR-12 — Máquinas e Equipamentos
+slug: adequacao-nr-12-maquinas-equipamentos
+shortDescription: "Adequação de máquinas e equipamentos conforme NR-12:
+  inventário, apreciação de riscos, projeto conceitual e executivo e laudo de
+  conformidade com ART."
+description: Adequação de máquinas e equipamentos industriais conforme NR-12, do
+  inventário ao laudo final, com segurança, agilidade e documentação completa.
+  Evite multas, interdições e acidentes de trabalho.
+image: /uploads/1.jpg
 order: 1
 icon: shield-check
 category: Segurança do Trabalho
