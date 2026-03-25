@@ -1,37 +1,45 @@
 ---
-title: "Estruturas Metálicas"
-slug: "estruturas-metalicas"
-icon: "building"
-category: "Engenharia Estrutural"
-description: "Projeto, fabricação e montagem de estruturas metálicas para diversos segmentos"
-shortDescription: "Soluções completas em estruturas metálicas, desde o projeto até a montagem, com qualidade e segurança certificadas."
+title: NR-13 Vasos de Pressão
+slug: NR-13-vasos-de-pressão
+shortDescription: Elaboração e atualização de prontuário de vaso de pressão
+  conforme NR-13, com responsabilidade de Profissional Habilitado.
+description: "Prontuário de vaso de pressão conforme NR-13: elaboração,
+  atualização e reconstituição com segurança e conformidade legal"
+image: /uploads/nr-13.jpg
 order: 2
+icon: document-text
+category: Engenharia Mecânica
 benefits:
-  - "Projetos otimizados"
-  - "Rapidez na execução"
-  - "Versatilidade de aplicações"
-  - "Durabilidade superior"
-  - "Custo-benefício competitivo"
+  - Documentação conforme NR-13
+  - Evita multas e interdições da fiscalização
+  - Atendimento ágil (24 horas/dia)
+  - Relatório completo com fotos e medições
 relatedServices:
-  - "maquinas-personalizadas"
-  - "laudos-tecnicos"
-  - "pericia-tecnica"
+  - maquinas-personalizadas
+  - laudos-tecnicos
+  - pericia-tecnica
 ---
+## 
+NR-13 — Inspeção e Prontuário de Vasos de Pressão
 
-## Estruturas Metálicas de Alta Performance
 
-Desenvolvemos projetos de estruturas metálicas para galpões industriais, coberturas, mezaninos, plataformas, escadas e estruturas especiais. Nossa equipe combina tecnologia avançada com experiência comprovada.
+Realizamos inspeção de segurança, elaboração, reconstituição e atualização de prontuário de vasos de pressão conforme NR-13, com ART e responsabilidade técnica de Profissional Habilitado (PLH). Evite multas, interdições e riscos operacionais.
+
 
 ## Nossos Serviços
 
-- Projeto estrutural completo
-- Cálculo estrutural com software especializado
-- Detalhamento para fabricação
-- Acompanhamento de fabricação
-- Supervisão de montagem
-- Laudos de inspeção
-- Reforço de estruturas existentes
+* Elaboração e reconstituição de prontuário do fabricante (NR-13)
+* Atualização de prontuário e registro de segurança
+* Inspeção de segurança periódica (ISP)
+* Medição de espessura por ultrassom (END)
+* Avaliação de integridade estrutural — corrosão, trincas e deformações
+* Verificação e calibração de válvulas de segurança e manômetros
+* Emissão de laudo técnico e relatório de inspeção com ART
+* Acompanhamento de teste hidrostático (quando necessário)
+
+
 
 ## Aplicações
 
-Galpões industriais, centros de distribuição, estruturas para painéis solares, passarelas, plataformas de acesso, mezaninos e estruturas especiais sob medida.
+
+Vasos de pressão, compressores, autoclaves, boilers, caldeiras, trocadores de calor e vasos de processo em indústrias alimentícias, químicas, petroquímicas, metalúrgicas, papel e celulose, etc.
