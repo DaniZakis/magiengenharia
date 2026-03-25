@@ -12,8 +12,7 @@ order: 1
 icon: shield-check
 category: Segurança do Trabalho
 benefits:
-  - Documentação clara
-  - completa e com validade legal
+  - Documentação clara e com validade legal
   - Apontamento claro dos riscos da máquina
   - Suporte técnico para operação e manutenção após a adequação
   - Adequação planejada para não paralisar sua produção
