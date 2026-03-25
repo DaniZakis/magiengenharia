@@ -27,9 +27,7 @@ relatedServices:
 ---
 ## NR-20 — Área Classificada e Prontuário para Inflamáveis e Combustíveis
 
-
 A NR-20 exige que toda empresa que armazena, manuseia ou opera com líquidos inflamáveis e combustíveis mantenha documentação técnica atualizada e suas instalações em conformidade. O descumprimento pode resultar em multas, interdições e, principalmente, risco grave de incêndio e explosão.
-
 
 ## Documentos Elaborados
 
@@ -41,8 +39,8 @@ A NR-20 exige que toda empresa que armazena, manuseia ou opera com líquidos inf
 * Atualização de prontuário existente
 * Laudo técnico com ART
 
-## 
-Por que Estar em Conformidade com a NR-20?
 
+
+## Por que Estar em Conformidade com a NR-20?
 
 Além da obrigação legal, a conformidade com a NR-20 reduz drasticamente o risco de incêndios e explosões, protege colaboradores e patrimônio, elimina passivos trabalhistas e garante a aprovação em auditorias, vistorias do Corpo de Bombeiros e contratos com grandes indústrias.
