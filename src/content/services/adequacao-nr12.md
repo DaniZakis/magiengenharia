@@ -4,9 +4,9 @@ slug: adequacao-nr-12-maquinas-equipamentos
 shortDescription: "Adequação de máquinas e equipamentos conforme NR-12:
   inventário, apreciação de riscos, projeto conceitual e executivo e laudo de
   conformidade com ART."
-description: Adequação de máquinas e equipamentos industriais conforme NR-12, do
-  inventário ao laudo final, com segurança, agilidade e documentação completa.
-  Evite multas, interdições e acidentes de trabalho.
+description: Projetos de adequação e apreciação de riscos em máquinas e
+  equipamentos conforme NR-12, do inventário ao laudo técnico. Evite multas,
+  interdições e acidentes de trabalho.
 image: /uploads/1.jpg
 order: 1
 icon: shield-check
