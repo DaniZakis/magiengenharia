@@ -1,21 +1,22 @@
 ---
-title: "Mão de Obra Especializada"
-slug: "mao-de-obra"
-icon: "users"
-category: "Recursos Humanos"
-description: "Fornecimento de profissionais qualificados para projetos de engenharia"
-shortDescription: "Disponibilizamos profissionais qualificados e treinados para atuar em projetos de engenharia, montagem e manutenção industrial."
+title: Terceirização de Mão de Obra para Projetos
+slug: mao-de-obra
+shortDescription: Disponibilizamos profissionais qualificados e treinados para
+  atuar em projetos de engenharia, montagem e manutenção industrial.
+description: Fornecimento de profissionais qualificados para projetos de engenharia
 order: 6
+icon: users
+category: Recursos Humanos
 benefits:
-  - "Profissionais qualificados"
-  - "Documentação em dia"
-  - "Flexibilidade de contratação"
-  - "Supervisão técnica"
-  - "Substituição garantida"
+  - Profissionais qualificados
+  - Documentação em dia
+  - Flexibilidade de contratação
+  - Supervisão técnica
+  - Substituição garantida
 relatedServices:
-  - "treinamento-sst"
-  - "gestao-sst-esocial"
-  - "estruturas-metalicas"
+  - treinamento-sst
+  - gestao-sst-esocial
+  - estruturas-metalicas
 ---
 
 ## Profissionais Qualificados
