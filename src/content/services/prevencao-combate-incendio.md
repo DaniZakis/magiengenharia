@@ -13,7 +13,7 @@ category: Segurança
 benefits:
   - Projetos com sistema grooved
   - Equipamentos certificados INMETRO / UL Listed / FM Approved
-  - Projeto aprovado pelo CB
+  - Projeto aprovado pelo Corpo de Bombeiros
   - Projetos aprovados pelas principais seguradoras
 relatedServices:
   - treinamento-sst
