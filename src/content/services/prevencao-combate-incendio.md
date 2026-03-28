@@ -1,38 +1,45 @@
 ---
-title: "Prevenção e Combate a Incêndio"
-slug: "prevencao-combate-incendio"
-icon: "fire"
-category: "Segurança"
-description: "Projetos e laudos de prevenção e combate a incêndio conforme normas do Corpo de Bombeiros"
-shortDescription: "Elaboramos projetos de prevenção e combate a incêndio, AVCB/CLCB e treinamento de brigada, garantindo a segurança da sua edificação."
-order: 10
+title: Sistemas de Prevenção e Combate a Incêndio
+slug: sistemas-prevencao-combate-incendio
+shortDescription: Projetos, inspeções e laudos de sistemas contra incêndio —
+  sprinklers, hidrantes e AVCB / CLCB — conforme normas do Corpo de Bombeiros e
+  seguradoras.
+description: Projetos e laudos de combate a incêndio conforme NBRs e NFPA, AVCB
+  / CLCB conforme Corpo de Bombeiros.
+image: /uploads/4.jpg
+order: 4
+icon: fire
+category: Segurança
 benefits:
-  - "Projeto aprovado pelo CB"
-  - "Obtenção de AVCB/CLCB"
-  - "Brigada treinada"
-  - "Equipamentos certificados"
-  - "Renovação facilitada"
+  - Projetos com sistema grooved
+  - Equipamentos certificados INMETRO / UL Listed / FM Approved
+  - Projeto aprovado pelo CB
+  - Projetos aprovados pelas principais seguradoras
 relatedServices:
-  - "treinamento-sst"
-  - "laudos-tecnicos"
-  - "adequacao-nr12"
+  - treinamento-sst
+  - laudos-tecnicos
+  - adequacao-nr12
 ---
+## Sistemas de Prevenção e Combate a Incêndio
 
-## Segurança Contra Incêndio
 
-Oferecemos soluções completas em prevenção e combate a incêndio, desde o projeto até a obtenção do AVCB/CLCB junto ao Corpo de Bombeiros, além de treinamento de brigada de emergência.
+
+Desenvolvemos projetos técnicos de prevenção e combate a incêndio conforme normas nacionais e internacionais (NBRs e NFPA), atuando desde a concepção inicial, até o comissionamento e startup do sistema. Atuamos também na aprovação da documentação de exigência do Corpo de Bombeiros (AVCB / CLCB), regularização completa do seu empreendimento em prevenção e combate a incêndio.
+
+
 
 ## Serviços Oferecidos
 
-- Projeto de Prevenção e Combate a Incêndio (PPCI)
-- Dimensionamento de sistemas (hidrantes, sprinklers, alarme)
-- Sinalização de emergência
-- Plano de Emergência
-- Obtenção de AVCB/CLCB
-- Treinamento de brigada de incêndio
-- Inspeção e manutenção de equipamentos
-- Regularização de edificações
+* Projeto de Prevenção e Combate a Incêndio (PPCI) conforme ABNT
+* Dimensionamento hidráulico de hidrantes e mangotinhos (NBR 13714)
+* Projeto de sistemas de sprinklers (NBR 10897 / NFPA 13)
+* Projeto de sistemas de combate tipo nevoa 
+* Plano de Emergência, sinalização e rotas de fuga (NBR 13434)
+* Inspeção e manutenção de equipamentos (hidrantes, sprinklers, etc) Teste de vazão de hidrantes 
+* Obtenção de AVCB/CLCB junto ao Corpo de Bombeiros;
+* Regularização de edificações e adequação a seguradoras
 
 ## Importância
 
-Além de ser obrigatório por lei, um bom sistema de prevenção e combate a incêndio protege vidas, patrimônio e garante a continuidade dos negócios.
+
+Além de obrigatório por lei, um sistema de combate a incêndio bem projetado protege vidas, preserva o patrimônio, reduz riscos de interdição e garante a continuidade operacional do negócio. Edificações regularizadas também têm vantagens em apólices de seguro, tendo grande desconto.
