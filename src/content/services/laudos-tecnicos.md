@@ -1,5 +1,5 @@
 ---
-title: Laudos Técnicos de Engenharia
+title: Laudos e Perícia Técnica
 slug: laudos-tecnicos
 shortDescription: Laudos técnicos elaborados por engenheiros especializados, com
   ART e validade legal para todas as finalidades.
