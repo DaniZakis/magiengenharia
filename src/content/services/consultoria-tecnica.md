@@ -1,5 +1,5 @@
 ---
-title: Projetos Elétricos
+title: Projetos Elétricos, Automação e Painéis de Controle
 slug: consultoria-tecnica
 shortDescription: Soluções técnicas personalizadas para otimizar seus projetos de engenharia
 description: Assessoria especializada em projetos de engenharia com foco em
