@@ -1,22 +1,23 @@
 ---
-title: "Consultoria Técnica"
-slug: "consultoria-tecnica"
-shortDescription: "Soluções técnicas personalizadas para otimizar seus projetos de engenharia"
-description: "Assessoria especializada em projetos de engenharia com foco em eficiência e inovação"
-image: "/uploads/service-consultoria.jpg"
+title: Projetos Elétricos
+slug: consultoria-tecnica
+shortDescription: Soluções técnicas personalizadas para otimizar seus projetos de engenharia
+description: Assessoria especializada em projetos de engenharia com foco em
+  eficiência e inovação
+image: /uploads/service-consultoria.jpg
 order: 12
-icon: "search"
-category: "Institucional"
+icon: search
+category: Institucional
 benefits:
-  - "Avaliação técnica detalhada"
-  - "Otimização de recursos"
-  - "Redução de custos"
-  - "Garantia de conformidade regulatória"
-  - "Suporte ao longo do projeto"
+  - Avaliação técnica detalhada
+  - Otimização de recursos
+  - Redução de custos
+  - Garantia de conformidade regulatória
+  - Suporte ao longo do projeto
 relatedServices:
-  - "estruturas-metalicas"
-  - "laudos-tecnicos"
-  - "pericia-tecnica"
+  - estruturas-metalicas
+  - laudos-tecnicos
+  - pericia-tecnica
 ---
 
 ## O que é Consultoria Técnica?
