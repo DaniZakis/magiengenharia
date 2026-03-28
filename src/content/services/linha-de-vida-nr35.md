@@ -1,38 +1,54 @@
 ---
-title: "Linha de Vida NR-35"
-slug: "linha-de-vida-nr35"
-icon: "link"
-category: "Segurança do Trabalho"
-description: "Projeto, instalação e certificação de sistemas de linha de vida conforme NR-35"
-shortDescription: "Sistemas de proteção contra quedas projetados e instalados conforme as normas técnicas, garantindo a segurança em trabalhos em altura."
+title: Linha de Vida — NR-35
+slug: linha-de-vida-nr35
+shortDescription: Projeto, instalação e certificação de sistemas de linha de
+  vida para trabalho em altura, conforme NR-35 e normas ABNT.
+description: Projetos e instalação de sistemas de linha de vida conforme NR-35 e
+  ABNT NBR 16325, garantindo segurança e certificação para trabalhos em altura.
+  Inspeção e laudo em sistemas de ancoragem.
+image: /uploads/captura-de-tela-2026-03-28-032754.jpg
 order: 5
+icon: link
+category: Segurança do Trabalho
 benefits:
-  - "Projeto personalizado"
-  - "Materiais certificados"
-  - "Instalação profissional"
-  - "Documentação completa"
-  - "Manutenção programada"
+  - Projeto personalizado
+  - Materiais certificados
+  - Instalação profissional
+  - Documentação completa
+  - Manutenção programada
 relatedServices:
-  - "adequacao-nr12"
-  - "treinamento-sst"
-  - "laudos-tecnicos"
+  - adequacao-nr12
+  - treinamento-sst
+  - laudos-tecnicos
 ---
-
 ## Sistemas de Linha de Vida
 
-Projetamos e instalamos sistemas de linha de vida horizontais e verticais, ancoragens e outros dispositivos de proteção contra quedas, em conformidade com a NR-35 e normas técnicas aplicáveis.
+
+Projetamos e instalamos sistemas de linha de vida horizontais, verticais, rígida com vigas ou com cabos de aço (flexível), com ancoragens dimensionadas estruturalmente, em conformidade com a NR-35 e ABNT NBR 16325. Atuamos desde o projeto até a emissão do laudo técnico e ART, garantindo segurança e rastreabilidade completa para trabalhos em altura.
+
+
 
 ## Serviços Oferecidos
 
-- Projeto de sistema de linha de vida
-- Cálculo estrutural de ancoragens
-- Fornecimento de materiais certificados
-- Instalação por equipe especializada
-- Ensaios e testes de carga
-- Emissão de laudo técnico e ART
-- Treinamento de usuários
-- Inspeção e manutenção periódica
 
-## Aplicações
 
-Coberturas industriais, fachadas de edifícios, torres de telecomunicação, pontes rolantes, silos, tanques e qualquer local onde haja trabalho em altura.
+* Projeto de sistema de linha de vida horizontal, vertical e em rede
+
+* Memorial de cálculo estrutural e dimensional de ancoragens e pontos de fixação
+
+* Fornecimento de equipamentos com certificação
+
+* Instalação por equipe especializada e habilitada em trabalho em altura
+
+* Ensaios e testes de carga conforme ABNT NBR 16325
+
+* Emissão de laudo técnico, ART e documentação de entrega
+
+* Treinamento de usuários conforme NR-35
+
+* Inspeção anual de linhas de vida, conforme obrigatoriedade NR-35
+
+## Importância
+
+
+O trabalho em altura é responsável por grande parte dos acidentes graves e fatais no Brasil. Além da obrigatoriedade legal pela NR-35, um sistema de linha de vida projetado e instalado corretamente protege vidas, elimina passivos trabalhistas e garante conformidade em auditorias e fiscalizações do MTE.
