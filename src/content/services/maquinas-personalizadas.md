@@ -1,21 +1,22 @@
 ---
-title: "Máquinas Personalizadas"
-slug: "maquinas-personalizadas"
-icon: "cog"
-category: "Engenharia Mecânica"
-description: "Projeto e fabricação de máquinas e equipamentos sob medida"
-shortDescription: "Desenvolvemos máquinas e equipamentos personalizados para atender às necessidades específicas do seu processo produtivo."
+title: Projetos Mecânicos
+slug: maquinas-personalizadas
+shortDescription: Desenvolvemos máquinas e equipamentos personalizados para
+  atender às necessidades específicas do seu processo produtivo.
+description: Projeto e fabricação de máquinas e equipamentos sob medida
 order: 7
+icon: cog
+category: Engenharia Mecânica
 benefits:
-  - "Projeto exclusivo"
-  - "Adequado às suas necessidades"
-  - "Aumento de produtividade"
-  - "Redução de custos"
-  - "Suporte técnico contínuo"
+  - Projeto exclusivo
+  - Adequado às suas necessidades
+  - Aumento de produtividade
+  - Redução de custos
+  - Suporte técnico contínuo
 relatedServices:
-  - "estruturas-metalicas"
-  - "adequacao-nr12"
-  - "laudos-tecnicos"
+  - estruturas-metalicas
+  - adequacao-nr12
+  - laudos-tecnicos
 ---
 
 ## Soluções Sob Medida
