@@ -1,21 +1,22 @@
 ---
-title: "Treinamento SST"
-slug: "treinamento-sst"
-icon: "academic-cap"
-category: "Capacitação"
-description: "Treinamentos de Saúde e Segurança do Trabalho conforme Normas Regulamentadoras"
-shortDescription: "Capacitamos seus colaboradores nos treinamentos obrigatórios de SST, com instrutores qualificados e certificação válida."
+title: Laudo Ergonômico - NR-17
+slug: treinamento-sst
+shortDescription: Capacitamos seus colaboradores nos treinamentos obrigatórios
+  de SST, com instrutores qualificados e certificação válida.
+description: Treinamentos de Saúde e Segurança do Trabalho conforme Normas Regulamentadoras
 order: 11
+icon: academic-cap
+category: Capacitação
 benefits:
-  - "Instrutores qualificados"
-  - "Certificação válida"
-  - "Material didático incluso"
-  - "Treinamento in company"
-  - "Reciclagens programadas"
+  - Instrutores qualificados
+  - Certificação válida
+  - Material didático incluso
+  - Treinamento in company
+  - Reciclagens programadas
 relatedServices:
-  - "adequacao-nr12"
-  - "linha-de-vida-nr35"
-  - "prevencao-combate-incendio"
+  - adequacao-nr12
+  - linha-de-vida-nr35
+  - prevencao-combate-incendio
 ---
 
 ## Capacitação em SST
