@@ -1,16 +1,18 @@
 ---
-title: Projetos Mecânicos
-slug: maquinas-personalizadas
-shortDescription: Desenvolvemos máquinas e equipamentos personalizados para
-  atender às necessidades específicas do seu processo produtivo.
-description: Projeto e fabricação de máquinas e equipamentos sob medida
+title: Projetos de Tubulação Industrial
+slug: projetos-de-tubulacao-industrial
+shortDescription: Projetos de tubulação industrial com isométricos, folhas de
+  dados e especificação de materiais, conforme ASME, NBR e normas de processo.
+description: Projetos de tubulação industrial para plantas de processo,
+  utilities e infraestrutura, conforme ASME B31.3, NBR e normas do cliente.
+image: /uploads/pipe.jpg
 order: 7
 icon: cog
 category: Engenharia Mecânica
 benefits:
-  - Projeto exclusivo
-  - Adequado às suas necessidades
-  - Aumento de produtividade
+  - Projeto claro e de fácil compreensão
+  - Adequado às principais normas
+  - Projetos com zero retrabalho
   - Redução de custos
   - Suporte técnico contínuo
 relatedServices:
@@ -18,22 +20,35 @@ relatedServices:
   - adequacao-nr12
   - laudos-tecnicos
 ---
+## Projetos de Tubulação Industrial
 
-## Soluções Sob Medida
 
-Projetamos e fabricamos máquinas e equipamentos especiais, desenvolvidos especificamente para otimizar seu processo produtivo, aumentar a eficiência e reduzir custos operacionais.
+
+Desenvolvemos projetos de tubulação industrial para plantas de processo, desde o conceitual até o projeto executivo, com cálculo estrutural de suportes e análise de flexibilidade, em conformidade com ASME B31.3, NBRs e normas internas do cliente.
+
 
 ## Processo de Desenvolvimento
 
-- Levantamento de requisitos e necessidades
-- Estudo de viabilidade técnica
-- Projeto conceitual e detalhado
-- Simulações e análises
-- Fabricação e montagem
-- Testes e comissionamento
-- Treinamento de operadores
-- Assistência técnica
+* Projeto conceitual e definição do roteamento de tubulações
+* Projeto executivo com desenhos isométricos e spools de fabricação
+* Especificação de materiais e classes de tubulação (pipe specs)
+* Cálculo estrutural e dimensional de suportes de tubulação
+* Análise de flexibilidade e cálculo de deslocamentos térmicos e mecânicos
+* Memorial de cálculo e documentação técnica conforme ASME B31.3
+* Lista de materiais
 
-## Exemplos de Aplicação
 
-Dispositivos de montagem, gabaritos de soldagem, transportadores, alimentadores, dosadores, misturadores, embaladores e muito mais.
+
+### **Normas e Referências**
+
+* ASME B31.3 — Process Piping
+* ASME B31.1 — Power Piping
+* ABNT NBR 15280 — Tubulação Industrial
+* ASTM — Especificação de materiais metálicos
+* API 610 / 670 — Conexões em equipamentos rotativos
+
+
+## Aplicações
+
+
+Plantas químicas e petroquímicas, refinarias, indústrias alimentícias, farmacêuticas, papel e celulose, mineração, siderurgia e utilities industriais.
