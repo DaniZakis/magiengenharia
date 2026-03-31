@@ -41,13 +41,13 @@ A NR-12 estabelece requisitos obrigatórios de segurança para máquinas e equip
 ### Normas e Referências
 
 
+
 * NR-12 — Segurança no Trabalho em Máquinas e Equipamentos
 * NR-10 — Segurança em Instalações e Serviços em Eletricidade
 * ABNT NBR ISO 12100 — Segurança de Máquinas — Princípios gerais de projeto e apreciação de riscos
 * ABNT NBR 14153 — Segurança de Máquinas — Distâncias de segurança
 * IEC 62061 — Segurança funcional de sistemas de comando
 * ABNT NBR ISO 13857 — Distâncias de segurança para zonas de perigo
-
 
 ## Por que Adequar?
 
