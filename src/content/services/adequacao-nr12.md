@@ -24,9 +24,7 @@ relatedServices:
 ---
 ## NR-12 — Adequação de Máquinas e Equipamentos
 
-
 A NR-12 estabelece requisitos obrigatórios de segurança para máquinas e equipamentos industriais. O não cumprimento sujeita a empresa a multas, interdições e responsabilidade civil em caso de acidentes. Nossa equipe realiza todo o processo de adequação, do inventário ao laudo final, garantindo a funcionalidade do seu processo após a adequação, disponibilizando documentação completa ao final do processo.
-
 
 ## Serviços de Adequação
 
@@ -40,9 +38,17 @@ A NR-12 estabelece requisitos obrigatórios de segurança para máquinas e equip
 * Laudo final de adequação com ART
 * Controle e gestão de não conformidades pós-instalação
 
+### Normas e Referências
+
+
+* NR-12 — Segurança no Trabalho em Máquinas e Equipamentos
+* NR-10 — Segurança em Instalações e Serviços em Eletricidade
+* ABNT NBR ISO 12100 — Segurança de Máquinas — Princípios gerais de projeto e apreciação de riscos
+* ABNT NBR 14153 — Segurança de Máquinas — Distâncias de segurança
+* IEC 62061 — Segurança funcional de sistemas de comando
+* ABNT NBR ISO 13857 — Distâncias de segurança para zonas de perigo
 
 
 ## Por que Adequar?
-
 
 A adequação à NR-12 é obrigação legal para toda empresa que possui máquinas e equipamentos. Além de evitar multas e interdições do Ministério do Trabalho, reduz riscos de acidentes graves, protege seus colaboradores e elimina passivos trabalhistas. Empresas adequadas também se destacam em auditorias, licitações e contratos com grandes indústrias.
