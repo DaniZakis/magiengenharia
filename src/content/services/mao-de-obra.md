@@ -37,8 +37,14 @@ Fornecemos profissionais qualificados e experientes para composição de equipes
 
 ### Aplicações
 
+
+
 Reforço de equipe em picos de demanda, substituição temporária de profissionais, composição de equipe para projetos CAPEX, suporte a escritórios de engenharia e alocação dedicada para obras e montagens industriais.
 
+
+
 ### Por que terceirizar mão de obra técnica?
+
+
 
 Manter equipe técnica fixa gera custos elevados em períodos de baixa demanda. A terceirização permite escalar a equipe conforme a necessidade do projeto, reduzindo custos fixos, eliminando encargos trabalhistas diretos e garantindo profissionais especializados no momento certo.
