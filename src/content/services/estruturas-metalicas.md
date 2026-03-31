@@ -35,17 +35,13 @@ Realizamos inspeção de segurança, elaboração, reconstituição e atualizaç
 * Emissão de laudo técnico e relatório de inspeção com ART
 * Acompanhamento de teste hidrostático (quando necessário)
 
-
-
-### Normas e Referências
-
+#### Normas e Referências
 
 * NR-13 — Caldeiras, Vasos de Pressão, Tubulações e Reservatórios
 * ABNT NBR 12177 — Inspeção de Segurança de Caldeiras
 * ABNT NBR 13943 — Vasos de Pressão — Inspeção de Segurança
 * ABNT NBR 6923 — Segurança em Caldeiras — Requisitos Gerais
 * ABNT NBR ISO 9712 — Ensaios Não Destrutivos — Qualificação de Pessoal
-
 
 ## Aplicações
 
