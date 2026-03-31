@@ -35,11 +35,7 @@ Desenvolvemos projetos técnicos de prevenção e combate a incêndio conforme n
 * Obtenção de AVCB/CLCB junto ao Corpo de Bombeiros;
 * Regularização de edificações e adequação a seguradoras
 
-
-
 #### Normas e Referências
-
-
 
 * ABNT NBR 10897 — Sistemas de Chuveiros Automáticos (Sprinklers)
 * ABNT NBR 13714 — Sistemas de Hidrantes e Mangotinhos
@@ -47,7 +43,7 @@ Desenvolvemos projetos técnicos de prevenção e combate a incêndio conforme n
 * NFPA 15 — Water Spray Fixed Systems
 * NFPA 20 — Installation of Stationary Fire Pumps
 * IT (Instrução Técnica) do Corpo de Bombeiros do estado
-* NR-23 — Proteção Contra Incêndios
+* NR-23 — Proteção Contra Incêndios.
 
 ## Importância
 
