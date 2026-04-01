@@ -14,16 +14,9 @@ category: Engenharia Mecânica
 ---
 ## Projetos de Máquinas Especiais Industriais
 
-
-
 Desenvolvemos projetos de máquinas especiais e equipamentos industriais sob medida, do estudo conceitual ao projeto executivo, com cálculo estrutural e dimensional, em conformidade com normas ABNT, NRs aplicáveis e requisitos do cliente.
 
-
-## 
-Escopo dos Projetos
-
-
-
+### Escopo dos Projetos
 
 * Estudo conceitual e definição de arquitetura da máquina
 * Projeto executivo com modelagem 3D e detalhamento 2D
@@ -33,10 +26,7 @@ Escopo dos Projetos
 * Especificação de componentes e lista de materiais (BOM)
 * Memorial de cálculo e documentação técnica
 
-### 
-Normas e Referências
-
-
+### Normas e Referências
 
 * ABNT NBR — Normas técnicas brasileiras aplicáveis
 * NR-12 — Segurança em máquinas e equipamentos
