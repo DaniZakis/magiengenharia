@@ -16,13 +16,9 @@ benefits:
 ---
 ### Projetos de Plataformas, Passarelas e Estruturas Industriais
 
-
-
 Desenvolvemos projetos estruturais de plataformas, passarelas, mezaninos e escadas industriais, do estudo conceitual ao projeto executivo, com cálculo estrutural completo em conformidade com ABNT NBR 6118, NBR 8681, NBR 7190 e NRs aplicáveis.
 
-### 
 Escopo dos Projetos
-
 
 * Projeto conceitual e definição estrutural
 * Modelagem 3D e detalhamento executivo 2D
@@ -32,10 +28,7 @@ Escopo dos Projetos
 * Dimensionamento de guarda-corpos e corrimãos conforme NR-12
 * Lista de materiais e memorial de cálculo
 
-
 ### Normas e Referências
-
-
 
 * ABNT NBR 8681 — Estruturas metálicas
 * ABNT NBR 6120 — Cargas para cálculo de estruturas
@@ -43,15 +36,10 @@ Escopo dos Projetos
 * NR-35 — Trabalho em altura
 * AWS D1.1
 
-### 
-Aplicações
-
+### Aplicações
 
 Plataformas de acesso a equipamentos, passarelas de interligação entre pavimentos, mezaninos industriais, escadas fixas de acesso, suportes de tubulação e equipamentos, estruturas de sustentação de painéis e instrumentação.
 
-### 
-Por que um projeto estrutural bem elaborado é essencial?
-
-
+### Por que um projeto estrutural bem elaborado é essencial?
 
 Estruturas subdimensionadas representam risco de colapso, acidentes graves e passivos trabalhistas. Um projeto executivo completo, com cálculo estrutural e conformidade com NR-12 e NR-35, garante segurança, durabilidade e aprovação em auditorias e fiscalizações.
