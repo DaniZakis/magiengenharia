@@ -45,4 +45,4 @@ Realizamos inspeção de segurança, elaboração, reconstituição e atualizaç
 
 ## Aplicações
 
-Vasos de pressão, compressores, autoclaves, boilers, caldeiras, trocadores de calor e vasos de processo em indústrias alimentícias, químicas, petroquímicas, metalúrgicas, papel e celulose, etc.
+Vasos de pressão, compressores, autoclaves, boilers, caldeiras, trocadores de calor e vasos de processo em indústrias alimentícias, químicas, petroquímicas, metalúrgicas, papel e celulose, laticínios, madeireiras, hospitais, etc.
