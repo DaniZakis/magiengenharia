@@ -22,9 +22,7 @@ relatedServices:
 ---
 ## Laudo Ergonômico — NR-17
 
-
 Elaboramos Laudos Ergonômicos e Análises Ergonômicas do Trabalho (AET) conforme NR-17 e exigências do eSocial, com avaliação técnica dos postos de trabalho, identificação de riscos de LER/DORT e recomendações de adequação, com ART e validade legal para fins judiciais, administrativos e fiscais.
-
 
 ## Serviços Oferecidos
 
@@ -36,29 +34,17 @@ Elaboramos Laudos Ergonômicos e Análises Ergonômicas do Trabalho (AET) confor
 * Análise das condições ambientais — iluminação, ruído e temperatura
 * Avaliação da organização do trabalho, jornada e pausas
 
-
-
-### 
-Normas e Referências
-
-
+### Normas e Referências
 
 * NR-17 — Ergonomia
 * ABNT NBR ISO 9241 — Ergonomia de sistemas interativos
 * ISO 11228 — Ergonomia — Movimentação manual de cargas
 * ISO 11226 — Ergonomia — Posturas de trabalho estáticas
 
-
-
-### 
-Aplicações
-
+### Aplicações
 
 Indústrias de manufatura, montagem e frigoríficos, operadores de máquinas e equipamentos industriais, centros de distribuição e operadores logísticos, escritórios, call centers e home office, operadores de caixa e comércio varejista, motoristas profissionais e operadores de veículos, construção civil e obras industriais, hospitais, clínicas e profissionais de saúde, e qualquer atividade com risco de LER/DORT ou doença ocupacional.
 
-
-## 
-Por que contratar um Laudo Ergonômico?
-
+### Por que contratar um Laudo Ergonômico?
 
 O Laudo Ergonômico conforme NR-17 é a principal defesa da empresa em processos judiciais envolvendo doenças ocupacionais, LER/DORT e afastamentos por esforço repetitivo. Um laudo bem elaborado, com embasamento técnico nas normas vigentes, tem validade jurídica perante o poder judiciário e reduz significativamente o passivo trabalhista. Empresas sem laudo atualizado estão sujeitas a autuações fiscais, multas e condenações trabalhistas.
