@@ -7,7 +7,7 @@ shortDescription: Projetos elétricos, automação e fabricação de painéis
 description: Projetos elétricos e de automação, e fabricação de painéis
   elétricos de baixa tensão sob medida, do projeto executivo à entrega, conforme
   ABNT e NR-10.
-image: /uploads/painel.jpg
+image: /uploads/painel2.jpg
 order: 16
 icon: search
 category: Segurança
