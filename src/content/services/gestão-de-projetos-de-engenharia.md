@@ -16,12 +16,9 @@ benefits:
 ---
 ### Gestão de Projetos de Engenharia
 
-
 Realizamos a gestão completa de projetos industriais e CAPEX, atuando desde a concepção inicial até o comissionamento e startup, com planejamento estruturado, controle de escopo, prazo e custos em conformidade com o PMBOK e boas práticas do PMI.
 
-### 
-Escopo dos Serviços
-
+### Escopo dos Serviços
 
 * Definição de escopo e EAP/WBS do projeto
 * Elaboração de cronograma físico-financeiro (MS Project / Primavera P6)
@@ -34,24 +31,16 @@ Escopo dos Serviços
 * Gestão de pré-comissionamento, comissionamento e startup
 * Relatórios de progresso e KPIs do projeto
 
-### 
-Normas e Referências
-
+### Normas e Referências
 
 * PMBOK — Project Management Body of Knowledge (PMI)
 * NBR ISO 21500 — Gestão de projetos
 * NBR ISO 9001 — Sistema de gestão da qualidade
 
-### 
-
-Aplicações
-
+### Aplicações
 
 Gestão de projetos industriais para implantação de novas plantas, ampliações, retrofits, instalação de linhas de produção, automação industrial, modernização de processos, infraestrutura industrial e adequação às normas (NR).
 
-### 
-Por que contar com um gestor de projetos especializado?
-
-
+### Por que contar com um gestor de projetos especializado?
 
 Projetos industriais sem gestão estruturada frequentemente ultrapassam orçamento, prazo e escopo, gerando perdas significativas. Um gerenciamento profissional baseado no PMBOK garante previsibilidade, controle de riscos e entrega dentro dos parâmetros estabelecidos — protegendo o investimento OPEX / CAPEX da sua empresa.
