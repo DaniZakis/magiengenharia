@@ -1,45 +1,58 @@
 ---
 title: Projetos Elétricos, Automação e Painéis Elétricos
-slug: consultoria-tecnica
-shortDescription: Soluções técnicas personalizadas para otimizar seus projetos de engenharia
-description: Assessoria especializada em projetos de engenharia com foco em
-  eficiência e inovação
-image: /uploads/service-consultoria.jpg
-order: 12
+slug: projetos-eletricos-automacao-paineis-eletricos
+shortDescription: Projetos elétricos, automação e fabricação de painéis
+  elétricos de comando sob medida — CCM, painéis de controle e distribuição
+  conforme ABNT e NR-10.
+description: Projetos elétricos e de automação, e fabricação de painéis
+  elétricos de baixa tensão sob medida, do projeto executivo à entrega, conforme
+  ABNT e NR-10.
+image: /uploads/painel.jpg
+order: 16
 icon: search
-category: Institucional
+category: Segurança
 benefits:
-  - Avaliação técnica detalhada
-  - Otimização de recursos
-  - Redução de custos
-  - Garantia de conformidade regulatória
-  - Suporte ao longo do projeto
+  - Entrega rápida
+  - Ótimo custo benefício
+  - Painéis organizados e identificados
+  - Certificado de testes
+  - Suporte após instalação
 relatedServices:
   - estruturas-metalicas
   - laudos-tecnicos
   - pericia-tecnica
 ---
+## Projetos Elétricos, Automação e Painéis Elétricos
 
-## O que é Consultoria Técnica?
 
-A consultoria técnica é um serviço especializado que oferece orientação profissional sobre aspectos técnicos de projetos de engenharia. Nossa equipe está preparada para avaliar, analisar e propor soluções eficientes para sua obra.
+Desenvolvemos projetos elétricos e de automação, e realizamos a fabricação de painéis elétricos de baixa tensão sob medida, do projeto executivo à entrega, atendendo indústrias, comércios e prestadores de serviço, em conformidade com ABNT, NR-10 e normas do cliente.
 
-### Benefícios
 
-- **Avaliação técnica detalhada** - Análise completa do seu projeto
-- **Otimização de recursos** - Melhor utilização de materiais e custos
-- **Redução de custos** - Soluções econômicas e eficientes
-- **Garantia de conformidade regulatória** - Atendimento a normas técnicas
-- **Suporte ao longo do projeto** - Acompanhamento constante
+### 
+Escopo dos Serviços
 
-### Como Funciona
 
-Iniciamos com uma avaliação completa do seu projeto, seguida por apresentação de recomendações personalizadas e acompanhamento durante a execução.
+* Projeto elétrico executivo — unifilares, diagramas e plantas
+* Projeto de automação industrial e diagramas de controle
+* Fornecimento de Centros de Controle de Motores (CCM)
+* Fornecimento de painéis de comando e controle
+* Fabricação de painéis de distribuição de baixa tensão
+* Fabricação de painéis elétricos para comércio e serviços
+* Testes de bancada e documentação de entrega
 
-### Áreas de Atuação
 
-- Engenharia Estrutural
-- Engenharia Civil
-- Engenharia de Instalações
-- Projetos Especiais
-- Análise de Viabilidade
+
+### Normas e Referências
+
+
+* NR-10 — Segurança em Instalações e Serviços em Eletricidade
+* NR-12 — Segurança em Máquinas e Equipamentos (painéis em máquinas)
+* ABNT NBR 5410 — Instalações elétricas de baixa tensão
+* ABNT NBR IEC 60204-1 — Segurança de Máquinas — Equipamentos elétricos
+
+
+### 
+Aplicações
+
+
+Indústrias de manufatura e processo, plantas químicas e petroquímicas, indústrias alimentícias e farmacêuticas, mineração e siderurgia, pequenos e médios comércios, escritórios e prestadores de serviço, projetos de modernização e retrofit elétrico, e qualquer aplicação que necessite de painéis elétricos de comando e controle de baixa tensão sob medida.
