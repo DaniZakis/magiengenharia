@@ -1,7 +1,7 @@
 ---
 title: "NR-12: Tudo o que você precisa saber sobre segurança em máquinas"
 slug: nr-12-seguranca-maquinas
-author: Eng. Danilo Maggi
+author: Eng. Danilo Yamazaki
 date: 2024-01-15
 category: Segurança do Trabalho
 image: https://braziliannr.com/wp-content/uploads/2022/01/nr12.png
@@ -59,9 +59,7 @@ A adequação à NR-12 traz diversos benefícios para a empresa:
 * **Produtividade:** Ambientes seguros tendem a ser mais produtivos
 * **Imagem corporativa:** Demonstra compromisso com a segurança dos colaboradores
 
-
-
-### **O que é a Apreciação de Riscos?**
+#### **O que é a Apreciação de Riscos?**
 
 A apreciação de riscos é um dos pilares da NR-12 e um dos termos mais buscados por profissionais da área. Trata-se de um processo sistemático de identificação e avaliação dos perigos presentes em uma máquina ou equipamento.
 
@@ -73,22 +71,19 @@ O processo segue três etapas principais conforme a ABNT NBR ISO 12100:
 
 Com base na apreciação de riscos, são definidas as medidas de proteção adequadas para cada situação — eliminando ou reduzindo os riscos ao nível mais baixo possível.
 
-
-
-### Quais são as penalidades pelo descumprimento?
-
+#### Quais são as penalidades pelo descumprimento?
 
 O não cumprimento da NR-12 pode resultar em:
 
-            - **Autuação e multa** pelo Ministério do Trabalho e Emprego
-            - **Interdição da máquina ou do setor** até a regularização
-            - **Embargo da empresa** em casos graves
-            - **Responsabilidade civil e criminal** do empregador em caso de acidente
-            - **Condenações trabalhistas** em processos judiciais envolvendo acidentes
+* Autuação e multa pelo Ministério do Trabalho e Emprego
+* Interdição da máquina ou do setor até a regularização
+* Embargo da empresa em casos graves
+* Responsabilidade civil e criminal do empregador em caso de acidentes
+* Condenações trabalhistas em processos judiciais envolvendo acidentes
 
 
 
-## Como a Maggi Engenharia pode ajudar?
+#### Como a Maggi Engenharia pode ajudar?
 
 Nossa equipe de engenheiros especializados realiza a análise completa das suas máquinas e equipamentos, identificando as não conformidades e propondo soluções técnicas para adequação à NR-12.
 
