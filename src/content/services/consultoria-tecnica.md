@@ -24,12 +24,10 @@ relatedServices:
 ---
 ## Projetos Elétricos, Automação e Painéis Elétricos
 
-
 Desenvolvemos projetos elétricos e de automação, e realizamos a fabricação de painéis elétricos de baixa tensão sob medida, do projeto executivo à entrega, atendendo indústrias, comércios e prestadores de serviço, em conformidade com ABNT, NR-10 e normas do cliente.
 
+### Escopo dos Serviços
 
-### 
-Escopo dos Serviços
 
 
 * Projeto elétrico executivo — unifilares, diagramas e plantas
@@ -45,14 +43,12 @@ Escopo dos Serviços
 ### Normas e Referências
 
 
+
 * NR-10 — Segurança em Instalações e Serviços em Eletricidade
 * NR-12 — Segurança em Máquinas e Equipamentos (painéis em máquinas)
 * ABNT NBR 5410 — Instalações elétricas de baixa tensão
 * ABNT NBR IEC 60204-1 — Segurança de Máquinas — Equipamentos elétricos
 
-
-### 
-Aplicações
-
+### Aplicações
 
 Indústrias de manufatura e processo, plantas químicas e petroquímicas, indústrias alimentícias e farmacêuticas, mineração e siderurgia, pequenos e médios comércios, escritórios e prestadores de serviço, projetos de modernização e retrofit elétrico, e qualquer aplicação que necessite de painéis elétricos de comando e controle de baixa tensão sob medida.
