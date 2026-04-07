@@ -107,7 +107,7 @@ Entre os principais benefícios, destacam-se:
 * Aprovação em certificações como ISO 9001, ISO 45001, entre outras 
 
 ## 
-Atendimento em São Paulo e em todo o Brasil
+Atendimento em São Paulo e em todo o Brasil.
 
 
 
