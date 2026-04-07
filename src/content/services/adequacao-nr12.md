@@ -19,7 +19,7 @@ benefits:
   - Suporte técnico para operação e manutenção após a adequação
   - Adequação planejada para não paralisar sua produção
   - Controle de não conformidades pós-instalação
-relatedServices: ""
+relatedServices: linha-de-vida-nr35
 ---
 A Maggi Engenharia realiza adequação NR-12 de máquinas e equipamentos industriais em São Paulo, com atuação desde o inventário e apreciação de riscos até o projeto de adequação, documentação técnica e laudo final com ART. O objetivo é reduzir riscos de acidentes, atender às exigências legais e manter a produtividade do processo.
 
