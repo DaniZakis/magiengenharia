@@ -106,21 +106,7 @@ Entre os principais benefícios, destacam-se:
 * Maior conforto e confiabilidade dos colaboradores em relação à empresa
 * Aprovação em certificações como ISO 9001, ISO 45001, entre outras 
 
-
-
-
-
-## Atendimento em São Paulo e em todo o Brasil.
-
-
-
-
-
-
-
-
-
-
+## Atendimento em São Paulo e em todo o Brasil
 
 A Maggi Engenharia presta serviços de **adequação NR-12 em São Paulo**, atendendo indústrias e empresas que necessitam de suporte técnico em segurança de máquinas, apreciação de riscos, laudos e projetos de adequação. O atendimento pode ser realizado conforme a necessidade do cliente, abrangendo desde avaliações pontuais até projetos mais completos de regularização e melhoria operacional.
 
