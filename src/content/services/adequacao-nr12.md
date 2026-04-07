@@ -19,10 +19,7 @@ benefits:
   - Suporte técnico para operação e manutenção após a adequação
   - Adequação planejada para não paralisar sua produção
   - Controle de não conformidades pós-instalação
-relatedServices:
-  - linha-de-vida-nr35
-  - laudos-tecnicos
-  - treinamento-sst
+relatedServices: laudos-tecnicos-e-pericia-de-engenharia
 ---
 A Maggi Engenharia realiza adequação NR-12 de máquinas e equipamentos industriais em São Paulo, com atuação desde o inventário e apreciação de riscos até o projeto de adequação, documentação técnica e laudo final com ART. O objetivo é reduzir riscos de acidentes, atender às exigências legais e manter a produtividade do processo.
 
@@ -30,16 +27,13 @@ A adequação conforme a **NR-12** envolve a análise das condições reais de f
 
 Atendemos empresas que necessitam de **consultoria NR-12**, **laudo NR-12**, **apreciação de riscos**, **projeto de adequação** e suporte técnico para regularização de máquinas e equipamentos industriais, com atendimento em **São Paulo** e projetos em outras regiões conforme demanda.
 
-
-### 
-Quando a adequação NR-12 é necessária
+### Quando a adequação NR-12 é necessária
 
 
 
 A adequação NR-12 é indicada quando a empresa possui máquinas ou equipamentos com proteções inexistentes, insuficientes ou inadequadas, sistemas de parada de emergência deficientes, circuitos de segurança incompatíveis com o risco, zonas de esmagamento, corte, arraste, impacto, aprisionamento ou outras situações que possam expor os trabalhadores a acidentes.
 
 Também é comum a necessidade de adequação nos seguintes casos:
-
 
 * processos de fiscalização ou auditoria;
 * exigências de clientes, seguradoras ou departamentos internos de SST;
@@ -49,9 +43,7 @@ Também é comum a necessidade de adequação nos seguintes casos:
 * regularização documental de equipamentos existentes;
 * necessidade de redução de passivos trabalhistas e riscos operacionais.
 
-
 ### O que está incluído no serviço
-
 
 O escopo de adequação pode envolver, conforme a necessidade de cada máquina, processo ou planta industrial:
 
@@ -70,12 +62,9 @@ O escopo de adequação pode envolver, conforme a necessidade de cada máquina, 
 * Laudo final de adequação com ART
 * Controle e gestão de não conformidades pós-instalação
 
-
 Cada projeto é desenvolvido considerando as características reais da máquina, do processo produtivo e da interação do operador com o equipamento, evitando soluções genéricas e priorizando medidas tecnicamente coerentes com a operação.
 
-
-### 
-Como funciona a adequação NR-12
+### Como funciona a adequação NR-12
 
 
 
@@ -83,13 +72,11 @@ A adequação normalmente começa com uma **avaliação técnica detalhada da m�
 
 Depois dessa etapa, são definidas as soluções de engenharia, que podem incluir modificações mecânicas, elétricas, proteções físicas, intertravamentos, reorganização de acessos, melhorias em comandos e recomendações complementares de operação e manutenção. Conforme o escopo, o trabalho pode abranger desde o **diagnóstico técnico** até o **projeto executivo de adequação** e a **documentação final**.
 
-### 
-Máquinas e equipamentos atendidos
+### Máquinas e equipamentos atendidos
 
 
 
 A Maggi Engenharia atua com adequação NR-12 em diversos tipos de máquinas e equipamentos industriais, como por exemplo:
-
 
 * Transportadores e esteiras
 * Máquinas de embalagem
@@ -101,11 +88,7 @@ A Maggi Engenharia atua com adequação NR-12 em diversos tipos de máquinas e e
 * Conjuntos industriais com necessidade de proteções, enclausuramento e intertravamento
 * Entre outros
 
-
-
 O atendimento é definido conforme o porte do equipamento, complexidade do processo e necessidade documental do cliente.
-
-
 
 ### Normas e Referências
 
@@ -118,11 +101,9 @@ O atendimento é definido conforme o porte do equipamento, complexidade do proce
 
 ### Por que Adequar?
 
-
 A adequação NR-12 não deve ser vista apenas como atendimento legal. Quando bem desenvolvida, ela também contribui para melhorar a confiabilidade do processo e reduzir perdas associadas a falhas de segurança, improvisações e intervenções inseguras.
 
 Entre os principais benefícios, destacam-se:
-
 
 * Redução do risco de acidentes de trabalho
 * Melhoria das condições de operação e manutenção
@@ -131,14 +112,13 @@ Entre os principais benefícios, destacam-se:
 * Maior conforto e confiabilidade dos colaboradores em relação à empresa
 * Aprovação em certificações como ISO 9001, ISO 45001, entre outras 
 
-### 
-Atendimento em São Paulo e em todo o Brasil
+### Atendimento em São Paulo e em todo o Brasil
+
 
 
 A Maggi Engenharia presta serviços de **adequação NR-12 em São Paulo**, atendendo indústrias e empresas que necessitam de suporte técnico em segurança de máquinas, apreciação de riscos, laudos e projetos de adequação. O atendimento pode ser realizado conforme a necessidade do cliente, abrangendo desde avaliações pontuais até projetos mais completos de regularização e melhoria operacional.
 
-### 
-Por que contratar a Maggi Engenharia
+### Por que contratar a Maggi Engenharia
 
 
 
