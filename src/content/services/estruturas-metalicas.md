@@ -1,6 +1,6 @@
 ---
 title: NR-13 Vasos de Pressão
-slug: NR-13-vasos-de-pressão
+slug: NR-13-vasos-de-pressao
 shortDescription: Elaboração e atualização de prontuário de vaso de pressão
   conforme NR-13, com responsabilidade de Profissional Habilitado.
 description: "Prontuário de vaso de pressão conforme NR-13: elaboração,
