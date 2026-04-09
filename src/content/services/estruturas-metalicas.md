@@ -27,11 +27,7 @@ A não conformidade com a NR-13 pode resultar em multas, interdições e riscos 
 
 Empresa especializada em inspeção de vasos de pressão conforme NR-13, entre em contato e conheça a transformação que o nosso trabalho está gerando dentro das empresas.
 
-
-
 ## Nossos Serviços
-
-
 
 Nossos serviços em NR-13 para vasos de pressão são:
 
@@ -44,8 +40,6 @@ Nossos serviços em NR-13 para vasos de pressão são:
 * Emissão de laudo técnico e relatório de inspeção com ART
 * Acompanhamento de teste hidrostático (quando necessário)
 
-
-
 #### Normas e Referências
 
 * NR-13 — Caldeiras, Vasos de Pressão, Tubulações e Reservatórios
@@ -54,10 +48,7 @@ Nossos serviços em NR-13 para vasos de pressão são:
 * ABNT NBR 6923 — Segurança em Caldeiras
 * ABNT NBR ISO 9712 — Ensaios Não Destrutivos
 
-
-
-### 
-Por que contratar nosso serviço?
+### Por que contratar nosso serviço?
 
 
 
@@ -69,10 +60,9 @@ Por que contratar nosso serviço?
 * Agilidade na regularização documental
 * Atuação em São Paulo e em todo o Brasil
 
+### Onde se aplica a NR-13?
 
 
-### 
-Onde se aplica a NR-13?
 
 
 
@@ -87,37 +77,24 @@ Onde se aplica a NR-13?
 * Compressores
 * Caldeiras
 
+### Perguntas Frequentes sobre NR-13
 
-
-
-## 
-Perguntas Frequentes sobre NR-13
 
 
 
 
 **O que é o prontuário de vaso de pressão?**
 
-
 O prontuário de vaso de pressão é o conjunto de documentos técnicos exigidos pela NR-13 que garantem a rastreabilidade, segurança e histórico completo do equipamento. Ele deve conter o projeto de construção, registros de inspeção, laudos técnicos, ART e todos os documentos relacionados à operação e manutenção do vaso ao longo de sua vida útil.
-
-
 
 **Quem pode emitir laudo NR-13?**
 
-
 O laudo NR-13 só pode ser emitido por engenheiro habilitado, com registro ativo no CREA e emissão de ART — Anotação de Responsabilidade Técnica. A norma veda expressamente a emissão por técnicos ou profissionais sem habilitação legal, sendo o engenheiro o único responsável pela validade jurídica e técnica do documento.
-
-
 
 **Qual a periodicidade da inspeção NR-13?**
 
-
 A periodicidade da inspeção de vasos de pressão conforme NR-13 varia de acordo com a categoria do vaso, fluido de trabalho e condições de operação. Em geral, as inspeções de segurança externas ocorrem a cada ano, e as inspeções internas a cada 5 anos, podendo ser alteradas com base no plano de inspeção elaborado pelo engenheiro responsável.
 
-
-
 **É obrigatório ter prontuário?**
-
 
 Sim, o prontuário de vaso de pressão é obrigatório conforme NR-13 para todos os vasos de pressão em operação. A ausência do prontuário pode gerar autuação pelo Ministério do Trabalho, multas, interdição do equipamento e responsabilização civil e criminal do empregador em caso de acidente.
