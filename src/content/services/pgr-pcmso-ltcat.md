@@ -30,8 +30,7 @@ A não conformidade pode resultar em multas, interdições e riscos graves de in
 
 Empresa especializada para serviços para NR-20 em São Paulo e em todo o Brasil. Venha conhecer como a nossa empresa está mudando o modo de fazer laudos e prontuários nas indústrias. 
 
-## 
-Serviços em NR-20 e Área Classificada
+### Serviços em NR-20 e Área Classificada
 
 
 
@@ -45,13 +44,7 @@ Serviços em NR-20 e Área Classificada
 * Laudo técnico com ART
 * Suporte técnico para adequação à norma
 
-
-
-
-
-### 
-Por que contratar nosso serviço?
-
+### Por que contratar nosso serviço?
 
 
 
@@ -61,21 +54,18 @@ Por que contratar nosso serviço?
 * Evita multas e interdições
 * Aumenta a segurança da fábrica e dos colaboradores
 
-### 
-Por que estar em conformidade com a NR-20?
+### Por que estar em conformidade com a NR-20?
 
 
 
 Além de obrigatória, a adequação à NR-20:
-
 
 * Reduz riscos de incêndios e explosões
 * Protege colaboradores e patrimônio
 * Garante aprovação em auditorias e fiscalizações
 * Facilita licenças e exigências do Corpo de Bombeiros
 
-### 
-Normas Técnicas Aplicáveis
+### Normas Técnicas Aplicáveis
 
 
 
@@ -84,8 +74,7 @@ Normas Técnicas Aplicáveis
 * ABNT NBR 17505 — Armazenamento de líquidos inflamáveis
 * NFPA (quando aplicável)
 
-### 
-Onde se aplica a NR-20?
+### Onde se aplica a NR-20?
 
 
 
@@ -110,15 +99,14 @@ Onde se aplica a NR-20?
 
 Área classificada é uma região onde pode ocorrer a formação de atmosfera explosiva devido à presença de gases, vapores, neblinas ou poeiras inflamáveis em concentração suficiente para causar explosão ou incêndio. A classificação de áreas é obrigatória conforme NR-20 e ABNT NBR IEC 60079-10, e define as zonas de risco e os requisitos de equipamentos e instalações elétricas para cada área.
 
-
 **Toda empresa precisa de área classificada?**
 
 O laudo NR-20 só pode ser emitido por engenheiro habilitado com registro ativo no CREA e emissão de ART — Anotação de Responsabilidade Técnica. Por envolver risco de explosão e incêndio, a NR-20 exige que todos os documentos técnicos sejam elaborados por profissional legalmente habilitado, sendo vedada a emissão por técnicos ou profissionais sem habilitação legal.
 
-
 **O prontuário NR-20 é obrigatório?**
 
 Sim, o prontuário NR-20 é obrigatório para todas as instalações que operam com líquidos inflamáveis, líquidos combustíveis e gases inflamáveis. Ele deve conter o projeto de classificação de áreas, laudos técnicos, ART, procedimentos operacionais e registros de inspeção e manutenção. A ausência do prontuário pode gerar autuação pelo Ministério do Trabalho, multas e interdição da instalação.
+
 
 
 ### Solicite uma avaliação técnica NR-20
