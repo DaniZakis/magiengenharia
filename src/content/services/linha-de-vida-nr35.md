@@ -47,19 +47,19 @@ São situações comuns em que a linha de vida se torna necessária:
 
 ## Tipos de Linha de Vida
 
-### Linha de vida horizontal flexível (cabo de aço)
+#### Linha de vida horizontal flexível (cabo de aço)
 
 Indicada para trajetos longos em coberturas, passarelas e estruturas industriais. Permite o deslocamento contínuo do usuário com um único ponto de conexão, sem necessidade de desacoplar o trava-quedas.
 
-### Linha de vida horizontal rígida (trilhos metálicos)
+#### Linha de vida horizontal rígida (trilhos metálicos)
 
 Recomendada para ambientes que exigem maior precisão no travamento e menor deflexão do sistema, como manutenção sobre máquinas, pontes rolantes e operações em que a queda deve ser contida no menor espaço possível.
 
-### Linha de vida vertical
+#### Linha de vida vertical
 
 Usada em escadas tipo marinheiro, torres, silos e acessos a coberturas. Conta com trava-queda deslizante que acompanha o usuário na subida e descida, garantindo proteção contínua durante todo o trajeto vertical.
 
-### Pontos de ancoragem pontuais
+#### Pontos de ancoragem pontuais
 
 Indicados para atividades específicas em locais restritos, como manutenção de equipamentos isolados ou limpeza de áreas pequenas. São dimensionados individualmente para suportar as cargas previstas na ABNT NBR 16325.
 
