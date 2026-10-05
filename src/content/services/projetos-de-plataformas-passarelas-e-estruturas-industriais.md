@@ -55,11 +55,21 @@ Nossos serviços em NR-13 para vasos de pressão são:
 
 
 
-## Como funciona a inspeção e prontuário NR-13
+### Como funciona a inspeção e prontuário NR-13
 
 A inspeção normalmente começa com o levantamento técnico do vaso de pressão e de sua documentação, verificando o prontuário, a placa de identificação, as condições de instalação e os dispositivos de segurança, como válvulas de segurança e manômetros. A partir disso, é realizada a categorização do vaso, conforme a classe do fluido e o potencial de risco, que define os prazos e o tipo de inspeção exigidos pela norma.
 
 Depois dessa etapa, é executada a inspeção de segurança, que pode incluir exame externo e interno, medição de espessura por ultrassom, teste hidrostático quando aplicável e verificação da calibração dos dispositivos de segurança. Ao final, são emitidos o relatório de inspeção, com a PMTA, as não conformidades encontradas e o prazo da próxima inspeção, e a ART do Profissional Habilitado. O trabalho abrange desde a reconstituição do prontuário até a atualização do prontuário do vaso existente.
+
+
+
+### Máquinas e equipamentos atendidos
+
+
+
+
+
+
 
 ### Por que um projeto estrutural bem elaborado é essencial?
 
