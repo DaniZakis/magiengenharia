@@ -44,8 +44,6 @@ Desenvolvemos projetos industriais para plantas de processo, utilities e infraes
 * Análise de flexibilidade e cálculo de deslocamentos térmicos e mecânicos
 * Memorial de cálculo e documentação técnica conforme ASME B31.3
 
-
-
 **Estruturas metálicas**
 
 * Projeto de plataformas, passarelas, escadas, guarda-corpos e mezaninos
@@ -55,8 +53,6 @@ Desenvolvemos projetos industriais para plantas de processo, utilities e infraes
 * Desenhos de fabricação e montagem
 * Memorial de cálculo e ART
 
-
-
 **Máquinas sob medida (engenheiradas)**
 
 * Levantamento das necessidades do processo e definição do conceito da máquina
@@ -65,8 +61,6 @@ Desenvolvemos projetos industriais para plantas de processo, utilities e infraes
 * Projeto de proteções e sistemas de segurança conforme NR-12
 * Apreciação de risco integrada ao projeto
 * Desenhos de fabricação (spool), lista de materiais e manual da máquina
-
-
 
 ### **Normas e Referências**
 
@@ -78,8 +72,8 @@ Desenvolvemos projetos industriais para plantas de processo, utilities e infraes
 * ABNT NBR ISO 13849-1 — Partes de sistemas de comando relacionadas à segurança
 * ABNT NBR ISO 14122 — Meios de acesso permanentes a máquinas
 
-
-
 ## Aplicações
 
 Plantas químicas e petroquímicas, refinarias, indústrias alimentícias, farmacêuticas, papel e celulose, mineração, siderurgia, utilities industriais e linhas de produção que demandam equipamentos e estruturas projetados sob medida.
+
+Atendemos indústrias em São Paulo, Grande SP e interior do estado.
