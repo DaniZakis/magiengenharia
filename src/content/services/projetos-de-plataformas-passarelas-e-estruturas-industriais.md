@@ -63,11 +63,25 @@ Depois dessa etapa, é executada a inspeção de segurança, que pode incluir ex
 
 
 
-### Máquinas e equipamentos atendidos
+### Equipamentos atendidos
 
 
 
+A Maggi Engenharia atua com inspeção NR-13 em diversos tipos de vasos de pressão utilizados na indústria, como por exemplo:
 
+\- Reservatórios de ar comprimido (pulmões) e compressores
+
+\- Caldeiras
+
+\- Autoclaves e esterilizadores
+
+\- Trocadores de calor
+
+\- Reatores e vasos de processo
+
+\- Vasos de armazenamento de gases, como GLP, amônia e CO₂
+
+O atendimento é definido conforme a quantidade e a categoria dos vasos, as condições de operação e a situação da documentação existente, incluindo a verificação do enquadramento do equipamento na NR-13.
 
 
 
