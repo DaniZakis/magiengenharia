@@ -4,16 +4,10 @@ slug: projetos-industriais
 shortDescription: Projetos de tubulações industriais, estruturas metálicas e
   máquinas sob medida, conforme ASME, NBR e NR-12, com desenhos e detalhamento
   para fabricação.
-description: >-
-  Desenvolvemos projetos industriais do conceito ao detalhamento para fabricação
-  e montagem, em três frentes: tubulações industriais para plantas de processo,
-  utilities e infraestrutura, conforme ASME B31.3 e NBR; estruturas metálicas
-  como plataformas, passarelas, escadas, guarda-corpos e suportes, dimensionadas
-  conforme a NBR 8800; e máquinas e equipamentos sob medida, projetados para a
-  necessidade específica do processo e em conformidade com a NR-12.
-
-
-  Cada projeto é entregue com desenhos técnicos, lista de materiais, memorial de cálculo e ART. Fazemos acompanhamento das etapas de fabricação e startup também.
+description: Projetos de tubulações industriais, estruturas metálicas e máquinas
+  sob medida, do conceito ao detalhamento para fabricação, conforme ASME, NBR e
+  NR-12. Entregamos desenhos, memorial de cálculo e ART, com acompanhamento da
+  fabricação ao startup.
 image: /uploads/pipe.jpg
 order: 7
 icon: cog
