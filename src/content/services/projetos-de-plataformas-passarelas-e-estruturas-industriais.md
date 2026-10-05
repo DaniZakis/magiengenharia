@@ -1,12 +1,12 @@
 ---
-title: Projetos de Plataformas, Passarelas e Estruturas Industriais
-slug: projetos-de-estruturas-metalicas-industriais
-shortDescription: Projetos de plataformas, passarelas, escadas e estruturas
-  metálicas industriais, conforme ABNT NBR 6118, NBR 8681 e NR-12.
-description: Projetos estruturais de plataformas, passarelas, mezaninos e
-  escadas industriais, com cálculo estrutural e detalhamento conforme ABNT e NRs
-  aplicáveis.
-image: /uploads/plataforma-trombini-2.jpg
+title: Inspeção NR-13 Vasos de Pressão e Caldeiras | Prontuário e Laudo
+slug: nr-13-prontuario-laudo
+shortDescription: "Inspeção NR-13 de vasos de pressão e caldeiras em São Paulo e
+  região: inspeção inicial e periódica , laudo técnico, elaboração e atualização
+  de prontuário e ART emitida por Profissional Habilitado."
+description: Elaboração de prontuário, inspeção e laudo NR-13 para vasos de
+  pressão e caldeiras com ART. Evite multas e garanta conformidade legal.
+image: /uploads/boiler_inspection_.jpg
 order: 11
 icon: building
 category: Engenharia Mecânica
@@ -14,27 +14,31 @@ benefits:
   - Baixo nível de retrabalho; Conformidade com todas as normas; Acompanhamento
     de fabricação; Suporte completo
 ---
-### Projetos de Plataformas, Passarelas e Estruturas Industriais
+### Inspeção NR13 em vasos de pressão e Caldeiras
 
-Desenvolvemos projetos estruturais de plataformas, passarelas, mezaninos e escadas industriais, do estudo conceitual ao projeto executivo, com cálculo estrutural completo em conformidade com ABNT NBR 6118, NBR 8681, NBR 7190 e NRs aplicáveis.
+Realizamos inspeção de segurança, elaboração, reconstituição e atualização de prontuário de vasos de pressão conforme a NR-13, com emissão de ART por Profissional Legalmente Habilitado.
 
-Escopo dos Projetos
+A não conformidade com a NR-13 pode resultar em multas, interdições e riscos operacionais graves. Atuamos para garantir que seus equipamentos estejam seguros, regularizados e aptos para operação.
 
-* Projeto conceitual e definição estrutural
-* Modelagem 3D e detalhamento executivo 2D
-* Cálculo estrutural de plataformas e passarelas metálicas
-* Cálculo de mezaninos e estruturas de suporte de equipamentos
-* Projeto de escadas industriais fixas e de acesso
-* Dimensionamento de guarda-corpos e corrimãos conforme NR-12
-* Lista de materiais e memorial de cálculo
+Empresa especializada em inspeção de vasos de pressão conforme NR-13, entre em contato e conheça a transformação que o nosso trabalho está gerando dentro das empresas.
+
+
+
+## Nossos Serviços
+
+
 
 ### Normas e Referências
 
-* ABNT NBR 8681 — Estruturas metálicas
-* ABNT NBR 6120 — Cargas para cálculo de estruturas
-* NR-12 — Segurança em máquinas e equipamentos
-* NR-35 — Trabalho em altura
-* AWS D1.1
+
+
+* NR-13 — Caldeiras, Vasos de Pressão, Tubulações e Reservatórios
+* ABNT NBR 12177 — Inspeção de Segurança de Caldeiras
+* ABNT NBR 13943 — Vasos de Pressão — Inspeção de Segurança
+* ABNT NBR 6923 — Segurança em Caldeiras
+* ABNT NBR ISO 9712 — Ensaios Não Destrutivos
+
+
 
 ### Aplicações
 
