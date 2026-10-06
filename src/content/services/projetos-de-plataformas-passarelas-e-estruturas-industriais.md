@@ -7,7 +7,7 @@ shortDescription: "Inspeção NR-13 de vasos de pressão e caldeiras em São Pau
 description: Elaboração de prontuário, inspeção e laudo NR-13 para vasos de
   pressão e caldeiras com ART. Evite multas e garanta conformidade legal.
 image: /uploads/boiler_inspection_.jpg
-order: 11
+order: 5
 icon: building
 category: Engenharia Mecânica
 benefits:
